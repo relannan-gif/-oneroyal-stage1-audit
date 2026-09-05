@@ -5,16 +5,22 @@ published for review on GitHub Pages.
 
 | | |
 | --- | --- |
-| **Application revision** | `825c9b8de3f1d59c35f4a669d4243368662ceaaa` on `claude/oneroyal-graphite-integration-8fcqxv` in `relannan-gif/Royal-trading-app` |
-| Shipping bundle | `entry-26381ff914fe4c2e64ff741bf316973b.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=` |
-| QA bundle | `entry-771f54e99666daf5d5fc9fe377ae2ff8.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=non-production` |
+| **Application revision** | `60954302a6fbd0a624bc44ed78b6c34ea24076c2` on `claude/oneroyal-graphite-integration-8fcqxv` in `relannan-gif/Royal-trading-app` |
+| Shipping bundle | `entry-250b5a2397816c470c57742b8d85ec06.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=` |
+| QA bundle | `entry-4461ab5f47cd00cb9c088fcef3e59cd0.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=non-production` |
 | Build-time difference from the audit bundle | `expo.experiments.baseUrl` set to `/-oneroyal-stage1-audit/shipping` and `/-oneroyal-stage1-audit/qa` respectively, so routing works under this repository's Pages path. No source change. |
 
-This revision carries the corrections from the independent desktop and mobile
-browser review of 5 September (identity reset on signup, phone field, profile
-review, receipts, tab history and the rest). The list, with what was and was
-not independently reproduced, is `docs/PLACEHOLDERS_AND_OPEN_ITEMS.md` in the
-source repository.
+This revision is the catalogue and chart pass: the full MT5 and MT4
+instrument catalogue (2,029 platform records, imported from the broker's
+workbook extracts with provenance), an interactive price chart (crosshair,
+pan and zoom, M1–W1 intervals, indicators, drawings with undo and redo that
+persist per platform and symbol, full screen), margin thresholds as
+percentages with margin call at 100% and stop out at 20%, the reopened Hub
+tab and finished-funds-flow fixes, the pre-verification deposit cap enforced
+at the amount step, and the Rewards & Cashback entries. Evidence for it is
+on the same branch at `a24215ecb650b04f122a61ac44412249d60c2ac7`
+(`docs/test-logs/`, `docs/screenshots/`, `docs/chart-evidence/`,
+`AUDIT_MANIFEST.md`); it is not part of this repository.
 
 - `shipping/` — the default configuration. No legal documents have been
   supplied; the onboarding consent step fails closed.
