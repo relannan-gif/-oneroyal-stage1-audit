@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<title>OneRoyal — Stage 1 previews</title>
+<style>
+  :root { color-scheme: dark light; }
+  body { font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 38rem; margin: 3rem auto; padding: 0 1.25rem; background: #141216; color: #ece8e1; }
+  @media (prefers-color-scheme: light) { body { background: #faf9f5; color: #1a1a1a; } a.card { background: #fff; border-color: #e3ded3; } .note { background: #fff; } }
+  h1 { font-size: 1.4rem; margin: 0 0 .25rem; }
+  p.meta { margin: 0 0 1.5rem; opacity: .7; font-size: .9rem; }
+  a.card { display: block; text-decoration: none; color: inherit; border: 1px solid #2e2a34; background: #1c1920; border-radius: 12px; padding: 1rem 1.1rem; margin: .75rem 0; }
+  a.card strong { display: block; font-size: 1.05rem; margin-bottom: .2rem; }
+  a.card span { opacity: .75; font-size: .92rem; }
+  .note { margin-top: 1.5rem; padding: .7rem .95rem; border-left: 3px solid #e6b422; border-radius: 6px; background: #1c1920; font-size: .92rem; }
+  code { font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>OneRoyal — Stage 1 previews</h1>
+<p class="meta">Application revision <code>2f8589e</code>. Everything in both previews — accounts, prices, balances, orders, deposits, withdrawals — is simulated.</p>
+<a class="card" href="shipping/"><strong>Shipping preview</strong><span>The default configuration. No legal documents have been supplied, so the onboarding consent step fails closed and an application cannot be submitted.</span></a>
+<a class="card" href="qa/"><strong>QA preview</strong><span>The same build carrying clearly labelled non-production legal fixtures, so onboarding can be walked end to end. Not OneRoyal approved content.</span></a>
+<div class="note">Open a preview and press <strong>Explore the demo</strong> on the welcome screen. A page refresh returns you to the welcome screen — the demo holds its state in memory only. This is the web export; it has never run on a physical iOS or Android device.</div>
+</body>
+</html>

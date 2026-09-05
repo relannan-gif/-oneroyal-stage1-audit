@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OneRoyal preview</title>
+<script>
+  /*
+   * GitHub Pages serves this for any path that is not a file. A refresh on a
+   * route inside either preview lands here; send it back to that preview's
+   * document with the route (and its query) carried in ?r=, which the
+   * preview restores before its bundle evaluates.
+   */
+  (function () {
+    var m = location.pathname.match(/^\/-oneroyal-stage1-audit\/(qa|shipping)(\/.*)?$/);
+    if (m) {
+      var route = (m[2] && m[2] !== '/' ? m[2] : '/welcome') + location.search;
+      location.replace('/-oneroyal-stage1-audit/' + m[1] + '/?r=' + encodeURIComponent(route));
+    } else {
+      location.replace('/-oneroyal-stage1-audit/');
+    }
+  })();
+</script>
+</head>
+<body></body>
+</html>
