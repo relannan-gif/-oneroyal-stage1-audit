@@ -5,13 +5,13 @@ published for review on GitHub Pages.
 
 | | |
 | --- | --- |
-| **Application revision** | `3fb077b729c6c0c83331dcf8a492f3359e8b47dd` on `claude/oneroyal-graphite-integration-8fcqxv` in `relannan-gif/Royal-trading-app` |
-| Shipping bundle | `entry-10951d3828902787fa4f1c91159be610.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=` |
-| QA bundle | `entry-222146ec27c2ba000feb3688dc4ac3d0.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=non-production` |
+| **Application revision** | `0d07c59894201c06a532ca0785464b841fc68604` on `claude/oneroyal-graphite-integration-8fcqxv` in `relannan-gif/Royal-trading-app` |
+| Shipping bundle | `entry-748ed5cddd6e5fc396ed13be81fd7044.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=` |
+| QA bundle | `entry-d4281a669cdc57c969548b7320833be5.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=non-production` |
 | Build-time difference from the audit bundle | `expo.experiments.baseUrl` set to `/-oneroyal-stage1-audit/shipping` and `/-oneroyal-stage1-audit/qa` respectively, so routing works under this repository's Pages path. No source change. |
 
-This revision is the acceptance-fix sprint on top of the client experience
-correction sprint, answering the independent client acceptance review of
+This revision is the acceptance-fix sprint and its follow-up on top of the
+client experience correction sprint, answering the independent client acceptance review of
 `f357550` (R01–R07) and the approved update of 7 September 2026 (R08): the
 instrument symbol never gives way on Markets, the picker, the chart header,
 the ticket or review at 320–430; the chart is sized from its measured
@@ -24,7 +24,11 @@ line each; the ticket carries one loss caveat and says where an MT4
 account's orders are placed before any order intent; and the instrument
 page shows a non-pressable Sell / Spread / Buy strip with one New order
 action that opens the shared ticket without choosing a direction for the
-client. Everything from the earlier passes is retained. Evidence for it is
+client. The follow-up of 7 September: the ticket and its review sit above
+the tabs, so the browser's Back from a ticket returns to the page the order
+was started from whichever tabs were visited before; the ticket names no
+side on its margin estimate before a direction is chosen; the review says
+the stop's caveat once. Everything from the earlier passes is retained. Evidence for it is
 on the same branch (`docs/test-logs/`, `docs/screenshots/`,
 `docs/chart-evidence/`, `docs/redesign-evidence/`, `docs/sprint-evidence/`,
 `docs/acceptance-evidence/`, `AUDIT_MANIFEST.md`, `docs/ACCEPTANCE_FIXES.md`);
