@@ -5,34 +5,29 @@ published for review on GitHub Pages.
 
 | | |
 | --- | --- |
-| **Application revision** | `0d07c59894201c06a532ca0785464b841fc68604` on `claude/oneroyal-graphite-integration-8fcqxv` in `relannan-gif/Royal-trading-app` |
-| Shipping bundle | `entry-748ed5cddd6e5fc396ed13be81fd7044.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=` |
-| QA bundle | `entry-d4281a669cdc57c969548b7320833be5.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=non-production` |
+| **Application revision** | `f2e447d940d6d7c33ad6f6de89b31e8627a188e0` on `claude/oneroyal-graphite-integration-8fcqxv` in `relannan-gif/Royal-trading-app` |
+| Shipping bundle | `entry-cf6d8921872553ce5cad0be928cab194.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=` |
+| QA bundle | `entry-ebbfa2f32ad609ce468342f50fa09381.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=non-production` |
 | Build-time difference from the audit bundle | `expo.experiments.baseUrl` set to `/-oneroyal-stage1-audit/shipping` and `/-oneroyal-stage1-audit/qa` respectively, so routing works under this repository's Pages path. No source change. |
 
-This revision is the acceptance-fix sprint and its follow-up on top of the
-client experience correction sprint, answering the independent client acceptance review of
-`f357550` (R01–R07) and the approved update of 7 September 2026 (R08): the
-instrument symbol never gives way on Markets, the picker, the chart header,
-the ticket or review at 320–430; the chart is sized from its measured
-container so the desktop price axis and price label stay inside the column;
-the research fixture carries no integration prose; the deposit review heads
-a card-return rule as a withdrawal rule; Rewards has one unavailable state
-and Cashback labels its sample as an example; the Welcome coach card groups
-each metric with its name and the provider buttons sit side by side on one
-line each; the ticket carries one loss caveat and says where an MT4
-account's orders are placed before any order intent; and the instrument
-page shows a non-pressable Sell / Spread / Buy strip with one New order
-action that opens the shared ticket without choosing a direction for the
-client. The follow-up of 7 September: the ticket and its review sit above
-the tabs, so the browser's Back from a ticket returns to the page the order
-was started from whichever tabs were visited before; the ticket names no
-side on its margin estimate before a direction is chosen; the review says
-the stop's caveat once. Everything from the earlier passes is retained. Evidence for it is
-on the same branch (`docs/test-logs/`, `docs/screenshots/`,
-`docs/chart-evidence/`, `docs/redesign-evidence/`, `docs/sprint-evidence/`,
-`docs/acceptance-evidence/`, `AUDIT_MANIFEST.md`, `docs/ACCEPTANCE_FIXES.md`);
-it is not part of this repository.
+This revision is the approved four-screen mobile UX sprint of 8 September
+2026 on top of the acceptance-fix sprint and its follow-up. Markets rows
+carry an instrument target (symbol, name, "Chart & info ›") that opens the
+instrument page and a separate Order control that opens the shared ticket
+with no direction; the bid and the ask are plain text. The instrument page
+has one header row, a labelled Bid price with the ask and the spread as
+text, Chart / News / Research / Details as tabs and a 64-point New order
+dock directly above the navigation. Trade carries + New order in its pinned
+header with no bottom dock, a compact account summary and compact position
+rows. Home's and Trade's New order open a dedicated Choose instrument
+screen whose rows open the same ticket. The ticket is neutral until a
+direction is chosen; explicit Buy/Sell links keep their side. In-app Back
+pops the tab's stack and brings a tab being left to its root. Everything
+from the earlier passes is retained. Evidence for it is on the same branch
+(`docs/test-logs/`, `docs/screenshots/`, `docs/chart-evidence/`,
+`docs/redesign-evidence/`, `docs/sprint-evidence/`,
+`docs/acceptance-evidence/`, `docs/UX_SPRINT_2026-09-08.md`) and
+is not part of this repository.
 
 Direct routes on either preview (press **Explore the demo** first for the
 in-app ones; a refresh returns to Welcome): `/welcome`,
