@@ -5,28 +5,12 @@ published for review on GitHub Pages.
 
 | | |
 | --- | --- |
-| **Application revision** | `f2e447d940d6d7c33ad6f6de89b31e8627a188e0` on `claude/oneroyal-graphite-integration-8fcqxv` in `relannan-gif/Royal-trading-app` |
-| Shipping bundle | `entry-cf6d8921872553ce5cad0be928cab194.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=` |
-| QA bundle | `entry-ebbfa2f32ad609ce468342f50fa09381.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=non-production` |
+| **Application revision** | `fbd54a54a962f8f73cec12d2c989e9c20e3bb1d2` on `claude/oneroyal-graphite-integration-8fcqxv` in `relannan-gif/Royal-trading-app` |
+| Shipping bundle | `entry-b9dc35fbb2c45cf1b19e1d1d12e4d63e.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=` |
+| QA bundle | `entry-37fe3218ac015a22fc321a67fb1d7763.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=non-production` |
 | Build-time difference from the audit bundle | `expo.experiments.baseUrl` set to `/-oneroyal-stage1-audit/shipping` and `/-oneroyal-stage1-audit/qa` respectively, so routing works under this repository's Pages path. No source change. |
 
-This revision is the approved four-screen mobile UX sprint of 8 September
-2026 on top of the acceptance-fix sprint and its follow-up. Markets rows
-carry an instrument target (symbol, name, "Chart & info ›") that opens the
-instrument page and a separate Order control that opens the shared ticket
-with no direction; the bid and the ask are plain text. The instrument page
-has one header row, a labelled Bid price with the ask and the spread as
-text, Chart / News / Research / Details as tabs and a 64-point New order
-dock directly above the navigation. Trade carries + New order in its pinned
-header with no bottom dock, a compact account summary and compact position
-rows. Home's and Trade's New order open a dedicated Choose instrument
-screen whose rows open the same ticket. The ticket is neutral until a
-direction is chosen; explicit Buy/Sell links keep their side. In-app Back
-pops the tab's stack and brings a tab being left to its root. Everything
-from the earlier passes is retained. Evidence for it is on the same branch
-(`docs/test-logs/`, `docs/screenshots/`, `docs/chart-evidence/`,
-`docs/redesign-evidence/`, `docs/sprint-evidence/`,
-`docs/acceptance-evidence/`, `docs/UX_SPRINT_2026-09-08.md`) and
+This revision is the consolidated design and correction sprint of 8 September 2026: the 68 main-page designs and their supporting states applied across the app on the shared graphite/plum/yellow system, the nine priority-one audit defects and the remaining audit rows corrected at the data boundary and asserted on state, and the four explicitly approved trading screens (Trade, Choose an instrument, the order ticket and its review) preserved with their volume picker, exposure sizing and stop-loss refinements. The QA preview carries labelled non-production legal placeholders so an application can be completed; the shipping preview fails closed on the declarations step until OneRoyal supplies approved legal text. Partners is reserved and deliberately not built. Physical iOS and Android devices, real payment, identity and OAuth providers were not exercised. The evidence workbook (journey recordings, before/after captures, registers)
 is not part of this repository.
 
 Direct routes on either preview (press **Explore the demo** first for the
