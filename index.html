@@ -7,22 +7,59 @@
 <title>OneRoyal — Stage 1 previews</title>
 <style>
   :root { color-scheme: dark light; }
-  body { font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 38rem; margin: 3rem auto; padding: 0 1.25rem; background: #141216; color: #ece8e1; }
-  @media (prefers-color-scheme: light) { body { background: #faf9f5; color: #1a1a1a; } a.card { background: #fff; border-color: #e3ded3; } .note { background: #fff; } }
+  body { font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 44rem; margin: 3rem auto; padding: 0 1.25rem; background: #141216; color: #ece8e1; }
+  @media (prefers-color-scheme: light) { body { background: #faf9f5; color: #1a1a1a; } a.card { background: #fff; border-color: #e3ded3; } .note { background: #fff; } table { background: #fff; } th, td { border-color: #e3ded3; } }
   h1 { font-size: 1.4rem; margin: 0 0 .25rem; }
+  h2 { font-size: 1rem; margin: 1.75rem 0 .5rem; opacity: .85; }
   p.meta { margin: 0 0 1.5rem; opacity: .7; font-size: .9rem; }
   a.card { display: block; text-decoration: none; color: inherit; border: 1px solid #2e2a34; background: #1c1920; border-radius: 12px; padding: 1rem 1.1rem; margin: .75rem 0; }
   a.card strong { display: block; font-size: 1.05rem; margin-bottom: .2rem; }
   a.card span { opacity: .75; font-size: .92rem; }
   .note { margin-top: 1.5rem; padding: .7rem .95rem; border-left: 3px solid #e6b422; border-radius: 6px; background: #1c1920; font-size: .92rem; }
-  code { font-size: .9em; }
+  table { width: 100%; border-collapse: collapse; background: #1c1920; border-radius: 10px; overflow: hidden; font-size: .85rem; display: block; overflow-x: auto; }
+  th, td { text-align: left; padding: .45rem .7rem; border-bottom: 1px solid #2e2a34; vertical-align: top; }
+  th { font-weight: 600; opacity: .75; white-space: nowrap; }
+  td code { word-break: break-all; }
+  tr:last-child th, tr:last-child td { border-bottom: 0; }
 </style>
 </head>
 <body>
 <h1>OneRoyal — Stage 1 previews</h1>
-<p class="meta">Application revision <code>f2e447d</code> — the approved four-screen mobile UX sprint of 8 September 2026 on top of the acceptance-fix sprint and its follow-up (Markets rows with a separate Order control and plain bid/ask, the instrument page with a labelled Bid hero, tabs and a 64-point New order dock, Trade with New order in its header, a dedicated Choose instrument screen, one neutral ticket, in-app Back that pops the tab). Everything in both previews — accounts, prices, balances, orders, deposits, withdrawals — is simulated.</p>
+<p class="meta">Source revision <code>25ce62f40cfb</code>. Everything in both previews — accounts, prices, balances, orders, deposits, withdrawals — is simulated. This is the web export; it has never run on a physical iOS or Android device.</p>
+
 <a class="card" href="shipping/"><strong>Shipping preview</strong><span>The default configuration. No legal documents have been supplied, so the onboarding consent step fails closed and an application cannot be submitted.</span></a>
-<a class="card" href="qa/"><strong>QA preview</strong><span>The same build carrying clearly labelled non-production legal fixtures, so onboarding can be walked end to end. Not OneRoyal approved content.</span></a>
-<div class="note">Open a preview and press <strong>Explore the demo</strong> on the welcome screen. A page refresh returns you to the welcome screen — the demo holds its state in memory only. This is the web export; it has never run on a physical iOS or Android device.</div>
+<a class="card" href="qa/"><strong>QA preview</strong><span>The same source carrying clearly labelled non-production legal fixtures, so onboarding can be walked end to end. Not OneRoyal approved content.</span></a>
+
+<div class="note">Open a preview and press <strong>Explore the demo</strong> on the welcome screen. A page refresh returns you to the welcome screen — the demo holds its state in memory only. Each preview shows its own build identity on the welcome screen, and it is the identity below.</div>
+
+<h2>Shipping build</h2>
+<table>
+<tr><th>Source revision</th><td><code>25ce62f40cfb7e1d69887041cddd037f31d3b649</code></td></tr>
+<tr><th>Evidence-scope revision</th><td><code>25ce62f40cfb7e1d69887041cddd037f31d3b649</code></td></tr>
+<tr><th>Lockfile SHA-256</th><td><code>53b8af8fe2abab6a9a9c17a9678e8939cf419d98843e5d518e3a68c466dca3dc</code></td></tr>
+<tr><th>Build configuration</th><td><code>awaiting-approved-content</code></td></tr>
+<tr><th>Base path</th><td><code>/-oneroyal-stage1-audit/shipping</code></td></tr>
+<tr><th>Bundle</th><td><code>_expo/static/js/web/entry-4c9db729e6c2439d48458894a0fa44f1.js</code></td></tr>
+<tr><th>Bundle SHA-256</th><td><code>a84c1106e1c2acd6e28685bbe430256eec007bdf29a45fc58c229877894ae6cd</code></td></tr>
+<tr><th>Files exported</th><td><code>41 files, 8,758,415 bytes</code></td></tr>
+<tr><th>Built at</th><td><code>2026-09-10T02:28:27.979Z</code></td></tr>
+<tr><th>Evidence scope clean at build</th><td><code>yes</code></td></tr>
+</table>
+
+<h2>QA build</h2>
+<table>
+<tr><th>Source revision</th><td><code>25ce62f40cfb7e1d69887041cddd037f31d3b649</code></td></tr>
+<tr><th>Evidence-scope revision</th><td><code>25ce62f40cfb7e1d69887041cddd037f31d3b649</code></td></tr>
+<tr><th>Lockfile SHA-256</th><td><code>53b8af8fe2abab6a9a9c17a9678e8939cf419d98843e5d518e3a68c466dca3dc</code></td></tr>
+<tr><th>Build configuration</th><td><code>non-production</code></td></tr>
+<tr><th>Base path</th><td><code>/-oneroyal-stage1-audit/qa</code></td></tr>
+<tr><th>Bundle</th><td><code>_expo/static/js/web/entry-305c3f7aa25b5e28e8e32f36d7646a7a.js</code></td></tr>
+<tr><th>Bundle SHA-256</th><td><code>c9601733e80e4b2af57a5a324e803158b625f95de667cef73ffe26fe516249e3</code></td></tr>
+<tr><th>Files exported</th><td><code>41 files, 8,758,147 bytes</code></td></tr>
+<tr><th>Built at</th><td><code>2026-09-10T02:28:52.035Z</code></td></tr>
+<tr><th>Evidence scope clean at build</th><td><code>yes</code></td></tr>
+</table>
+
+<div class="note">Every figure above is read from the <code>build-manifest.json</code> that each export carries, written by the same script that stamped the identity into the bundle. This page is generated, not written, so it cannot name a revision other than the one serving it.</div>
 </body>
 </html>
