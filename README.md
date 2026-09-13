@@ -3,15 +3,47 @@
 Two self-contained builds of the OneRoyal mobile application's web export,
 published for review on GitHub Pages.
 
+<!-- identity:start -->
 | | |
 | --- | --- |
-| **Application revision** | `3e08271a14da2da595a0fe36b5b6de62337c1233` on `claude/oneroyal-graphite-integration-8fcqxv` in `relannan-gif/Royal-trading-app` |
-| Shipping bundle | `entry-6f80925af459bd833f5392f4b0b7fd5e.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=` |
-| QA bundle | `entry-2f5132c66e263be0efd4011c6b7c5f54.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=non-production` |
+| **Application revision** | `862748e6a249f3cca28dadfac12924eb783898e4` on `claude/oneroyal-graphite-integration-8fcqxv` in `relannan-gif/Royal-trading-app` |
+| Shipping bundle | `entry-09a8c05cf55cf062b10a4eacc7d4c160.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=` |
+| QA bundle | `entry-4dbc2bf747e8294b8b138c1377659018.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=non-production` |
 | Build-time difference from the audit bundle | `expo.experiments.baseUrl` set to `/-oneroyal-stage1-audit/shipping` and `/-oneroyal-stage1-audit/qa` respectively, so routing works under this repository's Pages path. No source change. |
+<!-- identity:end -->
 
-This revision is the consolidated design and correction sprint of 8–9 September 2026, completed against the approved design catalogue: the 68 main-page designs and their supporting states applied across the app on the shared graphite/plum/yellow system, the nine priority-one audit defects and the remaining audit rows corrected at the data boundary and asserted on state, and the four explicitly approved trading screens (Trade, Choose an instrument, the order ticket and its review) preserved with their volume picker, exposure sizing and stop-loss refinements. The supporting states added in this revision include order expiry, saved and editable chart drawings, filtered trades behind any performance breakdown, insight data coverage, support attachments with a closed conversation and a failed reply that keeps the client's words, profile change requests that leave the stored details in use, a crypto deposit that asks for the network before showing any transfer detail, a withdrawal step-up that refuses a wrong code without submitting anything, a corporate review stage, and the identity-verification handoff with its file review, upload progress and camera-permission fallback. Three states that a client must never misread are also built: an order or a close whose answer was lost is reported as neither placed nor failed, with the reference to check, and a cancellation that a fill beat names the position the client now holds. The QA preview carries labelled non-production legal placeholders so an application can be completed; the shipping preview fails closed on the declarations step until OneRoyal supplies approved legal text. Rewards enrolment and the hosted payment handoff are not built: no campaign is configured and no payment provider is connected, and each says so rather than showing a form that cannot answer. Partners is reserved and deliberately not built. Physical iOS and Android devices, real payment, identity and OAuth providers were not exercised. The evidence workbook (journey recordings, before/after captures, registers)
-is not part of this repository.
+This revision is the correction pack of 12 September 2026: all fifty-five
+recorded defects, OR-01 to OR-55, corrected and bound to a test that runs.
+
+The work under it is mostly not cosmetic. A shared client identity now scopes
+every stored record, so a Market Play prediction, a prop purchase and a robot
+draft survive a reload and belong to one client rather than to the browser.
+Prop purchases, payouts and breach appeals write durable records through the
+ledger instead of a screen's own state, and each refreshes the views behind
+it — a paid challenge no longer confirms and then tells the client it is not
+on their account. Robots run against an explicit eligible ORX destination
+with versioned consent that a changed limit invalidates, and the simulation
+advances only while a robot screen is open, which the dashboard now says in
+as many words instead of implying a service that is not running.
+
+Five of the defects found in this pass were commercially serious and are
+worth naming: a payment that confirmed and then denied the purchase, a robot
+that read "Running" after being stopped, a blank screen in the middle of the
+robot setup, a Market Play prediction that could be taken and then lost on
+reload, and a simulation that kept running after the client left the screen.
+None of them were visible from a route list; each was found by a suite that
+had been printing results nobody was recording.
+
+The QA preview carries labelled non-production legal placeholders so an
+application can be completed; the shipping preview fails closed on the
+declarations step until OneRoyal supplies approved legal text. Rewards
+enrolment and the hosted payment handoff are not built: no campaign is
+configured and no payment provider is connected, and each says so rather than
+showing a form that cannot answer. Partners is reserved and deliberately not
+built. Physical iOS and Android devices, VoiceOver, TalkBack and real
+payment, identity and OAuth providers were not exercised, and the delivery
+records them as not run rather than as passed. The evidence workbook (journey
+recordings, before/after captures, registers) is not part of this repository.
 
 Direct routes on either preview (press **Explore the demo** first for the
 in-app ones; a refresh returns to Welcome): `/welcome`,
