@@ -1,27 +1,27 @@
 {
   "kind": "oneroyal.build-manifest",
   "version": 1,
-  "sourceRevision": "9ece7d75cd7731c1de83384113c0be0fd71a397c",
-  "treeRevision": "59b1cb14446ce5b5247fd877159178f5c3bdd851",
+  "sourceRevision": "32ec336b014330e4f6a3b057b28aa157780b8f6a",
+  "treeRevision": "9576167b2a7985e170cc8c2fdc1abefcc605313c",
   "lockfileHash": "53b8af8fe2abab6a9a9c17a9678e8939cf419d98843e5d518e3a68c466dca3dc",
   "configuration": "non-production",
-  "basePath": "-oneroyal-stage1-audit/qa",
-  "builtAt": "2026-09-15T11:19:00.035Z",
+  "basePath": "/-oneroyal-stage1-audit/qa",
+  "builtAt": "2026-09-16T20:52:12.878Z",
   "scopeClean": true,
   "evidenceScope": "apps, packages, scripts, package.json, pnpm-workspace.yaml, pnpm-lock.yaml, turbo.json, tsconfig.base.json",
   "bundle": {
-    "path": "_expo/static/js/web/entry-b912c0e6e5000dae5453cd5a3747ec18.js",
-    "bytes": 8618699,
-    "sha256": "b8f4a3f23a6263b1920c51d0fdd03eb1171144a95e3592b1f977970afe8f1345"
+    "path": "_expo/static/js/web/entry-c7692bc48f9b2cc91ee4cb1c61e21d17.js",
+    "bytes": 8699826,
+    "sha256": "0186b673c342bdac8c263df135b45b5588d0ea84061d16740eec67a5847d2688"
   },
   "export": {
     "fileCount": 41,
-    "bytes": 11019842,
+    "bytes": 11100969,
     "files": [
       {
-        "path": "_expo/static/js/web/entry-b912c0e6e5000dae5453cd5a3747ec18.js",
-        "bytes": 8618699,
-        "sha256": "b8f4a3f23a6263b1920c51d0fdd03eb1171144a95e3592b1f977970afe8f1345"
+        "path": "_expo/static/js/web/entry-c7692bc48f9b2cc91ee4cb1c61e21d17.js",
+        "bytes": 8699826,
+        "sha256": "0186b673c342bdac8c263df135b45b5588d0ea84061d16740eec67a5847d2688"
       },
       {
         "path": "assets/__node_modules/@expo-google-fonts/almarai/Almarai_300Light.5b0dec05feae02fef51afd517af94d4c.ttf",
@@ -216,7 +216,7 @@
       {
         "path": "index.html",
         "bytes": 1201,
-        "sha256": "2d403d7b253ffddaf37b589a8f33a1f693cfa7f6943a80443b3a46d284642fa3"
+        "sha256": "900631f490ae7483b11368dee30b7f47673c18a7609c1282a6ccc31bb5485abc"
       },
       {
         "path": "metadata.json",
