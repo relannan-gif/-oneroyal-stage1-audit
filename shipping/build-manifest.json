@@ -1,27 +1,27 @@
 {
   "kind": "oneroyal.build-manifest",
   "version": 1,
-  "sourceRevision": "32ec336b014330e4f6a3b057b28aa157780b8f6a",
-  "treeRevision": "9576167b2a7985e170cc8c2fdc1abefcc605313c",
+  "sourceRevision": "d961f5bfe0540c1e54a77c5c32d4430b6a5ee9f2",
+  "treeRevision": "d961f5bfe0540c1e54a77c5c32d4430b6a5ee9f2",
   "lockfileHash": "53b8af8fe2abab6a9a9c17a9678e8939cf419d98843e5d518e3a68c466dca3dc",
   "configuration": "awaiting-approved-content",
   "basePath": "/-oneroyal-stage1-audit/shipping",
-  "builtAt": "2026-09-16T20:50:52.421Z",
+  "builtAt": "2026-09-17T07:44:24.429Z",
   "scopeClean": true,
   "evidenceScope": "apps, packages, scripts, package.json, pnpm-workspace.yaml, pnpm-lock.yaml, turbo.json, tsconfig.base.json",
   "bundle": {
-    "path": "_expo/static/js/web/entry-218e74f45476f34b73a12ebadeacbda9.js",
-    "bytes": 8700088,
-    "sha256": "a9ec02df5c73f5fa42e95a6d121881160377be1a41a3623704914633aad14175"
+    "path": "_expo/static/js/web/entry-a1036f3c8cdfdf30da540e5bad3ad8ac.js",
+    "bytes": 8700933,
+    "sha256": "f319e7dd7d9eb8c7dfa444edd1c19a0f1729a3f881e8635fa9a3a86342c26a6f"
   },
   "export": {
     "fileCount": 41,
-    "bytes": 11101237,
+    "bytes": 11102082,
     "files": [
       {
-        "path": "_expo/static/js/web/entry-218e74f45476f34b73a12ebadeacbda9.js",
-        "bytes": 8700088,
-        "sha256": "a9ec02df5c73f5fa42e95a6d121881160377be1a41a3623704914633aad14175"
+        "path": "_expo/static/js/web/entry-a1036f3c8cdfdf30da540e5bad3ad8ac.js",
+        "bytes": 8700933,
+        "sha256": "f319e7dd7d9eb8c7dfa444edd1c19a0f1729a3f881e8635fa9a3a86342c26a6f"
       },
       {
         "path": "assets/__node_modules/@expo-google-fonts/almarai/Almarai_300Light.5b0dec05feae02fef51afd517af94d4c.ttf",
@@ -216,7 +216,7 @@
       {
         "path": "index.html",
         "bytes": 1207,
-        "sha256": "7e77efcfb05c66bfd55133a9955d936e219e78c6f904be8c1e0d8a23e11d6125"
+        "sha256": "e68045317e465c8946d05985e31d2b72284eefbf6f2583b9e008ba44fae248d6"
       },
       {
         "path": "metadata.json",
