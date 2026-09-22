@@ -1,27 +1,27 @@
 {
   "kind": "oneroyal.build-manifest",
   "version": 1,
-  "sourceRevision": "248fcad38d0d802ba5a0a40a15a399b8a627a562",
-  "treeRevision": "248fcad38d0d802ba5a0a40a15a399b8a627a562",
-  "lockfileHash": "53b8af8fe2abab6a9a9c17a9678e8939cf419d98843e5d518e3a68c466dca3dc",
+  "sourceRevision": "c8f6fb57fe2c1ed2afb94f3dcd1f2a1c93ffe8d2",
+  "treeRevision": "c8f6fb57fe2c1ed2afb94f3dcd1f2a1c93ffe8d2",
+  "lockfileHash": "bb7cadb56c130acea0327a1a1dadbf727ca9e59f08c9e522a1cf7438e04b3a40",
   "configuration": "awaiting-approved-content",
-  "basePath": "/-oneroyal-stage1-audit/shipping",
-  "builtAt": "2026-09-18T10:52:16.100Z",
+  "basePath": "/",
+  "builtAt": "2026-09-22T00:21:15.964Z",
   "scopeClean": true,
   "evidenceScope": "apps, packages, scripts, package.json, pnpm-workspace.yaml, pnpm-lock.yaml, turbo.json, tsconfig.base.json",
   "bundle": {
-    "path": "_expo/static/js/web/entry-8dc3ee24c6fdddb58416264c8d0d7003.js",
-    "bytes": 11720196,
-    "sha256": "57932692b48da6fac4fb4e1cde9df591273eed9ecb8ceb23a4a8cf5234bb74c6"
+    "path": "_expo/static/js/web/entry-79672ed7dd6215c9b6e6fa64f892e84d.js",
+    "bytes": 11917990,
+    "sha256": "45968322d75ff0ecac6c5ba0b8ba6a58c5bb502a662d6582b5f30b1f27c255c4"
   },
   "export": {
     "fileCount": 41,
-    "bytes": 14121345,
+    "bytes": 14319107,
     "files": [
       {
-        "path": "_expo/static/js/web/entry-8dc3ee24c6fdddb58416264c8d0d7003.js",
-        "bytes": 11720196,
-        "sha256": "57932692b48da6fac4fb4e1cde9df591273eed9ecb8ceb23a4a8cf5234bb74c6"
+        "path": "_expo/static/js/web/entry-79672ed7dd6215c9b6e6fa64f892e84d.js",
+        "bytes": 11917990,
+        "sha256": "45968322d75ff0ecac6c5ba0b8ba6a58c5bb502a662d6582b5f30b1f27c255c4"
       },
       {
         "path": "assets/__node_modules/@expo-google-fonts/almarai/Almarai_300Light.5b0dec05feae02fef51afd517af94d4c.ttf",
@@ -215,8 +215,8 @@
       },
       {
         "path": "index.html",
-        "bytes": 1207,
-        "sha256": "ee8a7cf8db4702dde925327b040b7a2ed860ce9c27c1ddcc097de2aa91ddf38f"
+        "bytes": 1175,
+        "sha256": "e2745622d96d36a1cea7d14610acde1b416ee8c5be342d48d5a60a44d63cf679"
       },
       {
         "path": "metadata.json",
