@@ -1,27 +1,27 @@
 {
   "kind": "oneroyal.build-manifest",
   "version": 1,
-  "sourceRevision": "c8f6fb57fe2c1ed2afb94f3dcd1f2a1c93ffe8d2",
-  "treeRevision": "4223e99be92e386add1cdd6bc4834edd3d5d1c0c",
+  "sourceRevision": "498ed9ad628a42b95ba71554d0a019ed9cc4e8bf",
+  "treeRevision": "498ed9ad628a42b95ba71554d0a019ed9cc4e8bf",
   "lockfileHash": "bb7cadb56c130acea0327a1a1dadbf727ca9e59f08c9e522a1cf7438e04b3a40",
   "configuration": "non-production",
-  "basePath": "/",
-  "builtAt": "2026-09-22T00:22:05.642Z",
+  "basePath": "/-oneroyal-stage1-audit/qa",
+  "builtAt": "2026-09-23T19:09:33.084Z",
   "scopeClean": true,
   "evidenceScope": "apps, packages, scripts, package.json, pnpm-workspace.yaml, pnpm-lock.yaml, turbo.json, tsconfig.base.json",
   "bundle": {
-    "path": "_expo/static/js/web/entry-e17da2869123002dac7971c3b47fe425.js",
-    "bytes": 11917962,
-    "sha256": "5d62222703687cfb1f97fc08744a2ad59ed9ca1a2b00d4777d1cc193e55aae09"
+    "path": "_expo/static/js/web/entry-980729fe3e271ffc7bb09ef957444d4a.js",
+    "bytes": 11973257,
+    "sha256": "4646b6524795f77b74040f1007540967bc76c2b5cbb66b066a32f3817575992b"
   },
   "export": {
     "fileCount": 41,
-    "bytes": 14319079,
+    "bytes": 14374400,
     "files": [
       {
-        "path": "_expo/static/js/web/entry-e17da2869123002dac7971c3b47fe425.js",
-        "bytes": 11917962,
-        "sha256": "5d62222703687cfb1f97fc08744a2ad59ed9ca1a2b00d4777d1cc193e55aae09"
+        "path": "_expo/static/js/web/entry-980729fe3e271ffc7bb09ef957444d4a.js",
+        "bytes": 11973257,
+        "sha256": "4646b6524795f77b74040f1007540967bc76c2b5cbb66b066a32f3817575992b"
       },
       {
         "path": "assets/__node_modules/@expo-google-fonts/almarai/Almarai_300Light.5b0dec05feae02fef51afd517af94d4c.ttf",
@@ -215,8 +215,8 @@
       },
       {
         "path": "index.html",
-        "bytes": 1175,
-        "sha256": "3ea8b5b0970c18620146d2cd1e0e67c3c469da46f51b03179379b27918dc514a"
+        "bytes": 1201,
+        "sha256": "0cab226091cdbda6ab6b11344244d56b2cdd2f7331ee384dbec829d968318b95"
       },
       {
         "path": "metadata.json",

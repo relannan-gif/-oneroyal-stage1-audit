@@ -1,27 +1,27 @@
 {
   "kind": "oneroyal.build-manifest",
   "version": 1,
-  "sourceRevision": "c8f6fb57fe2c1ed2afb94f3dcd1f2a1c93ffe8d2",
-  "treeRevision": "c8f6fb57fe2c1ed2afb94f3dcd1f2a1c93ffe8d2",
+  "sourceRevision": "498ed9ad628a42b95ba71554d0a019ed9cc4e8bf",
+  "treeRevision": "498ed9ad628a42b95ba71554d0a019ed9cc4e8bf",
   "lockfileHash": "bb7cadb56c130acea0327a1a1dadbf727ca9e59f08c9e522a1cf7438e04b3a40",
   "configuration": "awaiting-approved-content",
-  "basePath": "/",
-  "builtAt": "2026-09-22T00:21:15.964Z",
+  "basePath": "/-oneroyal-stage1-audit/shipping",
+  "builtAt": "2026-09-23T19:08:58.113Z",
   "scopeClean": true,
   "evidenceScope": "apps, packages, scripts, package.json, pnpm-workspace.yaml, pnpm-lock.yaml, turbo.json, tsconfig.base.json",
   "bundle": {
-    "path": "_expo/static/js/web/entry-79672ed7dd6215c9b6e6fa64f892e84d.js",
-    "bytes": 11917990,
-    "sha256": "45968322d75ff0ecac6c5ba0b8ba6a58c5bb502a662d6582b5f30b1f27c255c4"
+    "path": "_expo/static/js/web/entry-2566666d03e12dfc5fbf9526a485bfb4.js",
+    "bytes": 11973519,
+    "sha256": "afe1fcea65bdb348cf42611ea835ef6967037575510d8f0430e940eea87effad"
   },
   "export": {
     "fileCount": 41,
-    "bytes": 14319107,
+    "bytes": 14374668,
     "files": [
       {
-        "path": "_expo/static/js/web/entry-79672ed7dd6215c9b6e6fa64f892e84d.js",
-        "bytes": 11917990,
-        "sha256": "45968322d75ff0ecac6c5ba0b8ba6a58c5bb502a662d6582b5f30b1f27c255c4"
+        "path": "_expo/static/js/web/entry-2566666d03e12dfc5fbf9526a485bfb4.js",
+        "bytes": 11973519,
+        "sha256": "afe1fcea65bdb348cf42611ea835ef6967037575510d8f0430e940eea87effad"
       },
       {
         "path": "assets/__node_modules/@expo-google-fonts/almarai/Almarai_300Light.5b0dec05feae02fef51afd517af94d4c.ttf",
@@ -215,8 +215,8 @@
       },
       {
         "path": "index.html",
-        "bytes": 1175,
-        "sha256": "e2745622d96d36a1cea7d14610acde1b416ee8c5be342d48d5a60a44d63cf679"
+        "bytes": 1207,
+        "sha256": "1b999f5e17e01af0a7238ba5380d9785a304ef6f551af817e734725400e85dd0"
       },
       {
         "path": "metadata.json",
