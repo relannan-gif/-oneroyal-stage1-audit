@@ -1,0 +1,126 @@
+# Live verification of the two previews, from a GitHub runner (A21.2).
+#
+# Staged into the site repository by docs/repair-sprint/sep24/tools/stage-live-runner.sh
+# in relannan-gif/Royal-trading-app; the runner files under verify/ are copies
+# of that repository's files at the frozen revision. The records and a RUNNER.json
+# (site commit, run, sha256 of every runner file) are committed under
+# verification/<run id>/, where import-live.mjs checks them before they count.
+name: Live verification
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['shipping/**', 'qa/**', 'verify/**', '.github/workflows/live-verify.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: live-verify
+  cancel-in-progress: false
+
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      LIVE: https://relannan-gif.github.io/-oneroyal-stage1-audit
+      OUT: ${{ github.workspace }}/results
+      RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Revision the site commit publishes
+        id: rev
+        run: |
+          r=$(node -p "require('./shipping/build-manifest.json').sourceRevision")
+          q=$(node -p "require('./qa/build-manifest.json').sourceRevision")
+          test "$r" = "$q"
+          echo "revision=$r" >> "$GITHUB_OUTPUT"
+
+      - name: Wait for Pages to serve this commit's manifests
+        run: |
+          for i in $(seq 1 60); do
+            ok=1
+            for p in shipping qa; do
+              curl -sf "$LIVE/$p/build-manifest.json?nocache=$RANDOM" -o /tmp/m.json && cmp -s /tmp/m.json "$p/build-manifest.json" || ok=0
+            done
+            [ $ok = 1 ] && echo "served after $i checks" && exit 0
+            sleep 20
+          done
+          echo "Pages never served this commit's manifests"; exit 1
+
+      - name: Install Playwright and Chromium
+        run: |
+          cd verify && npm init -y >/dev/null && npm install --no-save playwright-core@1.63.0
+          npx playwright-core install --with-deps chromium
+
+      - name: Live verification (displayed revision, served bytes = this commit's files)
+        continue-on-error: true
+        env:
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/verify/node_modules/playwright-core/index.js
+        run: |
+          mkdir -p "$OUT"
+          node verify/scripts/verify-deployed-previews.mjs --url "$LIVE" \
+            --expect-revision ${{ steps.rev.outputs.revision }} \
+            --local-shipping shipping --local-qa qa --out "$OUT/live-verification.json"
+
+      - name: Live consuming journeys (both previews)
+        continue-on-error: true
+        env:
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/verify/node_modules/playwright-core/index.js
+          JOURNEYS_DECLARED_REVISION: ${{ steps.rev.outputs.revision }}
+          JOURNEYS_DECLARED_WHERE: ${{ env.RUN_URL }}
+          JOURNEYS_BASE: ${{ env.LIVE }}/shipping
+          JOURNEYS_BASE_NONPROD: ${{ env.LIVE }}/qa
+          JOURNEYS_OUT_JSON: ${{ env.OUT }}/live-consuming-journeys.json
+          JOURNEYS_OUT_DIR: ${{ env.OUT }}/live-consuming-journeys
+        run: node verify/scripts/sep22-consuming-journeys.mjs
+
+      - name: Live learning journeys (both previews)
+        continue-on-error: true
+        env:
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/verify/node_modules/playwright-core/index.js
+          JOURNEYS_DECLARED_REVISION: ${{ steps.rev.outputs.revision }}
+          JOURNEYS_DECLARED_WHERE: ${{ env.RUN_URL }}
+          JOURNEYS_BASE: ${{ env.LIVE }}/shipping
+          JOURNEYS_BASE_NONPROD: ${{ env.LIVE }}/qa
+          JOURNEYS_OUT_JSON: ${{ env.OUT }}/live-learning-journeys.json
+          JOURNEYS_OUT_DIR: ${{ env.OUT }}/live-learning-journeys
+        run: node verify/scripts/sep24-learning-journeys.mjs
+
+      - name: Live two-tab check (both previews)
+        continue-on-error: true
+        env:
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/verify/node_modules/playwright-core/index.js
+          JOURNEYS_DECLARED_REVISION: ${{ steps.rev.outputs.revision }}
+          JOURNEYS_DECLARED_WHERE: ${{ env.RUN_URL }}
+          TWO_TAB_OUT_JSON: ${{ env.OUT }}/live-two-tab.json
+        run: node verify/scripts/sep24-two-tab-concurrency.mjs "$LIVE/shipping" "$LIVE/qa"
+
+      - name: Record the runner and commit the results
+        run: |
+          dir=verification/${{ github.run_id }}
+          mkdir -p "$dir"
+          cp -r "$OUT"/. "$dir"/
+          node -e '
+            const {createHash}=require("crypto"),fs=require("fs"),path=require("path");
+            const list=[];const walk=(d)=>{for(const e of fs.readdirSync(d,{withFileTypes:true})){
+              const p=path.join(d,e.name); if(e.name==="node_modules"||(d==="verify"&&/^package(-lock)?\.json$/.test(e.name)))continue;
+              e.isDirectory()?walk(p):list.push({path:path.relative("verify",p),sha256:createHash("sha256").update(fs.readFileSync(p)).digest("hex")});}};
+            walk("verify");
+            fs.writeFileSync(process.argv[1],JSON.stringify({siteCommit:process.env.GITHUB_SHA,runId:process.env.GITHUB_RUN_ID,
+              runAttempt:process.env.GITHUB_RUN_ATTEMPT,runUrl:process.env.RUN_URL,revision:process.argv[2],
+              finishedAt:new Date().toISOString(),files:list},null,2)+"\n");
+          ' "$dir/RUNNER.json" ${{ steps.rev.outputs.revision }}
+          git config user.name "live-verify"
+          git config user.email "live-verify@users.noreply.github.com"
+          git add "$dir"
+          git commit -q -m "Live verification ${{ github.run_id }} of ${{ steps.rev.outputs.revision }}"
+          for i in 1 2 3 4; do git pull -q --rebase && git push -q && exit 0; sleep $((2**i)); done
+          exit 1
