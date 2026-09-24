@@ -1,0 +1,3802 @@
+{
+  "ranAt": "2026-09-24T20:18:58.665Z",
+  "commit": null,
+  "sourceRevision": "8e19e0a07a97824359ed08f5ce2f1c8eb6092a7d",
+  "revisionDeclaration": {
+    "where": "https://github.com/relannan-gif/-oneroyal-stage1-audit/actions/runs/36053836104",
+    "files": [
+      {
+        "path": "scripts/sep22-consuming-journeys.mjs",
+        "sha256": "3b3d68ea49f0ff413679c8b558541312875c4d4f45039835c3aae6403a83ecfe"
+      },
+      {
+        "path": "scripts/lib/runner-revision.mjs",
+        "sha256": "b5a6bb81a61af8fb0fe52873bd43d8dc17b171f9e48ee3fea5fedb1624ce90e3"
+      }
+    ]
+  },
+  "bases": {
+    "shipping": "https://relannan-gif.github.io/-oneroyal-stage1-audit/shipping",
+    "qa": "https://relannan-gif.github.io/-oneroyal-stage1-audit/qa"
+  },
+  "buildIdentity": {
+    "qa": "Build identity · 8e19e0a07a97 · Non-production legal fixtures",
+    "shipping": "Build identity · 8e19e0a07a97 · Awaiting approved legal content"
+  },
+  "builds": {
+    "qa": {
+      "sourceRevision": "8e19e0a07a97824359ed08f5ce2f1c8eb6092a7d",
+      "treeRevision": "8e19e0a07a97824359ed08f5ce2f1c8eb6092a7d",
+      "configuration": "non-production",
+      "scopeClean": true
+    },
+    "shipping": {
+      "sourceRevision": "8e19e0a07a97824359ed08f5ce2f1c8eb6092a7d",
+      "treeRevision": "8e19e0a07a97824359ed08f5ce2f1c8eb6092a7d",
+      "configuration": "awaiting-approved-content",
+      "scopeClean": true
+    }
+  },
+  "specs": [
+    {
+      "id": "F09",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F13",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F16",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F21",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F24",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F25",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F33",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F36",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F37",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F42",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F56",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F59",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F64",
+      "previews": [
+        "qa"
+      ]
+    },
+    {
+      "id": "F72",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F74",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F75",
+      "previews": [
+        "qa"
+      ]
+    },
+    {
+      "id": "F132",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F133",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F137",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F140",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F141",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F142",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F147",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    },
+    {
+      "id": "F144",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    }
+  ],
+  "engine": "chromium 153.0.8010.12",
+  "viewport": {
+    "width": 393,
+    "height": 852
+  },
+  "timezone": "Asia/Beirut",
+  "filtered": null,
+  "findings": [
+    {
+      "id": "F09",
+      "title": "Demo context becomes Live in account chooser",
+      "preview": "shipping",
+      "steps": [],
+      "checks": [
+        {
+          "name": "Home opens the account chooser",
+          "ok": true,
+          "detail": "/home/accounts"
+        },
+        {
+          "name": "the Demo segment is selected",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Add account from the Demo group opens a demo draft",
+          "ok": true,
+          "detail": "/accounts/new?environment=demo"
+        },
+        {
+          "name": "the environment control shows Demo",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "and the practice starting-balance choices are offered",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Back returns to the chooser",
+          "ok": true,
+          "detail": "/home/accounts"
+        },
+        {
+          "name": "with Demo still selected",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "ArrowLeft then Space selects Live from the keyboard",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "ArrowRight then Space selects Demo again",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Enter on Add account carries the keyboard-chosen Demo environment",
+          "ok": true,
+          "detail": "/accounts/new?environment=demo"
+        },
+        {
+          "name": "Add account from the Live group opens a live draft",
+          "ok": true,
+          "detail": "/accounts/new?environment=live · Live selected: true · Demo selected: false · new-account screens mounted: 1"
+        },
+        {
+          "name": "and offers no practice starting balance",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F09-shipping-demo-draft.png",
+        "F09-shipping-live-draft.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F09",
+      "title": "Demo context becomes Live in account chooser",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "Home opens the account chooser",
+          "ok": true,
+          "detail": "/home/accounts"
+        },
+        {
+          "name": "the Demo segment is selected",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Add account from the Demo group opens a demo draft",
+          "ok": true,
+          "detail": "/accounts/new?environment=demo"
+        },
+        {
+          "name": "the environment control shows Demo",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "and the practice starting-balance choices are offered",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Back returns to the chooser",
+          "ok": true,
+          "detail": "/home/accounts"
+        },
+        {
+          "name": "with Demo still selected",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "ArrowLeft then Space selects Live from the keyboard",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "ArrowRight then Space selects Demo again",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Enter on Add account carries the keyboard-chosen Demo environment",
+          "ok": true,
+          "detail": "/accounts/new?environment=demo"
+        },
+        {
+          "name": "Add account from the Live group opens a live draft",
+          "ok": true,
+          "detail": "/accounts/new?environment=live · Live selected: true · Demo selected: false · new-account screens mounted: 1"
+        },
+        {
+          "name": "and offers no practice starting balance",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F09-qa-demo-draft.png",
+        "F09-qa-live-draft.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F13",
+      "title": "Internal IDs and unformatted values leak into financial review",
+      "preview": "shipping",
+      "steps": [],
+      "checks": [
+        {
+          "name": "a PAMM manager is offered",
+          "ok": true,
+          "detail": "pamm-manager-str-harbour,pamm-manager-str-keystone"
+        },
+        {
+          "name": "the PAMM review opens",
+          "ok": true,
+          "detail": "/hub/strategies/pamm/str-harbour/review"
+        },
+        {
+          "name": "the PAMM review names the account, never its id, on any frame",
+          "ok": true,
+          "detail": "From Main"
+        },
+        {
+          "name": "a copy provider is offered",
+          "ok": true,
+          "detail": "copy-provider-str-atlas,copy-provider-str-meridian,copy-provider-str-vertex"
+        },
+        {
+          "name": "the Copy review opens",
+          "ok": true,
+          "detail": "/hub/strategies/copy/str-atlas/review"
+        },
+        {
+          "name": "the Copy review names the account, never its id, on any frame",
+          "ok": true,
+          "detail": "Account Main"
+        },
+        {
+          "name": "the subscription lists copied trades",
+          "ok": true,
+          "detail": "copy-trade-pos-copy-alc-501-mt-4,copy-trade-trd-copy-alc-501-mt-3,copy-trade-trd-copy-alc-501-mt-1,copy-trade-trd-copy-a"
+        },
+        {
+          "name": "a copied trade opens",
+          "ok": true,
+          "detail": "/hub/strategies/copy/subscription/alc-501/trade/pos-copy-alc-501-mt-4"
+        },
+        {
+          "name": "the copied-trade open price is formatted at an instrument precision (1–5 decimals, not a raw float)",
+          "ok": true,
+          "detail": "Open price 1.08790"
+        },
+        {
+          "name": "no raw account id on the copied-trade screen",
+          "ok": true,
+          "detail": "Copied trade EURUSD Sell Still open Their trade Size 0.8 Open price 1.0879 Close price Still open Your trade Size 0.40 O"
+        },
+        {
+          "name": "the robot rules open",
+          "ok": true,
+          "detail": "/hub/robots/create/rules"
+        },
+        {
+          "name": "the backtest opens",
+          "ok": true,
+          "detail": "/hub/robots/create/backtest"
+        },
+        {
+          "name": "every ledger price carries gold’s two decimals, never a raw float",
+          "ok": true,
+          "detail": "0.10 2344.05 2346.05 20.00 0.10 2344.55 2346.55 20.00"
+        },
+        {
+          "name": "the destination step opens",
+          "ok": true,
+          "detail": "/hub/robots/create/account"
+        },
+        {
+          "name": "an eligible ORX account is offered",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the limits step opens",
+          "ok": true,
+          "detail": "/hub/robots/create/limits"
+        },
+        {
+          "name": "the limits step names the account, never its id, on any frame",
+          "ok": true,
+          "detail": "Main · ORX Run on"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F13-shipping-pamm-review.png",
+        "F13-shipping-copy-review.png",
+        "F13-shipping-copied-trade.png",
+        "F13-shipping-backtest.png",
+        "F13-shipping-robot-limits.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F13",
+      "title": "Internal IDs and unformatted values leak into financial review",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "a PAMM manager is offered",
+          "ok": true,
+          "detail": "pamm-manager-str-harbour,pamm-manager-str-keystone"
+        },
+        {
+          "name": "the PAMM review opens",
+          "ok": true,
+          "detail": "/hub/strategies/pamm/str-harbour/review"
+        },
+        {
+          "name": "the PAMM review names the account, never its id, on any frame",
+          "ok": true,
+          "detail": "From Main"
+        },
+        {
+          "name": "a copy provider is offered",
+          "ok": true,
+          "detail": "copy-provider-str-atlas,copy-provider-str-meridian,copy-provider-str-vertex"
+        },
+        {
+          "name": "the Copy review opens",
+          "ok": true,
+          "detail": "/hub/strategies/copy/str-atlas/review"
+        },
+        {
+          "name": "the Copy review names the account, never its id, on any frame",
+          "ok": true,
+          "detail": "Account Main"
+        },
+        {
+          "name": "the subscription lists copied trades",
+          "ok": true,
+          "detail": "copy-trade-pos-copy-alc-501-mt-4,copy-trade-trd-copy-alc-501-mt-1,copy-trade-trd-copy-alc-501-mt-2,copy-trade-trd-copy-a"
+        },
+        {
+          "name": "a copied trade opens",
+          "ok": true,
+          "detail": "/hub/strategies/copy/subscription/alc-501/trade/pos-copy-alc-501-mt-4"
+        },
+        {
+          "name": "the copied-trade open price is formatted at an instrument precision (1–5 decimals, not a raw float)",
+          "ok": true,
+          "detail": "Open price 1.08790"
+        },
+        {
+          "name": "no raw account id on the copied-trade screen",
+          "ok": true,
+          "detail": "QA Preview build with sample legal documents. Not OneRoyal approved content. Copied trade EURUSD Sell Still open Their t"
+        },
+        {
+          "name": "the robot rules open",
+          "ok": true,
+          "detail": "/hub/robots/create/rules"
+        },
+        {
+          "name": "the backtest opens",
+          "ok": true,
+          "detail": "/hub/robots/create/backtest"
+        },
+        {
+          "name": "every ledger price carries gold’s two decimals, never a raw float",
+          "ok": true,
+          "detail": "0.10 2344.05 2346.05 20.00 0.10 2344.55 2346.55 20.00"
+        },
+        {
+          "name": "the destination step opens",
+          "ok": true,
+          "detail": "/hub/robots/create/account"
+        },
+        {
+          "name": "an eligible ORX account is offered",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the limits step opens",
+          "ok": true,
+          "detail": "/hub/robots/create/limits"
+        },
+        {
+          "name": "the limits step names the account, never its id, on any frame",
+          "ok": true,
+          "detail": "Main · ORX Run on"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F13-qa-pamm-review.png",
+        "F13-qa-copy-review.png",
+        "F13-qa-copied-trade.png",
+        "F13-qa-backtest.png",
+        "F13-qa-robot-limits.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F16",
+      "title": "ORX receipt still labels credentials MetaTrader",
+      "preview": "shipping",
+      "steps": [],
+      "checks": [
+        {
+          "name": "the new-account form opens (Journey ORX)",
+          "ok": true,
+          "detail": "/accounts/new?environment=live"
+        },
+        {
+          "name": "the Journey ORX account is created and its receipt shown",
+          "ok": true,
+          "detail": "/accounts/new?environment=live"
+        },
+        {
+          "name": "an ORX receipt labels the login as ORX",
+          "ok": true,
+          "detail": "ORX login 5200001 Copy Server OneRoyal-ORX-Live01 Copy Leverage 1:200"
+        },
+        {
+          "name": "the receipt says Live",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the receipt offers copy controls for the credentials",
+          "ok": true,
+          "detail": "created-copy-login,created-copy-server"
+        },
+        {
+          "name": "Continue leaves the receipt behind for the created account",
+          "ok": true,
+          "detail": "/accounts/acc-orx-5200001"
+        },
+        {
+          "name": "the new-account form opens (Journey MT4)",
+          "ok": true,
+          "detail": "/accounts/new?environment=live"
+        },
+        {
+          "name": "the Journey MT4 account is created and its receipt shown",
+          "ok": true,
+          "detail": "/accounts/new?environment=live"
+        },
+        {
+          "name": "an MT4 receipt labels the login as MetaTrader",
+          "ok": true,
+          "detail": "MetaTrader login 5200002 Copy Server OneRoyal-MT4-Live01 Copy Leverage 1:200"
+        },
+        {
+          "name": "the new-account form opens (Journey Practice)",
+          "ok": true,
+          "detail": "/accounts/new?environment=demo"
+        },
+        {
+          "name": "the Journey Practice account is created and its receipt shown",
+          "ok": true,
+          "detail": "/accounts/new?environment=demo"
+        },
+        {
+          "name": "a practice ORX receipt labels the login as ORX",
+          "ok": true,
+          "detail": "ORX login 5200003 Copy Server OneRoyal-ORX-Demo01 Copy Leverage 1:200"
+        },
+        {
+          "name": "and says Demo",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F16-shipping-orx-live-receipt.png",
+        "F16-shipping-mt4-live-receipt.png",
+        "F16-shipping-orx-demo-receipt.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F16",
+      "title": "ORX receipt still labels credentials MetaTrader",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "the new-account form opens (Journey ORX)",
+          "ok": true,
+          "detail": "/accounts/new?environment=live"
+        },
+        {
+          "name": "the Journey ORX account is created and its receipt shown",
+          "ok": true,
+          "detail": "/accounts/new?environment=live"
+        },
+        {
+          "name": "an ORX receipt labels the login as ORX",
+          "ok": true,
+          "detail": "ORX login 5200001 Copy Server OneRoyal-ORX-Live01 Copy Leverage 1:200"
+        },
+        {
+          "name": "the receipt says Live",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the receipt offers copy controls for the credentials",
+          "ok": true,
+          "detail": "created-copy-login,created-copy-server"
+        },
+        {
+          "name": "Continue leaves the receipt behind for the created account",
+          "ok": true,
+          "detail": "/accounts/acc-orx-5200001"
+        },
+        {
+          "name": "the new-account form opens (Journey MT4)",
+          "ok": true,
+          "detail": "/accounts/new?environment=live"
+        },
+        {
+          "name": "the Journey MT4 account is created and its receipt shown",
+          "ok": true,
+          "detail": "/accounts/new?environment=live"
+        },
+        {
+          "name": "an MT4 receipt labels the login as MetaTrader",
+          "ok": true,
+          "detail": "MetaTrader login 5200002 Copy Server OneRoyal-MT4-Live01 Copy Leverage 1:200"
+        },
+        {
+          "name": "the new-account form opens (Journey Practice)",
+          "ok": true,
+          "detail": "/accounts/new?environment=demo"
+        },
+        {
+          "name": "the Journey Practice account is created and its receipt shown",
+          "ok": true,
+          "detail": "/accounts/new?environment=demo"
+        },
+        {
+          "name": "a practice ORX receipt labels the login as ORX",
+          "ok": true,
+          "detail": "ORX login 5200003 Copy Server OneRoyal-ORX-Demo01 Copy Leverage 1:200"
+        },
+        {
+          "name": "and says Demo",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F16-qa-orx-live-receipt.png",
+        "F16-qa-mt4-live-receipt.png",
+        "F16-qa-orx-demo-receipt.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F21",
+      "title": "Unsaved e-wallet provider text carries across rails",
+      "preview": "shipping",
+      "steps": [],
+      "checks": [
+        {
+          "name": "withdraw opens from Funds",
+          "ok": true,
+          "detail": "/hub/wallet/withdraw"
+        },
+        {
+          "name": "bank, crypto and e-wallet rails are offered",
+          "ok": true,
+          "detail": "withdraw-method-pm-bank-wire,withdraw-method-pm-card,withdraw-method-pm-crypto,withdraw-method-pm-local-depositor,withdraw-method-pm-neteller,withdraw-method-pm-skrill,withdraw-method-pm-whish"
+        },
+        {
+          "name": "a short bank identifier is refused on the bank rail",
+          "ok": true,
+          "detail": "save disabled: true; error banner: false"
+        },
+        {
+          "name": "the crypto rail starts with no beneficiary text",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "its network field is reset from the crypto method, not the bank name",
+          "ok": true,
+          "detail": "TRC-20 (Tron)"
+        },
+        {
+          "name": "its identifier is empty",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the bank rail’s error does not carry over",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the e-wallet rail starts with an empty provider field",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "and an empty identifier",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "and an empty beneficiary",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "back on the bank rail, the e-wallet provider text is gone",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F21-shipping-bank-draft.png",
+        "F21-shipping-crypto-draft.png",
+        "F21-shipping-ewallet-then-bank.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F21",
+      "title": "Unsaved e-wallet provider text carries across rails",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "withdraw opens from Funds",
+          "ok": true,
+          "detail": "/hub/wallet/withdraw"
+        },
+        {
+          "name": "bank, crypto and e-wallet rails are offered",
+          "ok": true,
+          "detail": "withdraw-method-pm-bank-wire,withdraw-method-pm-card,withdraw-method-pm-crypto,withdraw-method-pm-local-depositor,withdraw-method-pm-neteller,withdraw-method-pm-skrill,withdraw-method-pm-whish"
+        },
+        {
+          "name": "a short bank identifier is refused on the bank rail",
+          "ok": true,
+          "detail": "save disabled: true; error banner: false"
+        },
+        {
+          "name": "the crypto rail starts with no beneficiary text",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "its network field is reset from the crypto method, not the bank name",
+          "ok": true,
+          "detail": "TRC-20 (Tron)"
+        },
+        {
+          "name": "its identifier is empty",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the bank rail’s error does not carry over",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the e-wallet rail starts with an empty provider field",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "and an empty identifier",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "and an empty beneficiary",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "back on the bank rail, the e-wallet provider text is gone",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F21-qa-bank-draft.png",
+        "F21-qa-crypto-draft.png",
+        "F21-qa-ewallet-then-bank.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F24",
+      "title": "Portfolio omits account scope and uses an ambiguous equity label",
+      "preview": "shipping",
+      "steps": [],
+      "checks": [
+        {
+          "name": "the portfolio opens from Trade",
+          "ok": true,
+          "detail": "/trade/portfolio"
+        },
+        {
+          "name": "the header names the active account",
+          "ok": true,
+          "detail": "Portfolio Main"
+        },
+        {
+          "name": "the closed-trade chart carries an explanatory caption",
+          "ok": true,
+          "detail": "Opening equity plus each closed trade’s net result, in closing order. Open positions and deposits made during the period are not part of this line."
+        },
+        {
+          "name": "switching accounts renames the header",
+          "ok": true,
+          "detail": "Portfolio Crypto book"
+        },
+        {
+          "name": "the light theme is applied",
+          "ok": true,
+          "detail": "rgb(21, 23, 27) → rgb(255, 255, 255)"
+        },
+        {
+          "name": "in the light theme the header still names the account",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "and the caption is still there",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F24-shipping-main-performance.png",
+        "F24-shipping-ecn-performance.png",
+        "F24-shipping-light-theme.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F24",
+      "title": "Portfolio omits account scope and uses an ambiguous equity label",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "the portfolio opens from Trade",
+          "ok": true,
+          "detail": "/trade/portfolio"
+        },
+        {
+          "name": "the header names the active account",
+          "ok": true,
+          "detail": "Portfolio Main"
+        },
+        {
+          "name": "the closed-trade chart carries an explanatory caption",
+          "ok": true,
+          "detail": "Opening equity plus each closed trade’s net result, in closing order. Open positions and deposits made during the period are not part of this line."
+        },
+        {
+          "name": "switching accounts renames the header",
+          "ok": true,
+          "detail": "Portfolio Crypto book"
+        },
+        {
+          "name": "the light theme is applied",
+          "ok": true,
+          "detail": "rgb(21, 23, 27) → rgb(255, 255, 255)"
+        },
+        {
+          "name": "in the light theme the header still names the account",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "and the caption is still there",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F24-qa-main-performance.png",
+        "F24-qa-ecn-performance.png",
+        "F24-qa-light-theme.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F25",
+      "title": "ORX account platform details name MT4",
+      "preview": "shipping",
+      "steps": [],
+      "checks": [
+        {
+          "name": "the ORX account opens",
+          "ok": true,
+          "detail": "/accounts/acc-classic-usd"
+        },
+        {
+          "name": "the ORX account labels its login as ORX",
+          "ok": true,
+          "detail": "Main ORX · 5104772 · USD Deposit Trade Overview Settings Platform Platform SIGN-IN DETAILS ORX login 5104772 Copy Server OneRoyal-ORX-Live01 Copy ACCOUNT SETTINGS Leverage 1:200 Status Active Supports"
+        },
+        {
+          "name": "and its server is an ORX server",
+          "ok": true,
+          "detail": "OneRoyal-ORX-Live01"
+        },
+        {
+          "name": "nothing on it says MT4 or MetaTrader login",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the MT4 account labels its login as MetaTrader",
+          "ok": true,
+          "detail": "MT4 book MetaTrader 4 · 4201883 · USD Trading is external Open MetaTrader 4 to place or manage trades on this account. Deposit Overview Settings Platform Platform SIGN-IN DETAILS MetaTrader login 4201"
+        },
+        {
+          "name": "after a reload the ORX account still says ORX login",
+          "ok": true,
+          "detail": "/accounts/acc-classic-usd · Main ORX · 5104772 · USD Deposit Trade Overview Settings Platform Platform SIGN-IN DETAILS ORX login 5104772 Copy Server"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F25-shipping-orx-platform.png",
+        "F25-shipping-mt4-platform.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F25",
+      "title": "ORX account platform details name MT4",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "the ORX account opens",
+          "ok": true,
+          "detail": "/accounts/acc-classic-usd"
+        },
+        {
+          "name": "the ORX account labels its login as ORX",
+          "ok": true,
+          "detail": "QA Preview build with sample legal documents. Not OneRoyal approved content. Main ORX · 5104772 · USD Deposit Trade Overview Settings Platform Platform SIGN-IN DETAILS ORX login 5104772 Copy Server On"
+        },
+        {
+          "name": "and its server is an ORX server",
+          "ok": true,
+          "detail": "OneRoyal-ORX-Live01"
+        },
+        {
+          "name": "nothing on it says MT4 or MetaTrader login",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the MT4 account labels its login as MetaTrader",
+          "ok": true,
+          "detail": "QA Preview build with sample legal documents. Not OneRoyal approved content. MT4 book MetaTrader 4 · 4201883 · USD Trading is external Open MetaTrader 4 to place or manage trades on this account. Depo"
+        },
+        {
+          "name": "after a reload the ORX account still says ORX login",
+          "ok": true,
+          "detail": "/accounts/acc-classic-usd · QA Preview build with sample legal documents. Not OneRoyal approved content. Main ORX · 5104772 · USD Deposit Trade Over"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F25-qa-orx-platform.png",
+        "F25-qa-mt4-platform.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F33",
+      "title": "Chart hover readout shifts toolbar targets under the pointer",
+      "preview": "shipping",
+      "steps": [],
+      "checks": [
+        {
+          "name": "393: gold opens with a chart",
+          "ok": true,
+          "detail": "/markets/instrument/XAUUSD"
+        },
+        {
+          "name": "393: the readout slot is reserved before any hover",
+          "ok": true,
+          "detail": "{\"x\":16,\"y\":257,\"width\":361,\"height\":20}"
+        },
+        {
+          "name": "393: hovering shows the readout",
+          "ok": true,
+          "detail": "Sep 24, 02:00 AM · O 2,360.33 H 2,360.60 L 2,357.57 C 2,358.66 · 2,358.31"
+        },
+        {
+          "name": "393: the toolbar does not move under the pointer while the readout is shown",
+          "ok": true,
+          "detail": "toolbar y 541 → 541; slot height 20 → 20"
+        },
+        {
+          "name": "393: nor does the chart",
+          "ok": true,
+          "detail": "chart y 289 → 289"
+        },
+        {
+          "name": "393: leaving the chart keeps the toolbar where it was",
+          "ok": true,
+          "detail": "toolbar y 541 → 541"
+        },
+        {
+          "name": "320: gold opens with a chart",
+          "ok": true,
+          "detail": "/markets/instrument/XAUUSD"
+        },
+        {
+          "name": "320: the readout slot is reserved before any hover",
+          "ok": true,
+          "detail": "{\"x\":16,\"y\":174,\"width\":288,\"height\":20}"
+        },
+        {
+          "name": "320: hovering shows the readout",
+          "ok": true,
+          "detail": "Sep 24, 07:00 AM · O 2,351.94 H 2,357.02 L 2,351.94 C 2,355.76 · 2,352.32"
+        },
+        {
+          "name": "320: the toolbar does not move under the pointer while the readout is shown",
+          "ok": true,
+          "detail": "toolbar y 458 → 458; slot height 20 → 20"
+        },
+        {
+          "name": "320: nor does the chart",
+          "ok": true,
+          "detail": "chart y 206 → 206"
+        },
+        {
+          "name": "320: leaving the chart keeps the toolbar where it was",
+          "ok": true,
+          "detail": "toolbar y 458 → 458"
+        },
+        {
+          "name": "zoom130: gold opens with a chart",
+          "ok": true,
+          "detail": "/markets/instrument/XAUUSD"
+        },
+        {
+          "name": "zoom130: the readout slot is reserved before any hover",
+          "ok": true,
+          "detail": "{\"x\":20.796875,\"y\":333.75,\"width\":351.40625,\"height\":26}"
+        },
+        {
+          "name": "zoom130: hovering shows the readout",
+          "ok": true,
+          "detail": "Sep 24, 01:00 PM · O 2,361.73 H 2,363.80 L 2,358.57 C 2,358.57 · 2,347.56"
+        },
+        {
+          "name": "zoom130: the toolbar does not move under the pointer while the readout is shown",
+          "ok": true,
+          "detail": "toolbar y 702.9375 → 702.9375; slot height 26 → 26"
+        },
+        {
+          "name": "zoom130: nor does the chart",
+          "ok": true,
+          "detail": "chart y 375.34375 → 375.34375"
+        },
+        {
+          "name": "zoom130: leaving the chart keeps the toolbar where it was",
+          "ok": true,
+          "detail": "toolbar y 702.9375 → 702.9375"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F33-shipping-393-hover.png",
+        "F33-shipping-320-hover.png",
+        "F33-shipping-zoom130-hover.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F33",
+      "title": "Chart hover readout shifts toolbar targets under the pointer",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "393: gold opens with a chart",
+          "ok": true,
+          "detail": "/markets/instrument/XAUUSD"
+        },
+        {
+          "name": "393: the readout slot is reserved before any hover",
+          "ok": true,
+          "detail": "{\"x\":16,\"y\":298,\"width\":361,\"height\":20}"
+        },
+        {
+          "name": "393: hovering shows the readout",
+          "ok": true,
+          "detail": "Sep 24, 02:00 AM · O 2,359.95 H 2,360.48 L 2,357.57 C 2,359.08 · 2,358.33"
+        },
+        {
+          "name": "393: the toolbar does not move under the pointer while the readout is shown",
+          "ok": true,
+          "detail": "toolbar y 582 → 582; slot height 20 → 20"
+        },
+        {
+          "name": "393: nor does the chart",
+          "ok": true,
+          "detail": "chart y 330 → 330"
+        },
+        {
+          "name": "393: leaving the chart keeps the toolbar where it was",
+          "ok": true,
+          "detail": "toolbar y 582 → 582"
+        },
+        {
+          "name": "320: gold opens with a chart",
+          "ok": true,
+          "detail": "/markets/instrument/XAUUSD"
+        },
+        {
+          "name": "320: the readout slot is reserved before any hover",
+          "ok": true,
+          "detail": "{\"x\":16,\"y\":174,\"width\":288,\"height\":20}"
+        },
+        {
+          "name": "320: hovering shows the readout",
+          "ok": true,
+          "detail": "Sep 24, 07:00 AM · O 2,351.86 H 2,356.50 L 2,351.86 C 2,355.72 · 2,352.31"
+        },
+        {
+          "name": "320: the toolbar does not move under the pointer while the readout is shown",
+          "ok": true,
+          "detail": "toolbar y 458 → 458; slot height 20 → 20"
+        },
+        {
+          "name": "320: nor does the chart",
+          "ok": true,
+          "detail": "chart y 206 → 206"
+        },
+        {
+          "name": "320: leaving the chart keeps the toolbar where it was",
+          "ok": true,
+          "detail": "toolbar y 458 → 458"
+        },
+        {
+          "name": "zoom130: gold opens with a chart",
+          "ok": true,
+          "detail": "/markets/instrument/XAUUSD"
+        },
+        {
+          "name": "zoom130: the readout slot is reserved before any hover",
+          "ok": true,
+          "detail": "{\"x\":20.796875,\"y\":339.515625,\"width\":351.40625,\"height\":26}"
+        },
+        {
+          "name": "zoom130: hovering shows the readout",
+          "ok": true,
+          "detail": "Sep 24, 01:00 PM · O 2,361.51 H 2,364.34 L 2,358.73 C 2,358.73 · 2,347.45"
+        },
+        {
+          "name": "zoom130: the toolbar does not move under the pointer while the readout is shown",
+          "ok": true,
+          "detail": "toolbar y 708.703125 → 708.703125; slot height 26 → 26"
+        },
+        {
+          "name": "zoom130: nor does the chart",
+          "ok": true,
+          "detail": "chart y 381.109375 → 381.109375"
+        },
+        {
+          "name": "zoom130: leaving the chart keeps the toolbar where it was",
+          "ok": true,
+          "detail": "toolbar y 708.703125 → 708.703125"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F33-qa-393-hover.png",
+        "F33-qa-320-hover.png",
+        "F33-qa-zoom130-hover.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F36",
+      "title": "Triggered alert contradicts notify-once status copy",
+      "preview": "shipping",
+      "steps": [],
+      "checks": [
+        {
+          "name": "alerts open from Markets",
+          "ok": true,
+          "detail": "/markets/alerts"
+        },
+        {
+          "name": "the seeded triggered BTCUSD alert is listed under Triggered",
+          "ok": true,
+          "detail": "alert-row-alr-00003"
+        },
+        {
+          "name": "it reads Off, consistent with notify-once",
+          "ok": true,
+          "detail": "BTCUSD Triggered Falls more than 5.0% · Off Today, 03:27 Off"
+        },
+        {
+          "name": "its switch is off",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "creating an alert shows its confirmation",
+          "ok": true,
+          "detail": "Alert set for BTCUSD"
+        },
+        {
+          "name": "the new alert is listed",
+          "ok": true,
+          "detail": "alert-row-alr-1001,alert-row-alr-00001,alert-row-alr-00002,alert-row-alr-00004"
+        },
+        {
+          "name": "deleting it removes the row",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "and clears the created confirmation",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "after a reload the triggered alert is still Off",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "and the deleted alert has not come back",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F36-shipping-triggered-off.png",
+        "F36-shipping-after-delete.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F36",
+      "title": "Triggered alert contradicts notify-once status copy",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "alerts open from Markets",
+          "ok": true,
+          "detail": "/markets/alerts"
+        },
+        {
+          "name": "the seeded triggered BTCUSD alert is listed under Triggered",
+          "ok": true,
+          "detail": "alert-row-alr-00003"
+        },
+        {
+          "name": "it reads Off, consistent with notify-once",
+          "ok": true,
+          "detail": "BTCUSD Triggered Falls more than 5.0% · Off Today, 03:27 Off"
+        },
+        {
+          "name": "its switch is off",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "creating an alert shows its confirmation",
+          "ok": true,
+          "detail": "Alert set for BTCUSD"
+        },
+        {
+          "name": "the new alert is listed",
+          "ok": true,
+          "detail": "alert-row-alr-1001,alert-row-alr-00001,alert-row-alr-00002,alert-row-alr-00004"
+        },
+        {
+          "name": "deleting it removes the row",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "and clears the created confirmation",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "after a reload the triggered alert is still Off",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "and the deleted alert has not come back",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F36-qa-triggered-off.png",
+        "F36-qa-after-delete.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F37",
+      "title": "Calendar This week label does not match its date window",
+      "preview": "shipping",
+      "steps": [],
+      "checks": [
+        {
+          "name": "Pacific/Kiritimati: the calendar opens",
+          "ok": true,
+          "detail": "/markets/calendar"
+        },
+        {
+          "name": "Pacific/Kiritimati: the screen names the device time zone",
+          "ok": true,
+          "detail": "Times are shown in your device’s time zone (Pacific/Kiritimati)."
+        },
+        {
+          "name": "Pacific/Kiritimati: Today lists exactly the events on the local calendar day",
+          "ok": true,
+          "detail": "shown  · expected "
+        },
+        {
+          "name": "Pacific/Kiritimati: Tomorrow lists exactly the next local day",
+          "ok": true,
+          "detail": "shown eco-00003 · expected eco-00003"
+        },
+        {
+          "name": "Pacific/Kiritimati: the third window is named Next 7 days, not This week",
+          "ok": true,
+          "detail": "Next 7 days"
+        },
+        {
+          "name": "Pacific/Kiritimati: and lists the seven local days from today",
+          "ok": true,
+          "detail": "shown eco-00001,eco-00002,eco-00003,eco-00005 · expected eco-00001,eco-00002,eco-00003,eco-00005"
+        },
+        {
+          "name": "Pacific/Kiritimati: the local day rolled over the boundary",
+          "ok": true,
+          "detail": "2026-09-23 → 2026-09-24"
+        },
+        {
+          "name": "Pacific/Kiritimati: after local midnight Today is recomputed on the calendar day",
+          "ok": true,
+          "detail": "shown eco-00003 · expected eco-00003"
+        },
+        {
+          "name": "UTC: the calendar opens",
+          "ok": true,
+          "detail": "/markets/calendar"
+        },
+        {
+          "name": "UTC: the screen names the device time zone",
+          "ok": true,
+          "detail": "Times are shown in your device’s time zone (UTC)."
+        },
+        {
+          "name": "UTC: Today lists exactly the events on the local calendar day",
+          "ok": true,
+          "detail": "shown eco-00003 · expected eco-00003"
+        },
+        {
+          "name": "UTC: Tomorrow lists exactly the next local day",
+          "ok": true,
+          "detail": "shown eco-00001 · expected eco-00001"
+        },
+        {
+          "name": "UTC: the third window is named Next 7 days, not This week",
+          "ok": true,
+          "detail": "Next 7 days"
+        },
+        {
+          "name": "UTC: and lists the seven local days from today",
+          "ok": true,
+          "detail": "shown eco-00001,eco-00002,eco-00003,eco-00005 · expected eco-00001,eco-00002,eco-00003,eco-00005"
+        },
+        {
+          "name": "UTC: the local day rolled over the boundary",
+          "ok": true,
+          "detail": "2026-09-23 → 2026-09-24"
+        },
+        {
+          "name": "UTC: after local midnight Today is recomputed on the calendar day",
+          "ok": true,
+          "detail": "shown eco-00001 · expected eco-00001"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F37-shipping-pacific-kiritimati-week.png",
+        "F37-shipping-pacific-kiritimati-after-midnight.png",
+        "F37-shipping-utc-week.png",
+        "F37-shipping-utc-after-midnight.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F37",
+      "title": "Calendar This week label does not match its date window",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "Pacific/Kiritimati: the calendar opens",
+          "ok": true,
+          "detail": "/markets/calendar"
+        },
+        {
+          "name": "Pacific/Kiritimati: the screen names the device time zone",
+          "ok": true,
+          "detail": "Times are shown in your device’s time zone (Pacific/Kiritimati)."
+        },
+        {
+          "name": "Pacific/Kiritimati: Today lists exactly the events on the local calendar day",
+          "ok": true,
+          "detail": "shown  · expected "
+        },
+        {
+          "name": "Pacific/Kiritimati: Tomorrow lists exactly the next local day",
+          "ok": true,
+          "detail": "shown eco-00003 · expected eco-00003"
+        },
+        {
+          "name": "Pacific/Kiritimati: the third window is named Next 7 days, not This week",
+          "ok": true,
+          "detail": "Next 7 days"
+        },
+        {
+          "name": "Pacific/Kiritimati: and lists the seven local days from today",
+          "ok": true,
+          "detail": "shown eco-00001,eco-00002,eco-00003,eco-00005 · expected eco-00001,eco-00002,eco-00003,eco-00005"
+        },
+        {
+          "name": "Pacific/Kiritimati: the local day rolled over the boundary",
+          "ok": true,
+          "detail": "2026-09-23 → 2026-09-24"
+        },
+        {
+          "name": "Pacific/Kiritimati: after local midnight Today is recomputed on the calendar day",
+          "ok": true,
+          "detail": "shown eco-00003 · expected eco-00003"
+        },
+        {
+          "name": "UTC: the calendar opens",
+          "ok": true,
+          "detail": "/markets/calendar"
+        },
+        {
+          "name": "UTC: the screen names the device time zone",
+          "ok": true,
+          "detail": "Times are shown in your device’s time zone (UTC)."
+        },
+        {
+          "name": "UTC: Today lists exactly the events on the local calendar day",
+          "ok": true,
+          "detail": "shown eco-00003 · expected eco-00003"
+        },
+        {
+          "name": "UTC: Tomorrow lists exactly the next local day",
+          "ok": true,
+          "detail": "shown eco-00001 · expected eco-00001"
+        },
+        {
+          "name": "UTC: the third window is named Next 7 days, not This week",
+          "ok": true,
+          "detail": "Next 7 days"
+        },
+        {
+          "name": "UTC: and lists the seven local days from today",
+          "ok": true,
+          "detail": "shown eco-00001,eco-00002,eco-00003,eco-00005 · expected eco-00001,eco-00002,eco-00003,eco-00005"
+        },
+        {
+          "name": "UTC: the local day rolled over the boundary",
+          "ok": true,
+          "detail": "2026-09-23 → 2026-09-24"
+        },
+        {
+          "name": "UTC: after local midnight Today is recomputed on the calendar day",
+          "ok": true,
+          "detail": "shown eco-00001 · expected eco-00001"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F37-qa-pacific-kiritimati-week.png",
+        "F37-qa-pacific-kiritimati-after-midnight.png",
+        "F37-qa-utc-week.png",
+        "F37-qa-utc-after-midnight.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F42",
+      "title": "Journal trade link does not identify its trade",
+      "preview": "shipping",
+      "steps": [],
+      "checks": [
+        {
+          "name": "the Crypto book account is active before the journal is opened",
+          "ok": true,
+          "detail": "Crypto book · MT5 5104938 EUR"
+        },
+        {
+          "name": "the journal opens from Coach",
+          "ok": true,
+          "detail": "/coach/journal"
+        },
+        {
+          "name": "the link opens Trade History and names its trade in the route",
+          "ok": true,
+          "detail": "/trade?tab=history&tradeId=trd-acc-classic-usd-00146"
+        },
+        {
+          "name": "History is the selected tab",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the linked trade is marked",
+          "ok": true,
+          "detail": "1 marked · closed-trade-trd-acc-classic-usd-00146"
+        },
+        {
+          "name": "and it is the first row",
+          "ok": true,
+          "detail": "closed-trade-trd-acc-classic-usd-00146,closed-trade-trd-acc-classic-usd-00142,closed-trade-trd-acc-classic-usd-00143"
+        },
+        {
+          "name": "the entry’s own account was selected, not the one that was active",
+          "ok": true,
+          "detail": "Main · ORX 5104772 USD"
+        },
+        {
+          "name": "the Coach tab still holds the journal the link was pressed from",
+          "ok": true,
+          "detail": "/coach/journal"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F42-shipping-linked-trade.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F42",
+      "title": "Journal trade link does not identify its trade",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "the Crypto book account is active before the journal is opened",
+          "ok": true,
+          "detail": "Crypto book · MT5 5104938 EUR"
+        },
+        {
+          "name": "the journal opens from Coach",
+          "ok": true,
+          "detail": "/coach/journal"
+        },
+        {
+          "name": "the link opens Trade History and names its trade in the route",
+          "ok": true,
+          "detail": "/trade?tab=history&tradeId=trd-acc-classic-usd-00146"
+        },
+        {
+          "name": "History is the selected tab",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the linked trade is marked",
+          "ok": true,
+          "detail": "1 marked · closed-trade-trd-acc-classic-usd-00146"
+        },
+        {
+          "name": "and it is the first row",
+          "ok": true,
+          "detail": "closed-trade-trd-acc-classic-usd-00146,closed-trade-trd-acc-classic-usd-00142,closed-trade-trd-acc-classic-usd-00143"
+        },
+        {
+          "name": "the entry’s own account was selected, not the one that was active",
+          "ok": true,
+          "detail": "Main · ORX 5104772 USD"
+        },
+        {
+          "name": "the Coach tab still holds the journal the link was pressed from",
+          "ok": true,
+          "detail": "/coach/journal"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F42-qa-linked-trade.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F56",
+      "title": "Funding review and tracker contradict disconnected payment availability",
+      "preview": "shipping",
+      "steps": [],
+      "checks": [
+        {
+          "name": "crypto: deposit opens from Funds",
+          "ok": true,
+          "detail": "/hub/wallet/deposit"
+        },
+        {
+          "name": "crypto: the rail is offered",
+          "ok": true,
+          "detail": "deposit-method-pm-crypto"
+        },
+        {
+          "name": "crypto: nothing payable is shown before a network is chosen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "crypto: submit is refused until a network is chosen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "crypto: the method’s networks are offered",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "name": "crypto: the chosen network is shown",
+          "ok": true,
+          "detail": "Selected network TRC-20 (Tron) Network fee Shown by your sending wallet"
+        },
+        {
+          "name": "crypto: the intent is recorded",
+          "ok": true,
+          "detail": "/hub/wallet/deposit"
+        },
+        {
+          "name": "crypto: the tracker opens",
+          "ok": true,
+          "detail": "/hub/wallet/transaction/txn-501"
+        },
+        {
+          "name": "crypto: the tracker names the selected network",
+          "ok": true,
+          "detail": "Network TRC-20 (Tron)"
+        },
+        {
+          "name": "crypto: next steps say nothing is payable in this preview and name the network",
+          "ok": true,
+          "detail": "What happens next Crypto funding is not connected in this preview, so no deposit address was issued for this intent (network: TRC-20 (Tron)). Nothing is payable and no funds should be sent anywhere. I"
+        },
+        {
+          "name": "crypto: it does not promise a card-style settlement",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "crypto: the intent is not shown as completed",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "crypto: after a reload the tracker still says nothing is payable",
+          "ok": true,
+          "detail": "/hub/wallet/transaction/txn-501 · What happens next Crypto funding is not connected in this preview, so no deposit address was issued for this intent (net"
+        },
+        {
+          "name": "wire: deposit opens from Funds",
+          "ok": true,
+          "detail": "/hub/wallet/deposit"
+        },
+        {
+          "name": "wire: the rail is offered",
+          "ok": true,
+          "detail": "deposit-method-pm-bank-wire,deposit-method-pm-card,deposit-method-pm-local-depositor,deposit-method-pm-neteller,deposit-method-pm-skrill,deposit-method-pm-whish"
+        },
+        {
+          "name": "wire: the intent is recorded",
+          "ok": true,
+          "detail": "/hub/wallet/deposit"
+        },
+        {
+          "name": "wire: next steps say the transfer is not connected and nothing moves",
+          "ok": true,
+          "detail": "What happens next Bank transfer is not connected in this preview, so no beneficiary details or reference were issued for this intent. Nothing is payable and no money moves. In the live app the payment"
+        },
+        {
+          "name": "wire: the intent is not shown as completed",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F56-shipping-crypto-review.png",
+        "F56-shipping-crypto-tracker.png",
+        "F56-shipping-wire-tracker.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F56",
+      "title": "Funding review and tracker contradict disconnected payment availability",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "crypto: deposit opens from Funds",
+          "ok": true,
+          "detail": "/hub/wallet/deposit"
+        },
+        {
+          "name": "crypto: the rail is offered",
+          "ok": true,
+          "detail": "deposit-method-pm-crypto"
+        },
+        {
+          "name": "crypto: nothing payable is shown before a network is chosen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "crypto: submit is refused until a network is chosen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "crypto: the method’s networks are offered",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "name": "crypto: the chosen network is shown",
+          "ok": true,
+          "detail": "Selected network TRC-20 (Tron) Network fee Shown by your sending wallet"
+        },
+        {
+          "name": "crypto: the intent is recorded",
+          "ok": true,
+          "detail": "/hub/wallet/deposit"
+        },
+        {
+          "name": "crypto: the tracker opens",
+          "ok": true,
+          "detail": "/hub/wallet/transaction/txn-501"
+        },
+        {
+          "name": "crypto: the tracker names the selected network",
+          "ok": true,
+          "detail": "Network TRC-20 (Tron)"
+        },
+        {
+          "name": "crypto: next steps say nothing is payable in this preview and name the network",
+          "ok": true,
+          "detail": "What happens next Crypto funding is not connected in this preview, so no deposit address was issued for this intent (network: TRC-20 (Tron)). Nothing is payable and no funds should be sent anywhere. I"
+        },
+        {
+          "name": "crypto: it does not promise a card-style settlement",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "crypto: the intent is not shown as completed",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "crypto: after a reload the tracker still says nothing is payable",
+          "ok": true,
+          "detail": "/hub/wallet/transaction/txn-501 · What happens next Crypto funding is not connected in this preview, so no deposit address was issued for this intent (net"
+        },
+        {
+          "name": "wire: deposit opens from Funds",
+          "ok": true,
+          "detail": "/hub/wallet/deposit"
+        },
+        {
+          "name": "wire: the rail is offered",
+          "ok": true,
+          "detail": "deposit-method-pm-bank-wire,deposit-method-pm-card,deposit-method-pm-local-depositor,deposit-method-pm-neteller,deposit-method-pm-skrill,deposit-method-pm-whish"
+        },
+        {
+          "name": "wire: the intent is recorded",
+          "ok": true,
+          "detail": "/hub/wallet/deposit"
+        },
+        {
+          "name": "wire: next steps say the transfer is not connected and nothing moves",
+          "ok": true,
+          "detail": "What happens next Bank transfer is not connected in this preview, so no beneficiary details or reference were issued for this intent. Nothing is payable and no money moves. In the live app the payment"
+        },
+        {
+          "name": "wire: the intent is not shown as completed",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F56-qa-crypto-review.png",
+        "F56-qa-crypto-tracker.png",
+        "F56-qa-wire-tracker.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F59",
+      "title": "Hub challenge progress link is broken",
+      "preview": "shipping",
+      "steps": [],
+      "checks": [
+        {
+          "name": "choosing a plan opens its rules",
+          "ok": true,
+          "detail": "/hub/prop/rules/royal-25k"
+        },
+        {
+          "name": "accepting the rules opens the payment step",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the challenge account is created",
+          "ok": true,
+          "detail": "/hub/prop/ready/pur-1"
+        },
+        {
+          "name": "the Hub lists the purchased challenge with a progress control",
+          "ok": true,
+          "detail": "prop-open-progress-pur-1"
+        },
+        {
+          "name": "the control is a button",
+          "ok": true,
+          "detail": "button"
+        },
+        {
+          "name": "it opens the purchased challenge’s dashboard",
+          "ok": true,
+          "detail": "/hub/prop/challenge/pur-1"
+        },
+        {
+          "name": "Back returns to the Prop screen",
+          "ok": true,
+          "detail": "/hub/prop"
+        },
+        {
+          "name": "Enter on the control opens the same dashboard",
+          "ok": true,
+          "detail": "/hub/prop/challenge/pur-1"
+        },
+        {
+          "name": "a reload on the dashboard route restores it",
+          "ok": true,
+          "detail": "/hub/prop/challenge/pur-1"
+        },
+        {
+          "name": "and it still names the challenge",
+          "ok": true,
+          "detail": "Phase 1 — Evaluation ORX Prop · Simulated · 5200001 Active"
+        },
+        {
+          "name": "Back after a reload lands on the Prop screen, never Welcome",
+          "ok": true,
+          "detail": "/hub"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F59-shipping-dashboard.png",
+        "F59-shipping-after-reload.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F59",
+      "title": "Hub challenge progress link is broken",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "choosing a plan opens its rules",
+          "ok": true,
+          "detail": "/hub/prop/rules/royal-25k"
+        },
+        {
+          "name": "accepting the rules opens the payment step",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the challenge account is created",
+          "ok": true,
+          "detail": "/hub/prop/ready/pur-1"
+        },
+        {
+          "name": "the Hub lists the purchased challenge with a progress control",
+          "ok": true,
+          "detail": "prop-open-progress-pur-1"
+        },
+        {
+          "name": "the control is a button",
+          "ok": true,
+          "detail": "button"
+        },
+        {
+          "name": "it opens the purchased challenge’s dashboard",
+          "ok": true,
+          "detail": "/hub/prop/challenge/pur-1"
+        },
+        {
+          "name": "Back returns to the Prop screen",
+          "ok": true,
+          "detail": "/hub/prop"
+        },
+        {
+          "name": "Enter on the control opens the same dashboard",
+          "ok": true,
+          "detail": "/hub/prop/challenge/pur-1"
+        },
+        {
+          "name": "a reload on the dashboard route restores it",
+          "ok": true,
+          "detail": "/hub/prop/challenge/pur-1"
+        },
+        {
+          "name": "and it still names the challenge",
+          "ok": true,
+          "detail": "Phase 1 — Evaluation ORX Prop · Simulated · 5200001 Active"
+        },
+        {
+          "name": "Back after a reload lands on the Prop screen, never Welcome",
+          "ok": true,
+          "detail": "/hub"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F59-qa-dashboard.png",
+        "F59-qa-after-reload.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F64",
+      "title": "Corporate external-representative branch cannot be completed",
+      "preview": "qa",
+      "steps": [
+        "company stage complete",
+        "addresses stage complete",
+        "financials stage complete",
+        "structure stage complete",
+        "general stage complete",
+        "account stage complete"
+      ],
+      "checks": [
+        {
+          "name": "corporate sign-up opens the corporate application",
+          "ok": true,
+          "detail": "/onboarding/corporate"
+        },
+        {
+          "name": "answering No renders the representative branch",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "with an Add control",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "adding opens the person editor",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Done is refused while the representative is incomplete",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Done is still refused without an email",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Done is offered once name, date of birth, nationality, email and address are present",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the representative summary shows the person as complete",
+          "ok": true,
+          "detail": "Layla Haddad United Arab Emirates · layla@example.test Complete"
+        },
+        {
+          "name": "removing the representative offers Add again",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the re-added representative reads complete",
+          "ok": true,
+          "detail": "Layla Haddad United Arab Emirates · layla-haddad@example.test Complete · sheet open: false"
+        },
+        {
+          "name": "Continue is offered on the structure stage",
+          "ok": true,
+          "detail": "ubos: Rania Haddad United Arab Emirates · rania-haddad@example.test Complete · directors: Omar Haddad United Arab Emirates · omar-haddad@example.test Complete"
+        },
+        {
+          "name": "Continue is offered on the general stage",
+          "ok": true,
+          "detail": "QA Preview build with sample legal documents. Not OneRoyal approved content. Open a corporate account STEP 5 OF 7 · TAX About 3 min left Tax and residency Is any shareholder or director a politically "
+        },
+        {
+          "name": "Continue is offered on the account stage",
+          "ok": true,
+          "detail": "5 Open again Accepted Risk Disclosure Statement Required Version 0.0-non-production · in force from 1 Jan 2025 Open again Accepted Terms of Business Required Version 0.0-non-production · in force from 1 Jan 2025 Open again Accepted Continue"
+        },
+        {
+          "name": "the review marks the structure stage complete",
+          "ok": true,
+          "detail": "Structure 2 people listed Complete"
+        },
+        {
+          "name": "once confirmed, nothing is reported incomplete",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the corporate application submits",
+          "ok": true,
+          "detail": "/onboarding/status · "
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F64-qa-representative.png",
+        "F64-qa-review.png",
+        "F64-qa-submitted.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F72",
+      "title": "Challenge consent omits configured conditions and payout timing",
+      "preview": "shipping",
+      "steps": [],
+      "checks": [
+        {
+          "name": "the plan opens its versioned rules before consent",
+          "ok": true,
+          "detail": "/hub/prop/rules/royal-25k"
+        },
+        {
+          "name": "the consent screen names the programme version",
+          "ok": true,
+          "detail": "Programme version prop-2026.09.1 These rules are fixed for the life of your challenge. A later change to the catalogue does not alter what you bought."
+        },
+        {
+          "name": "it states weekend holding is not allowed",
+          "ok": true,
+          "detail": "Holding over the weekend Not allowed"
+        },
+        {
+          "name": "news trading allowed",
+          "ok": true,
+          "detail": "Trading around news Allowed"
+        },
+        {
+          "name": "expert advisers and copy trading not allowed",
+          "ok": true,
+          "detail": "Expert advisers and robots Not allowed · Copy trading Not allowed"
+        },
+        {
+          "name": "the profit share is stated",
+          "ok": true,
+          "detail": "Your share 80%"
+        },
+        {
+          "name": "the first payout timing is stated in trading days",
+          "ok": true,
+          "detail": "First payout after 14 trading days"
+        },
+        {
+          "name": "the payout interval is stated in calendar days",
+          "ok": true,
+          "detail": "Then every 14 days"
+        },
+        {
+          "name": "the challenge is bought",
+          "ok": true,
+          "detail": "/hub/prop/ready/pur-1"
+        },
+        {
+          "name": "the bought challenge’s rules open",
+          "ok": true,
+          "detail": "/hub/prop/challenge/pur-1/rules"
+        },
+        {
+          "name": "the bought rules render the same conditions as the consent screen",
+          "ok": true,
+          "detail": "{\"weekend\":\"Holding over the weekend Not allowed\",\"news\":\"Trading around news Allowed\",\"advisors\":\"Expert advisers and robots Not allowed\",\"copy\":\"Copy trading Not allowed\",\"share\":\"Your share 80%\",\"f"
+        },
+        {
+          "name": "and the same programme version",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Arabic is applied to the document",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Arabic consent names weekend holding as not allowed",
+          "ok": true,
+          "detail": "الاحتفاظ بالمراكز خلال عطلة نهاية الأسبوع غير مسموح"
+        },
+        {
+          "name": "Arabic consent keeps the configured figures",
+          "ok": true,
+          "detail": "حصتك 80% · أول دفعة بعد 14 يوم تداول · ثم كل 14 يوم"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F72-shipping-consent-terms.png",
+        "F72-shipping-bought-terms.png",
+        "F72-shipping-consent-terms-ar.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F72",
+      "title": "Challenge consent omits configured conditions and payout timing",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "the plan opens its versioned rules before consent",
+          "ok": true,
+          "detail": "/hub/prop/rules/royal-25k"
+        },
+        {
+          "name": "the consent screen names the programme version",
+          "ok": true,
+          "detail": "Programme version prop-2026.09.1 These rules are fixed for the life of your challenge. A later change to the catalogue does not alter what you bought."
+        },
+        {
+          "name": "it states weekend holding is not allowed",
+          "ok": true,
+          "detail": "Holding over the weekend Not allowed"
+        },
+        {
+          "name": "news trading allowed",
+          "ok": true,
+          "detail": "Trading around news Allowed"
+        },
+        {
+          "name": "expert advisers and copy trading not allowed",
+          "ok": true,
+          "detail": "Expert advisers and robots Not allowed · Copy trading Not allowed"
+        },
+        {
+          "name": "the profit share is stated",
+          "ok": true,
+          "detail": "Your share 80%"
+        },
+        {
+          "name": "the first payout timing is stated in trading days",
+          "ok": true,
+          "detail": "First payout after 14 trading days"
+        },
+        {
+          "name": "the payout interval is stated in calendar days",
+          "ok": true,
+          "detail": "Then every 14 days"
+        },
+        {
+          "name": "the challenge is bought",
+          "ok": true,
+          "detail": "/hub/prop/ready/pur-1"
+        },
+        {
+          "name": "the bought challenge’s rules open",
+          "ok": true,
+          "detail": "/hub/prop/challenge/pur-1/rules"
+        },
+        {
+          "name": "the bought rules render the same conditions as the consent screen",
+          "ok": true,
+          "detail": "{\"weekend\":\"Holding over the weekend Not allowed\",\"news\":\"Trading around news Allowed\",\"advisors\":\"Expert advisers and robots Not allowed\",\"copy\":\"Copy trading Not allowed\",\"share\":\"Your share 80%\",\"f"
+        },
+        {
+          "name": "and the same programme version",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Arabic is applied to the document",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Arabic consent names weekend holding as not allowed",
+          "ok": true,
+          "detail": "الاحتفاظ بالمراكز خلال عطلة نهاية الأسبوع غير مسموح"
+        },
+        {
+          "name": "Arabic consent keeps the configured figures",
+          "ok": true,
+          "detail": "حصتك 80% · أول دفعة بعد 14 يوم تداول · ثم كل 14 يوم"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F72-qa-consent-terms.png",
+        "F72-qa-bought-terms.png",
+        "F72-qa-consent-terms-ar.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F74",
+      "title": "Verification method change races with Continue",
+      "preview": "shipping",
+      "steps": [],
+      "checks": [
+        {
+          "name": "shipping: the application is on hold for approved documents",
+          "ok": true,
+          "detail": "/onboarding/individual"
+        },
+        {
+          "name": "shipping: the application cannot be submitted",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "shipping: no method choice is reachable, so no method save can be made or fail",
+          "ok": true,
+          "detail": "/onboarding/individual"
+        },
+        {
+          "name": "shipping: the Verify address typed by the blocked applicant offers no method choice",
+          "ok": false,
+          "detail": "/onboarding/verify"
+        },
+        {
+          "name": "shipping: and lands on the application status",
+          "ok": false,
+          "detail": "/onboarding/verify"
+        },
+        {
+          "name": "shipping: the Verify address typed by the verified client offers no method choice",
+          "ok": false,
+          "detail": "/onboarding/verify"
+        },
+        {
+          "name": "shipping: and lands on the status screen, still verified",
+          "ok": false,
+          "detail": "/onboarding/verify"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F74-shipping-shipping-fails-closed-before-verification.png",
+        "F74-shipping-shipping-applicant-typed-verify.png",
+        "F74-shipping-shipping-verified-client-typed-verify.png"
+      ],
+      "ok": false
+    },
+    {
+      "id": "F74",
+      "title": "Verification method change races with Continue",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "step 1 lands on the status screen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "step 2 lands on verification",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Continue is refused while the choice is being saved",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the last choice wins once the save settles",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "and Continue is offered again",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the documents asked for are the classic set, the method that was saved",
+          "ok": true,
+          "detail": "identity,proof-of-address"
+        },
+        {
+          "name": "Back shows the saved method, not the earlier tap",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "prior-method: a refused save shows the error banner",
+          "ok": false,
+          "detail": ""
+        },
+        {
+          "name": "prior-method: the unsaved choice stays selected",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "prior-method: Continue is refused",
+          "ok": false,
+          "detail": ""
+        },
+        {
+          "name": "the journey ran to completion",
+          "ok": false,
+          "detail": "Error: tap verify-method-error-action: TimeoutError: locator.click: Timeout 15000ms exceeded."
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F74-qa-after-rapid-choice.png",
+        "F74-qa-back-to-method.png",
+        "F74-qa-prior-method-save-refused.png",
+        "F74-qa-failure.png"
+      ],
+      "ok": false
+    },
+    {
+      "id": "F75",
+      "title": "Late document-upload cancellation falsely promises nothing was sent",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "step 1 lands on the status screen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "step 2 lands on verification",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "an early cancel says nothing was sent",
+          "ok": true,
+          "detail": "Upload cancelled. Nothing was sent."
+        },
+        {
+          "name": "and the document is not received",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the progress sheet reaches the point of no return",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "a late cancel does not promise nothing was sent",
+          "ok": true,
+          "detail": "Upload could not be cancelled The document had already been sent when you cancelled, so it counts as received."
+        },
+        {
+          "name": "the document is nonetheless received",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F75-qa-early-cancel.png",
+        "F75-qa-late-cancel.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F132",
+      "title": "Demo starting-balance choices show USD for selected EUR/GBP accounts",
+      "preview": "shipping",
+      "steps": [],
+      "checks": [
+        {
+          "name": "with USD selected the grants are priced in dollars",
+          "ok": true,
+          "detail": "$1,000.00 $3,000.00 $5,000.00 $10,000.00 $50,000.00 $100,000.00"
+        },
+        {
+          "name": "choosing EUR reprices every grant in euros",
+          "ok": true,
+          "detail": "€1,000.00 €3,000.00 €5,000.00 €10,000.00 €50,000.00 €100,000.00"
+        },
+        {
+          "name": "choosing GBP reprices every grant in pounds",
+          "ok": true,
+          "detail": "£1,000.00 £3,000.00 £5,000.00 £10,000.00 £50,000.00 £100,000.00"
+        },
+        {
+          "name": "Enter on the EUR choice reprices the grants",
+          "ok": true,
+          "detail": "€1,000.00 €3,000.00 €5,000.00 €10,000.00 €50,000.00 €100,000.00"
+        },
+        {
+          "name": "the EUR practice account is created",
+          "ok": true,
+          "detail": "/accounts/new?environment=demo"
+        },
+        {
+          "name": "the receipt names the account as EUR, not USD",
+          "ok": true,
+          "detail": "Your account is ready Demo Classic EUR ORX ORX login 5200001 on OneRoyal-ORX-Demo01."
+        },
+        {
+          "name": "the created account carries the grant in euros",
+          "ok": true,
+          "detail": "€10,000.00"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F132-shipping-gbp-choices.png",
+        "F132-shipping-eur-receipt.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F132",
+      "title": "Demo starting-balance choices show USD for selected EUR/GBP accounts",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "with USD selected the grants are priced in dollars",
+          "ok": true,
+          "detail": "$1,000.00 $3,000.00 $5,000.00 $10,000.00 $50,000.00 $100,000.00"
+        },
+        {
+          "name": "choosing EUR reprices every grant in euros",
+          "ok": true,
+          "detail": "€1,000.00 €3,000.00 €5,000.00 €10,000.00 €50,000.00 €100,000.00"
+        },
+        {
+          "name": "choosing GBP reprices every grant in pounds",
+          "ok": true,
+          "detail": "£1,000.00 £3,000.00 £5,000.00 £10,000.00 £50,000.00 £100,000.00"
+        },
+        {
+          "name": "Enter on the EUR choice reprices the grants",
+          "ok": true,
+          "detail": "€1,000.00 €3,000.00 €5,000.00 €10,000.00 €50,000.00 €100,000.00"
+        },
+        {
+          "name": "the EUR practice account is created",
+          "ok": true,
+          "detail": "/accounts/new?environment=demo"
+        },
+        {
+          "name": "the receipt names the account as EUR, not USD",
+          "ok": true,
+          "detail": "Your account is ready Demo Classic EUR ORX ORX login 5200001 on OneRoyal-ORX-Demo01."
+        },
+        {
+          "name": "the created account carries the grant in euros",
+          "ok": true,
+          "detail": "€10,000.00"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F132-qa-gbp-choices.png",
+        "F132-qa-eur-receipt.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F133",
+      "title": "Unconfirmed market-order recovery can retain the wrong ledger tab",
+      "preview": "shipping",
+      "steps": [
+        "low-margin demo fixture: an isolated fixture client, not the demo visitor"
+      ],
+      "checks": [
+        {
+          "name": "low-margin fixture: Trade is left on History",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "low-margin fixture: Home shows the margin warning with Review positions",
+          "ok": false,
+          "detail": ""
+        },
+        {
+          "name": "market: Trade is left on History",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "market: the ticket opens",
+          "ok": true,
+          "detail": "/trade/ticket?symbol=BTCUSD"
+        },
+        {
+          "name": "market: the ticket advances to review",
+          "ok": false,
+          "detail": "/trade/ticket?symbol=BTCUSD"
+        },
+        {
+          "name": "the journey ran to completion",
+          "ok": false,
+          "detail": "Error: tap review-submit: TimeoutError: locator.click: Timeout 15000ms exceeded."
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F133-shipping-failure.png"
+      ],
+      "ok": false
+    },
+    {
+      "id": "F133",
+      "title": "Unconfirmed market-order recovery can retain the wrong ledger tab",
+      "preview": "qa",
+      "steps": [
+        "low-margin demo fixture: an isolated fixture client, not the demo visitor"
+      ],
+      "checks": [
+        {
+          "name": "low-margin fixture: Trade is left on History",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "low-margin fixture: Home shows the margin warning with Review positions",
+          "ok": false,
+          "detail": ""
+        },
+        {
+          "name": "market: Trade is left on History",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "market: the ticket opens",
+          "ok": true,
+          "detail": "/trade/ticket?symbol=BTCUSD"
+        },
+        {
+          "name": "market: the ticket advances to review",
+          "ok": false,
+          "detail": "/trade/ticket?symbol=BTCUSD"
+        },
+        {
+          "name": "the journey ran to completion",
+          "ok": false,
+          "detail": "Error: tap review-submit: TimeoutError: locator.click: Timeout 15000ms exceeded."
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F133-qa-failure.png"
+      ],
+      "ok": false
+    },
+    {
+      "id": "F137",
+      "title": "Cancelling account-password verification retains the unsent password",
+      "preview": "shipping",
+      "steps": [],
+      "checks": [
+        {
+          "name": "the password actions are offered",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the step-up sheet opens",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "confirm is refused with nothing typed",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "confirm is offered once a password is typed",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "reopening after Close shows an empty field",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "and confirm is refused again",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "reopening after Escape shows an empty field again",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "confirming sends the request",
+          "ok": true,
+          "detail": "On its way The trading server is sending it to r•••o@e•••e.invalid."
+        },
+        {
+          "name": "and closes the sheet",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the sent password is not retained for the next request",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F137-shipping-typed.png",
+        "F137-shipping-after-send.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F137",
+      "title": "Cancelling account-password verification retains the unsent password",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "the password actions are offered",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the step-up sheet opens",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "confirm is refused with nothing typed",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "confirm is offered once a password is typed",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "reopening after Close shows an empty field",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "and confirm is refused again",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "reopening after Escape shows an empty field again",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "confirming sends the request",
+          "ok": true,
+          "detail": "On its way The trading server is sending it to r•••o@e•••e.invalid."
+        },
+        {
+          "name": "and closes the sheet",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the sent password is not retained for the next request",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F137-qa-typed.png",
+        "F137-qa-after-send.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F140",
+      "title": "Wallet Today section includes a transaction labelled Yesterday",
+      "preview": "shipping",
+      "steps": [],
+      "checks": [
+        {
+          "name": "beirut-00-30: the wallet history opens",
+          "ok": true,
+          "detail": "/hub/wallet/history"
+        },
+        {
+          "name": "beirut-00-30: no row under Today is labelled Yesterday",
+          "ok": true,
+          "detail": "Deposit · Today, 00:26"
+        },
+        {
+          "name": "beirut-00-30: every row under Today is labelled Today",
+          "ok": true,
+          "detail": "Deposit · Today, 00:26"
+        },
+        {
+          "name": "beirut-00-30: no row under Earlier is labelled Today",
+          "ok": true,
+          "detail": "Deposit · Yesterday, 23:50 | Withdrawal · Yesterday, 19:30 | Deposit · Yesterday, 02:30 | Withdrawal · 21 Sept 2026, 00:30 | Deposit · 11 Sept 2026, 00:30 | Withdrawal · 7 Sept 2026, 00:30 | Transfer "
+        },
+        {
+          "name": "beirut-00-30: txn-00007 is under Today",
+          "ok": true,
+          "detail": "today: transaction-row-txn-00007"
+        },
+        {
+          "name": "beirut-00-30: txn-00006 is under Earlier",
+          "ok": true,
+          "detail": "earlier: transaction-row-txn-00006,transaction-row-txn-00008,transaction-row-txn-00002,transaction-row-txn-00007,transaction-row-txn-00006,transaction-row-txn-00008,transaction-row-txn-00002,transaction-row-txn-00003,transaction-row-txn-000"
+        },
+        {
+          "name": "beirut-00-30: txn-00002 is under Earlier",
+          "ok": true,
+          "detail": "earlier: transaction-row-txn-00006,transaction-row-txn-00008,transaction-row-txn-00002,transaction-row-txn-00007,transaction-row-txn-00006,transaction-row-txn-00008,transaction-row-txn-00002,transaction-row-txn-00003,transaction-row-txn-000"
+        },
+        {
+          "name": "beirut-23-30: the wallet history opens",
+          "ok": true,
+          "detail": "/hub/wallet/history"
+        },
+        {
+          "name": "beirut-23-30: no row under Today is labelled Yesterday",
+          "ok": true,
+          "detail": "Deposit · Today, 23:26 | Deposit · Today, 22:50 | Withdrawal · Today, 18:30 | Deposit · Today, 01:30"
+        },
+        {
+          "name": "beirut-23-30: every row under Today is labelled Today",
+          "ok": true,
+          "detail": "Deposit · Today, 23:26 | Deposit · Today, 22:50 | Withdrawal · Today, 18:30 | Deposit · Today, 01:30"
+        },
+        {
+          "name": "beirut-23-30: no row under Earlier is labelled Today",
+          "ok": true,
+          "detail": "Withdrawal · 20 Sept 2026, 23:30 | Deposit · 10 Sept 2026, 23:30 | Withdrawal · 6 Sept 2026, 23:30 | Transfer out · 23 Aug 2026, 23:30"
+        },
+        {
+          "name": "beirut-23-30: txn-00002 is under Today",
+          "ok": true,
+          "detail": "today: transaction-row-txn-00007,transaction-row-txn-00006,transaction-row-txn-00008,transaction-row-txn-00002"
+        },
+        {
+          "name": "beirut-23-30: txn-00006 is under Today",
+          "ok": true,
+          "detail": "today: transaction-row-txn-00007,transaction-row-txn-00006,transaction-row-txn-00008,transaction-row-txn-00002"
+        },
+        {
+          "name": "beirut-23-30: txn-00007 is under Today",
+          "ok": true,
+          "detail": "today: transaction-row-txn-00007,transaction-row-txn-00006,transaction-row-txn-00008,transaction-row-txn-00002"
+        },
+        {
+          "name": "utc-21-30: the wallet history opens",
+          "ok": true,
+          "detail": "/hub/wallet/history"
+        },
+        {
+          "name": "utc-21-30: no row under Today is labelled Yesterday",
+          "ok": true,
+          "detail": "Deposit · Today, 21:26 | Deposit · Today, 20:50 | Withdrawal · Today, 16:30"
+        },
+        {
+          "name": "utc-21-30: every row under Today is labelled Today",
+          "ok": true,
+          "detail": "Deposit · Today, 21:26 | Deposit · Today, 20:50 | Withdrawal · Today, 16:30"
+        },
+        {
+          "name": "utc-21-30: no row under Earlier is labelled Today",
+          "ok": true,
+          "detail": "Deposit · Yesterday, 23:30 | Withdrawal · 20 Sept 2026, 21:30 | Deposit · 10 Sept 2026, 21:30 | Withdrawal · 6 Sept 2026, 21:30 | Transfer out · 23 Aug 2026, 21:30"
+        },
+        {
+          "name": "utc-21-30: txn-00006 is under Today",
+          "ok": true,
+          "detail": "today: transaction-row-txn-00007,transaction-row-txn-00006,transaction-row-txn-00008"
+        },
+        {
+          "name": "utc-21-30: txn-00007 is under Today",
+          "ok": true,
+          "detail": "today: transaction-row-txn-00007,transaction-row-txn-00006,transaction-row-txn-00008"
+        },
+        {
+          "name": "utc-21-30: txn-00002 is under Earlier",
+          "ok": true,
+          "detail": "earlier: transaction-row-txn-00002,transaction-row-txn-00007,transaction-row-txn-00006,transaction-row-txn-00008,transaction-row-txn-00002,transaction-row-txn-00003,transaction-row-txn-00001,transaction-row-txn-00004,transaction-row-txn-000"
+        },
+        {
+          "name": "london-dst-fallback: the wallet history opens",
+          "ok": true,
+          "detail": "/hub/wallet/history"
+        },
+        {
+          "name": "london-dst-fallback: no row under Today is labelled Yesterday",
+          "ok": true,
+          "detail": "Deposit · Today, 02:26 | Deposit · Today, 01:50"
+        },
+        {
+          "name": "london-dst-fallback: every row under Today is labelled Today",
+          "ok": true,
+          "detail": "Deposit · Today, 02:26 | Deposit · Today, 01:50"
+        },
+        {
+          "name": "london-dst-fallback: no row under Earlier is labelled Today",
+          "ok": true,
+          "detail": "Withdrawal · Yesterday, 22:30 | Deposit · Yesterday, 05:30 | Withdrawal · 23 Oct 2026, 03:30 | Deposit · 13 Oct 2026, 03:30 | Withdrawal · 9 Oct 2026, 03:30 | Transfer out · 25 Sept 2026, 03:30"
+        },
+        {
+          "name": "london-dst-fallback: txn-00006 is under Today",
+          "ok": true,
+          "detail": "today: transaction-row-txn-00007,transaction-row-txn-00006"
+        },
+        {
+          "name": "london-dst-fallback: txn-00007 is under Today",
+          "ok": true,
+          "detail": "today: transaction-row-txn-00007,transaction-row-txn-00006"
+        },
+        {
+          "name": "london-dst-fallback: txn-00002 is under Earlier",
+          "ok": true,
+          "detail": "earlier: transaction-row-txn-00008,transaction-row-txn-00002,transaction-row-txn-00007,transaction-row-txn-00006,transaction-row-txn-00008,transaction-row-txn-00002,transaction-row-txn-00003,transaction-row-txn-00001,transaction-row-txn-000"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F140-shipping-beirut-00-30.png",
+        "F140-shipping-beirut-23-30.png",
+        "F140-shipping-utc-21-30.png",
+        "F140-shipping-london-dst-fallback.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F140",
+      "title": "Wallet Today section includes a transaction labelled Yesterday",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "beirut-00-30: the wallet history opens",
+          "ok": true,
+          "detail": "/hub/wallet/history"
+        },
+        {
+          "name": "beirut-00-30: no row under Today is labelled Yesterday",
+          "ok": true,
+          "detail": "Deposit · Today, 00:26"
+        },
+        {
+          "name": "beirut-00-30: every row under Today is labelled Today",
+          "ok": true,
+          "detail": "Deposit · Today, 00:26"
+        },
+        {
+          "name": "beirut-00-30: no row under Earlier is labelled Today",
+          "ok": true,
+          "detail": "Deposit · Yesterday, 23:50 | Withdrawal · Yesterday, 19:30 | Deposit · Yesterday, 02:30 | Withdrawal · 21 Sept 2026, 00:30 | Deposit · 11 Sept 2026, 00:30 | Withdrawal · 7 Sept 2026, 00:30 | Transfer "
+        },
+        {
+          "name": "beirut-00-30: txn-00007 is under Today",
+          "ok": true,
+          "detail": "today: transaction-row-txn-00007"
+        },
+        {
+          "name": "beirut-00-30: txn-00006 is under Earlier",
+          "ok": true,
+          "detail": "earlier: transaction-row-txn-00006,transaction-row-txn-00008,transaction-row-txn-00002,transaction-row-txn-00007,transaction-row-txn-00006,transaction-row-txn-00008,transaction-row-txn-00002,transaction-row-txn-00003,transaction-row-txn-000"
+        },
+        {
+          "name": "beirut-00-30: txn-00002 is under Earlier",
+          "ok": true,
+          "detail": "earlier: transaction-row-txn-00006,transaction-row-txn-00008,transaction-row-txn-00002,transaction-row-txn-00007,transaction-row-txn-00006,transaction-row-txn-00008,transaction-row-txn-00002,transaction-row-txn-00003,transaction-row-txn-000"
+        },
+        {
+          "name": "beirut-23-30: the wallet history opens",
+          "ok": true,
+          "detail": "/hub/wallet/history"
+        },
+        {
+          "name": "beirut-23-30: no row under Today is labelled Yesterday",
+          "ok": true,
+          "detail": "Deposit · Today, 23:26 | Deposit · Today, 22:50 | Withdrawal · Today, 18:30 | Deposit · Today, 01:30"
+        },
+        {
+          "name": "beirut-23-30: every row under Today is labelled Today",
+          "ok": true,
+          "detail": "Deposit · Today, 23:26 | Deposit · Today, 22:50 | Withdrawal · Today, 18:30 | Deposit · Today, 01:30"
+        },
+        {
+          "name": "beirut-23-30: no row under Earlier is labelled Today",
+          "ok": true,
+          "detail": "Withdrawal · 20 Sept 2026, 23:30 | Deposit · 10 Sept 2026, 23:30 | Withdrawal · 6 Sept 2026, 23:30 | Transfer out · 23 Aug 2026, 23:30"
+        },
+        {
+          "name": "beirut-23-30: txn-00002 is under Today",
+          "ok": true,
+          "detail": "today: transaction-row-txn-00007,transaction-row-txn-00006,transaction-row-txn-00008,transaction-row-txn-00002"
+        },
+        {
+          "name": "beirut-23-30: txn-00006 is under Today",
+          "ok": true,
+          "detail": "today: transaction-row-txn-00007,transaction-row-txn-00006,transaction-row-txn-00008,transaction-row-txn-00002"
+        },
+        {
+          "name": "beirut-23-30: txn-00007 is under Today",
+          "ok": true,
+          "detail": "today: transaction-row-txn-00007,transaction-row-txn-00006,transaction-row-txn-00008,transaction-row-txn-00002"
+        },
+        {
+          "name": "utc-21-30: the wallet history opens",
+          "ok": true,
+          "detail": "/hub/wallet/history"
+        },
+        {
+          "name": "utc-21-30: no row under Today is labelled Yesterday",
+          "ok": true,
+          "detail": "Deposit · Today, 21:26 | Deposit · Today, 20:50 | Withdrawal · Today, 16:30"
+        },
+        {
+          "name": "utc-21-30: every row under Today is labelled Today",
+          "ok": true,
+          "detail": "Deposit · Today, 21:26 | Deposit · Today, 20:50 | Withdrawal · Today, 16:30"
+        },
+        {
+          "name": "utc-21-30: no row under Earlier is labelled Today",
+          "ok": true,
+          "detail": "Deposit · Yesterday, 23:30 | Withdrawal · 20 Sept 2026, 21:30 | Deposit · 10 Sept 2026, 21:30 | Withdrawal · 6 Sept 2026, 21:30 | Transfer out · 23 Aug 2026, 21:30"
+        },
+        {
+          "name": "utc-21-30: txn-00006 is under Today",
+          "ok": true,
+          "detail": "today: transaction-row-txn-00007,transaction-row-txn-00006,transaction-row-txn-00008"
+        },
+        {
+          "name": "utc-21-30: txn-00007 is under Today",
+          "ok": true,
+          "detail": "today: transaction-row-txn-00007,transaction-row-txn-00006,transaction-row-txn-00008"
+        },
+        {
+          "name": "utc-21-30: txn-00002 is under Earlier",
+          "ok": true,
+          "detail": "earlier: transaction-row-txn-00002,transaction-row-txn-00007,transaction-row-txn-00006,transaction-row-txn-00008,transaction-row-txn-00002,transaction-row-txn-00003,transaction-row-txn-00001,transaction-row-txn-00004,transaction-row-txn-000"
+        },
+        {
+          "name": "london-dst-fallback: the wallet history opens",
+          "ok": true,
+          "detail": "/hub/wallet/history"
+        },
+        {
+          "name": "london-dst-fallback: no row under Today is labelled Yesterday",
+          "ok": true,
+          "detail": "Deposit · Today, 02:26 | Deposit · Today, 01:50"
+        },
+        {
+          "name": "london-dst-fallback: every row under Today is labelled Today",
+          "ok": true,
+          "detail": "Deposit · Today, 02:26 | Deposit · Today, 01:50"
+        },
+        {
+          "name": "london-dst-fallback: no row under Earlier is labelled Today",
+          "ok": true,
+          "detail": "Withdrawal · Yesterday, 22:30 | Deposit · Yesterday, 05:30 | Withdrawal · 23 Oct 2026, 03:30 | Deposit · 13 Oct 2026, 03:30 | Withdrawal · 9 Oct 2026, 03:30 | Transfer out · 25 Sept 2026, 03:30"
+        },
+        {
+          "name": "london-dst-fallback: txn-00006 is under Today",
+          "ok": true,
+          "detail": "today: transaction-row-txn-00007,transaction-row-txn-00006"
+        },
+        {
+          "name": "london-dst-fallback: txn-00007 is under Today",
+          "ok": true,
+          "detail": "today: transaction-row-txn-00007,transaction-row-txn-00006"
+        },
+        {
+          "name": "london-dst-fallback: txn-00002 is under Earlier",
+          "ok": true,
+          "detail": "earlier: transaction-row-txn-00008,transaction-row-txn-00002,transaction-row-txn-00007,transaction-row-txn-00006,transaction-row-txn-00008,transaction-row-txn-00002,transaction-row-txn-00003,transaction-row-txn-00001,transaction-row-txn-000"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F140-qa-beirut-00-30.png",
+        "F140-qa-beirut-23-30.png",
+        "F140-qa-utc-21-30.png",
+        "F140-qa-london-dst-fallback.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F141",
+      "title": "Order ticket repeats closed-market notices and retains distracting context banners",
+      "preview": "shipping",
+      "steps": [],
+      "checks": [
+        {
+          "name": "on a Saturday gold is shown closed",
+          "ok": true,
+          "detail": "Market closed"
+        },
+        {
+          "name": "the ticket opens",
+          "ok": true,
+          "detail": "/trade/ticket?symbol=XAUUSD"
+        },
+        {
+          "name": "a refused Buy stays on the ticket instead of opening review",
+          "ok": true,
+          "detail": "/trade/ticket?symbol=XAUUSD"
+        },
+        {
+          "name": "no blocking banner repeats the closed market",
+          "ok": true,
+          "detail": "0 banner(s)"
+        },
+        {
+          "name": "the closed market is said once, as a status beside the instrument",
+          "ok": true,
+          "detail": "Gold / US Dollar Market closed Main · ORX 5104772 USD"
+        },
+        {
+          "name": "and once more as the reason Continue is refused",
+          "ok": true,
+          "detail": "Gold / US Dollar is closed right now. Trading hours: Mon 00:00 – Fri 22:00 UTC."
+        },
+        {
+          "name": "no alert banner on the ticket mentions the closed market",
+          "ok": true,
+          "detail": "This order has no stop-loss, so its risk"
+        },
+        {
+          "name": "the active account holds a position to trade against",
+          "ok": true,
+          "detail": "position-row-pos-00001,position-row-pos-00002,position-row-pos-00003,position-row-pos-00001,position-row-pos-00002,position-row-pos-00003"
+        },
+        {
+          "name": "the existing XAUUSD position is NOT restated on its ticket",
+          "ok": false,
+          "detail": "1 line(s)"
+        },
+        {
+          "name": "the journey ran to completion",
+          "ok": false,
+          "detail": "TimeoutError: locator.click: Timeout 15000ms exceeded."
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F141-shipping-closed-gold-ticket.png",
+        "F141-shipping-no-concentration-line.png",
+        "F141-shipping-failure.png"
+      ],
+      "ok": false
+    },
+    {
+      "id": "F141",
+      "title": "Order ticket repeats closed-market notices and retains distracting context banners",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "on a Saturday gold is shown closed",
+          "ok": true,
+          "detail": "Market closed"
+        },
+        {
+          "name": "the ticket opens",
+          "ok": true,
+          "detail": "/trade/ticket?symbol=XAUUSD"
+        },
+        {
+          "name": "a refused Buy stays on the ticket instead of opening review",
+          "ok": true,
+          "detail": "/trade/ticket?symbol=XAUUSD"
+        },
+        {
+          "name": "no blocking banner repeats the closed market",
+          "ok": true,
+          "detail": "0 banner(s)"
+        },
+        {
+          "name": "the closed market is said once, as a status beside the instrument",
+          "ok": true,
+          "detail": "Gold / US Dollar Market closed Main · ORX 5104772 USD"
+        },
+        {
+          "name": "and once more as the reason Continue is refused",
+          "ok": true,
+          "detail": "Gold / US Dollar is closed right now. Trading hours: Mon 00:00 – Fri 22:00 UTC."
+        },
+        {
+          "name": "no alert banner on the ticket mentions the closed market",
+          "ok": true,
+          "detail": "QA\nPreview build with sample legal docum | This order has no stop-loss, so its risk"
+        },
+        {
+          "name": "the active account holds a position to trade against",
+          "ok": true,
+          "detail": "position-row-pos-00001,position-row-pos-00002,position-row-pos-00003,position-row-pos-00001,position-row-pos-00002,position-row-pos-00003"
+        },
+        {
+          "name": "the existing XAUUSD position is NOT restated on its ticket",
+          "ok": true,
+          "detail": "0 line(s)"
+        },
+        {
+          "name": "the journey ran to completion",
+          "ok": false,
+          "detail": "TimeoutError: locator.click: Timeout 15000ms exceeded."
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F141-qa-closed-gold-ticket.png",
+        "F141-qa-no-concentration-line.png",
+        "F141-qa-failure.png"
+      ],
+      "ok": false
+    },
+    {
+      "id": "F142",
+      "title": "Portfolio RTL endpoint captions oppose plotted chronology",
+      "preview": "shipping",
+      "steps": [],
+      "checks": [
+        {
+          "name": "English: Start sits under the left endpoint and Latest under the right",
+          "ok": true,
+          "detail": "[[\"Start · Aug 25 $13,6\",32],[\"Latest · Sep 24 $14,\",258]]"
+        },
+        {
+          "name": "Arabic is applied to the document",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the layout is mirrored: Home is now on the right of the Hub",
+          "ok": true,
+          "detail": "home 312 hub 4"
+        },
+        {
+          "name": "Arabic: the start caption still sits under the left endpoint",
+          "ok": true,
+          "detail": "[[\"البداية · 25 أغسطس ⁦\",32],[\"الأحدث · 24 سبتمبر ⁦\",261]]"
+        },
+        {
+          "name": "Arabic: and the latest caption under the right one",
+          "ok": true,
+          "detail": "الأحدث · 24 سبتمبر ⁦$14,953.13⁩"
+        },
+        {
+          "name": "the captions span the plot they annotate",
+          "ok": true,
+          "detail": "{\"frame\":[32,329]}"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F142-shipping-arabic-portfolio.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F142",
+      "title": "Portfolio RTL endpoint captions oppose plotted chronology",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "English: Start sits under the left endpoint and Latest under the right",
+          "ok": true,
+          "detail": "[[\"Start · Aug 25 $13,6\",32],[\"Latest · Sep 24 $14,\",258]]"
+        },
+        {
+          "name": "Arabic is applied to the document",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the layout is mirrored: Home is now on the right of the Hub",
+          "ok": true,
+          "detail": "home 312 hub 4"
+        },
+        {
+          "name": "Arabic: the start caption still sits under the left endpoint",
+          "ok": true,
+          "detail": "[[\"البداية · 25 أغسطس ⁦\",32],[\"الأحدث · 24 سبتمبر ⁦\",261]]"
+        },
+        {
+          "name": "Arabic: and the latest caption under the right one",
+          "ok": true,
+          "detail": "الأحدث · 24 سبتمبر ⁦$14,953.13⁩"
+        },
+        {
+          "name": "the captions span the plot they annotate",
+          "ok": true,
+          "detail": "{\"frame\":[32,329]}"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F142-qa-arabic-portfolio.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F147",
+      "title": "Closed position lookup loses continuity with its resulting trade",
+      "preview": "shipping",
+      "steps": [
+        "trade-query-retry demo fixture: an isolated fixture client, not the demo visitor"
+      ],
+      "checks": [
+        {
+          "name": "an open position is available to close",
+          "ok": true,
+          "detail": "position-row-pos-00001,position-row-pos-00002,position-row-pos-00003,position-row-pos-00001,position-row-pos-00002,position-row-pos-00003"
+        },
+        {
+          "name": "the position opens",
+          "ok": true,
+          "detail": "/trade/position/pos-00001"
+        },
+        {
+          "name": "closing lands on Trade with History showing",
+          "ok": true,
+          "detail": "/trade?tab=history"
+        },
+        {
+          "name": "the close produced a trade with its own id, distinct from the position",
+          "ok": true,
+          "detail": "pos-00001 → trd-9001"
+        },
+        {
+          "name": "the newest history row is that trade and names the symbol",
+          "ok": true,
+          "detail": "XAUUSD Buy 0.40 lots · Today, 23:46 · Swap 0.00 · Commission 0.00 −$5.60"
+        },
+        {
+          "name": "the row opens the closed trade’s own record",
+          "ok": true,
+          "detail": "/trade/position/trd-9001"
+        },
+        {
+          "name": "the record names the symbol and how it was closed",
+          "ok": true,
+          "detail": "Closed by You closed it"
+        },
+        {
+          "name": "the closed position’s route resolves to its resulting trade",
+          "ok": true,
+          "detail": "/trade/position/pos-00001 · Closed trade XAUUSD Buy 0.40 RESULT −$5.60 OPEN PRICE 2,338.40 CLOSE PRICE 2,338"
+        },
+        {
+          "name": "Back from the record does not land on Welcome",
+          "ok": true,
+          "detail": "/trade"
+        },
+        {
+          "name": "trade-query fixture: the failed history read shows an error with Try again",
+          "ok": false,
+          "detail": ""
+        },
+        {
+          "name": "the journey ran to completion",
+          "ok": false,
+          "detail": "Error: tap error-state-action: TimeoutError: locator.click: Timeout 15000ms exceeded."
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F147-shipping-closed-record.png",
+        "F147-shipping-lineage.png",
+        "F147-shipping-history-read-failed.png",
+        "F147-shipping-failure.png"
+      ],
+      "ok": false
+    },
+    {
+      "id": "F147",
+      "title": "Closed position lookup loses continuity with its resulting trade",
+      "preview": "qa",
+      "steps": [
+        "trade-query-retry demo fixture: an isolated fixture client, not the demo visitor"
+      ],
+      "checks": [
+        {
+          "name": "an open position is available to close",
+          "ok": true,
+          "detail": "position-row-pos-00001,position-row-pos-00002,position-row-pos-00003,position-row-pos-00001,position-row-pos-00002,position-row-pos-00003"
+        },
+        {
+          "name": "the position opens",
+          "ok": true,
+          "detail": "/trade/position/pos-00001"
+        },
+        {
+          "name": "closing lands on Trade with History showing",
+          "ok": true,
+          "detail": "/trade?tab=history"
+        },
+        {
+          "name": "the close produced a trade with its own id, distinct from the position",
+          "ok": true,
+          "detail": "pos-00001 → trd-9001"
+        },
+        {
+          "name": "the newest history row is that trade and names the symbol",
+          "ok": true,
+          "detail": "XAUUSD Buy 0.40 lots · Today, 23:48 · Swap 0.00 · Commission 0.00 −$5.60"
+        },
+        {
+          "name": "the row opens the closed trade’s own record",
+          "ok": true,
+          "detail": "/trade/position/trd-9001"
+        },
+        {
+          "name": "the record names the symbol and how it was closed",
+          "ok": true,
+          "detail": "Closed by You closed it"
+        },
+        {
+          "name": "the closed position’s route resolves to its resulting trade",
+          "ok": true,
+          "detail": "/trade/position/pos-00001 · QA Preview build with sample legal documents. Not OneRoyal approved content. Clo"
+        },
+        {
+          "name": "Back from the record does not land on Welcome",
+          "ok": true,
+          "detail": "/trade"
+        },
+        {
+          "name": "trade-query fixture: the failed history read shows an error with Try again",
+          "ok": false,
+          "detail": ""
+        },
+        {
+          "name": "the journey ran to completion",
+          "ok": false,
+          "detail": "Error: tap error-state-action: TimeoutError: locator.click: Timeout 15000ms exceeded."
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F147-qa-closed-record.png",
+        "F147-qa-lineage.png",
+        "F147-qa-history-read-failed.png",
+        "F147-qa-failure.png"
+      ],
+      "ok": false
+    },
+    {
+      "id": "F144",
+      "title": "Robot catalogue search restricts testable selection to five fixtures",
+      "preview": "shipping",
+      "steps": [],
+      "checks": [
+        {
+          "name": "the robot rules open",
+          "ok": true,
+          "detail": "/hub/robots/create/rules"
+        },
+        {
+          "name": "more than the five fixtures can be tested, and any instrument can be built on",
+          "ok": true,
+          "detail": "18 of 1942 instruments can be tested in this demo. A robot can be built on any of them."
+        },
+        {
+          "name": "a catalogue instrument without test data is listed",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "it can be chosen: the notice beside the choice names it",
+          "ok": true,
+          "detail": "You can build this robot, not test it yet This demo has no price history or trading costs for EURGBP, so the robot cannot be backtested or run here. Everything else can be set up now."
+        },
+        {
+          "name": "Continue waits for data instead of testing invented prices",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the rule list gives the reason in words",
+          "ok": true,
+          "detail": "Visual rule builder Fix these before testing The engine will not guess at a rule it cannot read, and nothing is estimated while one is unresolved. EURGBP EURGBP has no price history or trading costs i"
+        },
+        {
+          "name": "Enter on an untested instrument chooses it",
+          "ok": true,
+          "detail": "You can build this robot, not test it yet This demo has no price history or trading costs for AUDCAD, so the robot cannot be backtested or run here. Everything else can be set up now."
+        },
+        {
+          "name": "choosing a testable instrument clears the notice",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "and Continue is available",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the backtest opens for US500",
+          "ok": true,
+          "detail": "Historical test Historical test A deterministic replay over the demo price series. It is a fixture, not a forecast, and past behaviour does not predict future results. Price data Price data A syntheti"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F144-shipping-untested-instrument-chosen.png",
+        "F144-shipping-us500-backtest.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "F144",
+      "title": "Robot catalogue search restricts testable selection to five fixtures",
+      "preview": "qa",
+      "steps": [],
+      "checks": [
+        {
+          "name": "the robot rules open",
+          "ok": true,
+          "detail": "/hub/robots/create/rules"
+        },
+        {
+          "name": "more than the five fixtures can be tested, and any instrument can be built on",
+          "ok": true,
+          "detail": "18 of 1942 instruments can be tested in this demo. A robot can be built on any of them."
+        },
+        {
+          "name": "a catalogue instrument without test data is listed",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "it can be chosen: the notice beside the choice names it",
+          "ok": true,
+          "detail": "You can build this robot, not test it yet This demo has no price history or trading costs for EURGBP, so the robot cannot be backtested or run here. Everything else can be set up now."
+        },
+        {
+          "name": "Continue waits for data instead of testing invented prices",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the rule list gives the reason in words",
+          "ok": true,
+          "detail": "QA Preview build with sample legal documents. Not OneRoyal approved content. Visual rule builder Fix these before testing The engine will not guess at a rule it cannot read, and nothing is estimated w"
+        },
+        {
+          "name": "Enter on an untested instrument chooses it",
+          "ok": true,
+          "detail": "You can build this robot, not test it yet This demo has no price history or trading costs for AUDCAD, so the robot cannot be backtested or run here. Everything else can be set up now."
+        },
+        {
+          "name": "choosing a testable instrument clears the notice",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "and Continue is available",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the backtest opens for US500",
+          "ok": true,
+          "detail": "QA Preview build with sample legal documents. Not OneRoyal approved content. Historical test Historical test A deterministic replay over the demo price series. It is a fixture, not a forecast, and pas"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "F144-qa-untested-instrument-chosen.png",
+        "F144-qa-us500-backtest.png"
+      ],
+      "ok": true
+    }
+  ],
+  "totals": {
+    "findings": 24,
+    "runs": 46,
+    "checks": 587,
+    "failed": 20,
+    "blocked": 0
+  }
+}
