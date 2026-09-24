@@ -6,9 +6,9 @@ published for review on GitHub Pages.
 <!-- identity:start -->
 | | |
 | --- | --- |
-| **Application revision** | `498ed9ad628a42b95ba71554d0a019ed9cc4e8bf` on `claude/oneroyal-graphite-integration-8fcqxv` in `relannan-gif/Royal-trading-app` |
-| Shipping bundle | `entry-2566666d03e12dfc5fbf9526a485bfb4.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=` |
-| QA bundle | `entry-980729fe3e271ffc7bb09ef957444d4a.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=non-production` |
+| **Application revision** | `8e19e0a07a97824359ed08f5ce2f1c8eb6092a7d` on `claude/oneroyal-graphite-integration-8fcqxv` in `relannan-gif/Royal-trading-app` |
+| Shipping bundle | `entry-281c327b0e4009204174a9a904f91d8c.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=` |
+| QA bundle | `entry-4b8f016fbc4c1fe41cf1996b511d4c28.js` — `EXPO_PUBLIC_LEGAL_FIXTURES=non-production` |
 | Build-time difference from the audit bundle | `expo.experiments.baseUrl` set to `/-oneroyal-stage1-audit/shipping` and `/-oneroyal-stage1-audit/qa` respectively, so routing works under this repository's Pages path. No source change. |
 <!-- identity:end -->
 
