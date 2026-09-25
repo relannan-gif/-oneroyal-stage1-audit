@@ -2961,6 +2961,8 @@
   "errors.paymentDeclined": "The payment provider declined this transaction. No money has left your account. Try a different amount or another payment method.",
   "errors.verificationUnavailable": "Verification is unavailable right now. Your application details are saved.",
   "errors.accountOpeningUnavailable": "We could not open your trading account just now. Nothing was charged, and you can try again.",
+  "errors.otherTabActive": "This account is open in another tab. Use that tab, or close it to continue here.",
+  "errors.useThisTab": "Use this tab",
   "errors.offlineTitle": "You are offline",
   "errors.offlineShowingSaved": "Showing the last available information.",
   "errors.offlineLastUpdated": "Last updated",

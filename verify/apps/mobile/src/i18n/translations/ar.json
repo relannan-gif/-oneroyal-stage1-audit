@@ -2961,6 +2961,8 @@
   "errors.paymentDeclined": "رفض مزوّد الدفع هذه المعاملة. لم تخرج أي أموال من حسابك. جرّب مبلغًا مختلفًا أو وسيلة دفع أخرى.",
   "errors.verificationUnavailable": "التحقق غير متاح حاليًا. تم حفظ تفاصيل طلبك.",
   "errors.accountOpeningUnavailable": "تعذّر علينا فتح حساب التداول الخاص بك الآن. لم يتم تحصيل أي رسوم، ويمكنك المحاولة مرة أخرى.",
+  "errors.otherTabActive": "هذا الحساب مفتوح في علامة تبويب أخرى. استخدم تلك العلامة، أو أغلقها للمتابعة هنا.",
+  "errors.useThisTab": "استخدم هذه العلامة",
   "errors.offlineTitle": "أنت غير متصل",
   "errors.offlineShowingSaved": "يتم عرض آخر المعلومات المتاحة.",
   "errors.offlineLastUpdated": "آخر تحديث",

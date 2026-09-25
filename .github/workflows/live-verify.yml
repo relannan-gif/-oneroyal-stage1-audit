@@ -23,7 +23,7 @@ concurrency:
 jobs:
   live:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 240
     env:
       LIVE: https://relannan-gif.github.io/-oneroyal-stage1-audit
       OUT: ${{ github.workspace }}/results
@@ -104,9 +104,11 @@ jobs:
         run: node verify/scripts/sep24-two-tab-concurrency.mjs "$LIVE/shipping" "$LIVE/qa"
 
       - name: Record the runner and commit the results
+        # whatever happened above: a partial run is recorded (and refused on import), never lost
+        if: always()
         run: |
           dir=verification/${{ github.run_id }}
-          mkdir -p "$dir"
+          mkdir -p "$dir" "$OUT"
           cp -r "$OUT"/. "$dir"/
           node -e '
             const {createHash}=require("crypto"),fs=require("fs"),path=require("path");

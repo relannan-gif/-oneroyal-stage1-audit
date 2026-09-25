@@ -49,9 +49,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { runnerRevision } from './lib/runner-revision.mjs';
 
-const pw = await import(
-  process.env.PLAYWRIGHT_MODULE ?? '/tmp/claude-0/pw/node_modules/playwright-core/index.js'
-);
+const pw = await import(process.env.PLAYWRIGHT_MODULE ?? 'playwright');
 const { chromium } = pw.chromium ? pw : pw.default;
 
 const BASES = process.argv
@@ -65,7 +63,7 @@ if (BASES.length === 0) {
 
 const VIEWPORT = { width: 393, height: 852 };
 const browser = await chromium.launch({
-  executablePath: process.env.CHROMIUM_PATH ?? '/opt/pw-browsers/chromium-1194/chrome-linux/chrome',
+  executablePath: process.env.CHROMIUM_PATH || undefined,
   args: ['--no-sandbox', '--disable-dev-shm-usage'],
 });
 
