@@ -1,0 +1,2253 @@
+{
+  "runner": "sep24-learning-journeys",
+  "ranAt": "2026-09-25T05:54:08.682Z",
+  "commit": null,
+  "sourceRevision": "b7d50d66c8944fdc918190718abcb50f1457b493",
+  "revisionDeclaration": {
+    "where": "https://github.com/relannan-gif/-oneroyal-stage1-audit/actions/runs/36098420698",
+    "files": [
+      {
+        "path": "scripts/sep24-learning-journeys.mjs",
+        "sha256": "f8c7f8e54ea5633f78f354d9f4b60929b6bbcbf330991fc51730ca24a87050e4"
+      },
+      {
+        "path": "scripts/lib/runner-revision.mjs",
+        "sha256": "b5a6bb81a61af8fb0fe52873bd43d8dc17b171f9e48ee3fea5fedb1624ce90e3"
+      },
+      {
+        "path": "apps/mobile/src/i18n/translations/_en.reference.json",
+        "sha256": "9a84e9e5346e322819a9506c50c20a1a3745ff14c4b24ed0f0c135b3226b8e00"
+      },
+      {
+        "path": "apps/mobile/src/i18n/translations/ar.json",
+        "sha256": "744a053f24045d8094969f8fde046cc39788f77be9d02fd2fac81a505e2c3ccb"
+      },
+      {
+        "path": "packages/test-fixtures/src/learning/content.generated.ts",
+        "sha256": "40b5a54b3e66fc33bb477ffa397e09cc432841e911b33bec7eebb29e1e895793"
+      }
+    ]
+  },
+  "bases": {
+    "shipping": "https://relannan-gif.github.io/-oneroyal-stage1-audit/shipping",
+    "qa": "https://relannan-gif.github.io/-oneroyal-stage1-audit/qa"
+  },
+  "buildIdentity": {
+    "qa": "Build identity · b7d50d66c894 · Non-production legal fixtures",
+    "shipping": "Build identity · b7d50d66c894 · Awaiting approved legal content"
+  },
+  "builds": {
+    "qa": {
+      "sourceRevision": "b7d50d66c8944fdc918190718abcb50f1457b493",
+      "treeRevision": "b57669a14db641f358a77c458c8f9a9bdd75ec1b",
+      "configuration": "non-production",
+      "scopeClean": true
+    },
+    "shipping": {
+      "sourceRevision": "b7d50d66c8944fdc918190718abcb50f1457b493",
+      "treeRevision": "a14b941c61474c30104afcb314e1e2fddc98051b",
+      "configuration": "awaiting-approved-content",
+      "scopeClean": true
+    }
+  },
+  "specs": [
+    {
+      "id": "A13-practice",
+      "criteria": [
+        "A13.1",
+        "A13.2"
+      ],
+      "previews": [
+        "shipping",
+        "qa"
+      ],
+      "context": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browserLocale": "en-GB",
+        "appLanguage": "en",
+        "timezoneId": "Asia/Beirut"
+      }
+    },
+    {
+      "id": "A13-formal",
+      "criteria": [
+        "A13.2"
+      ],
+      "previews": [
+        "shipping",
+        "qa"
+      ],
+      "context": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browserLocale": "en-GB",
+        "appLanguage": "en",
+        "timezoneId": "Asia/Beirut"
+      }
+    },
+    {
+      "id": "A14-sitting",
+      "criteria": [
+        "A14.1",
+        "A14.2",
+        "A13.2"
+      ],
+      "previews": [
+        "shipping",
+        "qa"
+      ],
+      "context": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browserLocale": "en-GB",
+        "appLanguage": "en",
+        "timezoneId": "Asia/Beirut"
+      }
+    },
+    {
+      "id": "A12-failed-write",
+      "criteria": [
+        "A12.1",
+        "A12.2"
+      ],
+      "previews": [
+        "shipping",
+        "qa"
+      ],
+      "context": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browserLocale": "en-GB",
+        "appLanguage": "en",
+        "timezoneId": "Asia/Beirut"
+      }
+    },
+    {
+      "id": "A15.3-provisional",
+      "criteria": [
+        "A15.3"
+      ],
+      "previews": [
+        "shipping",
+        "qa"
+      ],
+      "context": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browserLocale": "en-GB",
+        "appLanguage": "en",
+        "timezoneId": "Asia/Beirut"
+      }
+    },
+    {
+      "id": "A13-desktop",
+      "criteria": [
+        "A13.1",
+        "A13.2"
+      ],
+      "previews": [
+        "shipping",
+        "qa"
+      ],
+      "context": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "browserLocale": "en-GB",
+        "appLanguage": "en",
+        "timezoneId": "Asia/Beirut"
+      }
+    },
+    {
+      "id": "A13-rtl",
+      "criteria": [
+        "A13.1",
+        "A13.2"
+      ],
+      "previews": [
+        "shipping",
+        "qa"
+      ],
+      "context": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browserLocale": "ar",
+        "appLanguage": "ar",
+        "timezoneId": "Asia/Beirut"
+      }
+    }
+  ],
+  "engine": "chromium 153.0.8010.12",
+  "viewports": {
+    "phone": {
+      "width": 390,
+      "height": 844
+    },
+    "desktop": {
+      "width": 1280,
+      "height": 800
+    }
+  },
+  "locales": [
+    "en",
+    "ar"
+  ],
+  "timezone": "Asia/Beirut",
+  "fault": "Storage.prototype.setItem throws QuotaExceededError while the fault is on (journey-checks S15-10, F74)",
+  "filtered": null,
+  "findings": [
+    {
+      "id": "A13-practice",
+      "title": "Single-choice practice is marked and explained on selection, without Check, on every practice surface; multi-select and typed answers keep Check",
+      "preview": "shipping",
+      "criteria": [
+        "A13.1",
+        "A13.2"
+      ],
+      "context": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browserLocale": "en-GB",
+        "appLanguage": "en",
+        "timezoneId": "Asia/Beirut",
+        "clock": "2026-09-24T07:00:00.000Z"
+      },
+      "steps": [
+        "enter the demo; open a lesson with a single choice and a multi/typed question",
+        "objective review: \"Practise this objective\" on the lesson",
+        "retake practice: finish the objective review, press Retake",
+        "a second lesson answered today, so two objectives come due",
+        "four days later: both objectives are due for review",
+        "the due review: \"Review what's due\" on the learn home",
+        "the review sitting again by deep link (a page load of its URL)"
+      ],
+      "checks": [
+        {
+          "name": "lesson practice opens from the course",
+          "ok": true,
+          "detail": "fx-starter / lsn-fx-starter-updated-lesson-1-introduction-to-forex-s0-o0"
+        },
+        {
+          "name": "lesson practice: the single-choice card runs in practice mode",
+          "ok": true,
+          "detail": "learn-lesson-question-0 fx-starter-updated-lesson-1-introduction-to-forex-q01 mode=practice feedback=immediate"
+        },
+        {
+          "name": "lesson practice: the single-choice card offers no Check button",
+          "ok": true,
+          "detail": "learn-lesson-question-0"
+        },
+        {
+          "name": "lesson practice: nothing is marked before an option is chosen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "lesson practice: choosing an option marks it at once, with its explanation",
+          "ok": true,
+          "detail": "Not quite The Forex market is generally considered more liquid than the stock market because its daily trading volume, measured in trillions of US dollars, is f"
+        },
+        {
+          "name": "lesson practice: the key is shown on the options",
+          "ok": true,
+          "detail": "2 option(s) labelled"
+        },
+        {
+          "name": "lesson practice: the multi card offers Check",
+          "ok": true,
+          "detail": "learn-lesson-question-1 fx-starter-updated-lesson-1-introduction-to-forex-q02"
+        },
+        {
+          "name": "lesson practice: filling the multi answer marks nothing until Check",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "lesson practice: Check marks the multi answer",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the lesson offers \"Practise this objective\"",
+          "ok": true,
+          "detail": "Practise this objective"
+        },
+        {
+          "name": "objective review opens from the lesson button",
+          "ok": true,
+          "detail": "/learn/assessment/objective/fx-starter-updated-lesson-1-introduction-to-forex-s0-o0"
+        },
+        {
+          "name": "objective review is practice: no formal note",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "objective review: the single-choice card runs in practice mode",
+          "ok": true,
+          "detail": "learn-assessment-question-0 fx-starter-updated-lesson-1-introduction-to-forex-q01 mode=practice feedback=immediate"
+        },
+        {
+          "name": "objective review: the single-choice card offers no Check button",
+          "ok": true,
+          "detail": "learn-assessment-question-0"
+        },
+        {
+          "name": "objective review: nothing is marked before an option is chosen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "objective review: choosing an option marks it at once, with its explanation",
+          "ok": true,
+          "detail": "Not quite The Forex market is generally considered more liquid than the stock market because its daily trading volume, measured in trillions of US dollars, is f"
+        },
+        {
+          "name": "objective review: the key is shown on the options",
+          "ok": true,
+          "detail": "2 option(s) labelled"
+        },
+        {
+          "name": "objective review reaches its result",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Retake opens fresh practice cards",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "retake practice: the single-choice card runs in practice mode",
+          "ok": true,
+          "detail": "learn-assessment-question-0 fx-starter-updated-lesson-1-introduction-to-forex-q01 mode=practice feedback=immediate"
+        },
+        {
+          "name": "retake practice: the single-choice card offers no Check button",
+          "ok": true,
+          "detail": "learn-assessment-question-0"
+        },
+        {
+          "name": "retake practice: nothing is marked before an option is chosen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "retake practice: choosing an option marks it at once, with its explanation",
+          "ok": true,
+          "detail": "Not quite The Forex market is generally considered more liquid than the stock market because its daily trading volume, measured in trillions of US dollars, is f"
+        },
+        {
+          "name": "retake practice: the key is shown on the options",
+          "ok": true,
+          "detail": "2 option(s) labelled"
+        },
+        {
+          "name": "a second lesson with a scored single choice opens",
+          "ok": true,
+          "detail": "lsn-fx-starter-updated-lesson-5-traditional-chart-patterns-s2-o1"
+        },
+        {
+          "name": "its single choice is answered",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the learn home lists both objectives as due for review",
+          "ok": true,
+          "detail": "learn-review-fx-starter-updated-lesson-1-introduction-to-forex-s0-o0 · learn-review-fx-starter-updated-lesson-5-traditional-chart-patterns-s2-o1"
+        },
+        {
+          "name": "the learn home offers \"Review what's due\" with the due count",
+          "ok": true,
+          "detail": "Review what's due (2) · 2 due rows"
+        },
+        {
+          "name": "the review sitting opens from the learn home button with due questions",
+          "ok": true,
+          "detail": "/learn/assessment/review/due"
+        },
+        {
+          "name": "the review sitting is practice: no formal note",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "due review sitting: the single-choice card runs in practice mode",
+          "ok": true,
+          "detail": "learn-assessment-question-0 fx-starter-updated-lesson-1-introduction-to-forex-q01 mode=practice feedback=immediate"
+        },
+        {
+          "name": "due review sitting: the single-choice card offers no Check button",
+          "ok": true,
+          "detail": "learn-assessment-question-0"
+        },
+        {
+          "name": "due review sitting: nothing is marked before an option is chosen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "due review sitting: choosing an option marks it at once, with its explanation",
+          "ok": true,
+          "detail": "Not quite The Forex market is generally considered more liquid than the stock market because its daily trading volume, measured in trillions of US dollars, is f"
+        },
+        {
+          "name": "due review sitting: the key is shown on the options",
+          "ok": true,
+          "detail": "2 option(s) labelled"
+        },
+        {
+          "name": "the review sitting opens by deep link: the sitting the button opened, resumed",
+          "ok": true,
+          "detail": "/learn/assessment/review/due · device sitting sit-review-1-1790578810749 → sit-review-1-1790578810749"
+        },
+        {
+          "name": "the second objective is still listed as due",
+          "ok": true,
+          "detail": "learn-review-fx-starter-updated-lesson-5-traditional-chart-patterns-s2-o1"
+        },
+        {
+          "name": "the due review opens the lesson",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "due review (learn home): the single-choice card runs in practice mode",
+          "ok": true,
+          "detail": "learn-lesson-question-0 fx-starter-updated-lesson-5-traditional-chart-patterns-q03 mode=practice feedback=immediate"
+        },
+        {
+          "name": "due review (learn home): the single-choice card offers no Check button",
+          "ok": true,
+          "detail": "learn-lesson-question-0"
+        },
+        {
+          "name": "due review (learn home): nothing is marked before an option is chosen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "due review (learn home): choosing an option marks it at once, with its explanation",
+          "ok": true,
+          "detail": "Correct A descending triangle has lower highs pressing down on flat support. In an existing downtrend, a break below that support usually signals that sellers a"
+        },
+        {
+          "name": "due review (learn home): the key is shown on the options",
+          "ok": true,
+          "detail": "1 option(s) labelled"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "A13-practice-shipping-01-lesson-practice.png",
+        "A13-practice-shipping-02-objective-review.png",
+        "A13-practice-shipping-03-retake-practice.png",
+        "A13-practice-shipping-04-review-due.png",
+        "A13-practice-shipping-05-review-sitting.png",
+        "A13-practice-shipping-06-due-review-lesson.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "A13-practice",
+      "title": "Single-choice practice is marked and explained on selection, without Check, on every practice surface; multi-select and typed answers keep Check",
+      "preview": "qa",
+      "criteria": [
+        "A13.1",
+        "A13.2"
+      ],
+      "context": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browserLocale": "en-GB",
+        "appLanguage": "en",
+        "timezoneId": "Asia/Beirut",
+        "clock": "2026-09-24T07:00:00.000Z"
+      },
+      "steps": [
+        "enter the demo; open a lesson with a single choice and a multi/typed question",
+        "objective review: \"Practise this objective\" on the lesson",
+        "retake practice: finish the objective review, press Retake",
+        "a second lesson answered today, so two objectives come due",
+        "four days later: both objectives are due for review",
+        "the due review: \"Review what's due\" on the learn home",
+        "the review sitting again by deep link (a page load of its URL)"
+      ],
+      "checks": [
+        {
+          "name": "lesson practice opens from the course",
+          "ok": true,
+          "detail": "fx-starter / lsn-fx-starter-updated-lesson-1-introduction-to-forex-s0-o0"
+        },
+        {
+          "name": "lesson practice: the single-choice card runs in practice mode",
+          "ok": true,
+          "detail": "learn-lesson-question-0 fx-starter-updated-lesson-1-introduction-to-forex-q01 mode=practice feedback=immediate"
+        },
+        {
+          "name": "lesson practice: the single-choice card offers no Check button",
+          "ok": true,
+          "detail": "learn-lesson-question-0"
+        },
+        {
+          "name": "lesson practice: nothing is marked before an option is chosen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "lesson practice: choosing an option marks it at once, with its explanation",
+          "ok": true,
+          "detail": "Not quite The Forex market is generally considered more liquid than the stock market because its daily trading volume, measured in trillions of US dollars, is f"
+        },
+        {
+          "name": "lesson practice: the key is shown on the options",
+          "ok": true,
+          "detail": "2 option(s) labelled"
+        },
+        {
+          "name": "lesson practice: the multi card offers Check",
+          "ok": true,
+          "detail": "learn-lesson-question-1 fx-starter-updated-lesson-1-introduction-to-forex-q02"
+        },
+        {
+          "name": "lesson practice: filling the multi answer marks nothing until Check",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "lesson practice: Check marks the multi answer",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the lesson offers \"Practise this objective\"",
+          "ok": true,
+          "detail": "Practise this objective"
+        },
+        {
+          "name": "objective review opens from the lesson button",
+          "ok": true,
+          "detail": "/learn/assessment/objective/fx-starter-updated-lesson-1-introduction-to-forex-s0-o0"
+        },
+        {
+          "name": "objective review is practice: no formal note",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "objective review: the single-choice card runs in practice mode",
+          "ok": true,
+          "detail": "learn-assessment-question-0 fx-starter-updated-lesson-1-introduction-to-forex-q01 mode=practice feedback=immediate"
+        },
+        {
+          "name": "objective review: the single-choice card offers no Check button",
+          "ok": true,
+          "detail": "learn-assessment-question-0"
+        },
+        {
+          "name": "objective review: nothing is marked before an option is chosen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "objective review: choosing an option marks it at once, with its explanation",
+          "ok": true,
+          "detail": "Not quite The Forex market is generally considered more liquid than the stock market because its daily trading volume, measured in trillions of US dollars, is f"
+        },
+        {
+          "name": "objective review: the key is shown on the options",
+          "ok": true,
+          "detail": "2 option(s) labelled"
+        },
+        {
+          "name": "objective review reaches its result",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Retake opens fresh practice cards",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "retake practice: the single-choice card runs in practice mode",
+          "ok": true,
+          "detail": "learn-assessment-question-0 fx-starter-updated-lesson-1-introduction-to-forex-q01 mode=practice feedback=immediate"
+        },
+        {
+          "name": "retake practice: the single-choice card offers no Check button",
+          "ok": true,
+          "detail": "learn-assessment-question-0"
+        },
+        {
+          "name": "retake practice: nothing is marked before an option is chosen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "retake practice: choosing an option marks it at once, with its explanation",
+          "ok": true,
+          "detail": "Not quite The Forex market is generally considered more liquid than the stock market because its daily trading volume, measured in trillions of US dollars, is f"
+        },
+        {
+          "name": "retake practice: the key is shown on the options",
+          "ok": true,
+          "detail": "2 option(s) labelled"
+        },
+        {
+          "name": "a second lesson with a scored single choice opens",
+          "ok": true,
+          "detail": "lsn-fx-starter-updated-lesson-5-traditional-chart-patterns-s2-o1"
+        },
+        {
+          "name": "its single choice is answered",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the learn home lists both objectives as due for review",
+          "ok": true,
+          "detail": "learn-review-fx-starter-updated-lesson-1-introduction-to-forex-s0-o0 · learn-review-fx-starter-updated-lesson-5-traditional-chart-patterns-s2-o1"
+        },
+        {
+          "name": "the learn home offers \"Review what's due\" with the due count",
+          "ok": true,
+          "detail": "Review what's due (2) · 2 due rows"
+        },
+        {
+          "name": "the review sitting opens from the learn home button with due questions",
+          "ok": true,
+          "detail": "/learn/assessment/review/due"
+        },
+        {
+          "name": "the review sitting is practice: no formal note",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "due review sitting: the single-choice card runs in practice mode",
+          "ok": true,
+          "detail": "learn-assessment-question-0 fx-starter-updated-lesson-1-introduction-to-forex-q01 mode=practice feedback=immediate"
+        },
+        {
+          "name": "due review sitting: the single-choice card offers no Check button",
+          "ok": true,
+          "detail": "learn-assessment-question-0"
+        },
+        {
+          "name": "due review sitting: nothing is marked before an option is chosen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "due review sitting: choosing an option marks it at once, with its explanation",
+          "ok": true,
+          "detail": "Not quite The Forex market is generally considered more liquid than the stock market because its daily trading volume, measured in trillions of US dollars, is f"
+        },
+        {
+          "name": "due review sitting: the key is shown on the options",
+          "ok": true,
+          "detail": "2 option(s) labelled"
+        },
+        {
+          "name": "the review sitting opens by deep link: the sitting the button opened, resumed",
+          "ok": true,
+          "detail": "/learn/assessment/review/due · device sitting sit-review-1-1790578810734 → sit-review-1-1790578810734"
+        },
+        {
+          "name": "the second objective is still listed as due",
+          "ok": true,
+          "detail": "learn-review-fx-starter-updated-lesson-5-traditional-chart-patterns-s2-o1"
+        },
+        {
+          "name": "the due review opens the lesson",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "due review (learn home): the single-choice card runs in practice mode",
+          "ok": true,
+          "detail": "learn-lesson-question-0 fx-starter-updated-lesson-5-traditional-chart-patterns-q03 mode=practice feedback=immediate"
+        },
+        {
+          "name": "due review (learn home): the single-choice card offers no Check button",
+          "ok": true,
+          "detail": "learn-lesson-question-0"
+        },
+        {
+          "name": "due review (learn home): nothing is marked before an option is chosen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "due review (learn home): choosing an option marks it at once, with its explanation",
+          "ok": true,
+          "detail": "Correct A descending triangle has lower highs pressing down on flat support. In an existing downtrend, a break below that support usually signals that sellers a"
+        },
+        {
+          "name": "due review (learn home): the key is shown on the options",
+          "ok": true,
+          "detail": "1 option(s) labelled"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "A13-practice-qa-01-lesson-practice.png",
+        "A13-practice-qa-02-objective-review.png",
+        "A13-practice-qa-03-retake-practice.png",
+        "A13-practice-qa-04-review-due.png",
+        "A13-practice-qa-05-review-sitting.png",
+        "A13-practice-qa-06-due-review-lesson.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "A13-formal",
+      "title": "A chapter checkpoint and a course exam withhold the key and correctness until the sitting completes",
+      "preview": "shipping",
+      "criteria": [
+        "A13.2"
+      ],
+      "context": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browserLocale": "en-GB",
+        "appLanguage": "en",
+        "timezoneId": "Asia/Beirut",
+        "clock": null
+      },
+      "steps": [
+        "a chapter checkpoint",
+        "a course exam"
+      ],
+      "checks": [
+        {
+          "name": "the checkpoint opens",
+          "ok": true,
+          "detail": "whole-picture"
+        },
+        {
+          "name": "checkpoint: the sitting is formal and says feedback waits for the end",
+          "ok": true,
+          "detail": "match:assessment/withheld choice:assessment/withheld match:assessment/withheld choice:assessment/withheld choice:assessment/withheld choice:assessment/withheld choice:assessment/withheld multi:assessment/withheld"
+        },
+        {
+          "name": "checkpoint: no hint is offered",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "checkpoint: choosing a single-choice option marks nothing; Check is still needed",
+          "ok": true,
+          "detail": "learn-assessment-question-1"
+        },
+        {
+          "name": "checkpoint: the answered card says only that the answer is recorded",
+          "ok": true,
+          "detail": "learn-assessment-question-1: recorded"
+        },
+        {
+          "name": "checkpoint: with one question left, every answer is only recorded and nothing is marked",
+          "ok": true,
+          "detail": "recorded,recorded,recorded,recorded,recorded,recorded,recorded; feedback 0, key marks 0"
+        },
+        {
+          "name": "checkpoint: the last answer completes the sitting with a result",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "checkpoint: once complete, every card shows what it withheld",
+          "ok": true,
+          "detail": "8/8"
+        },
+        {
+          "name": "the course exam opens",
+          "ok": true,
+          "detail": "fx-starter"
+        },
+        {
+          "name": "course exam: the sitting is formal and says feedback waits for the end",
+          "ok": true,
+          "detail": "choice:assessment/withheld match:assessment/withheld boolean:assessment/withheld choice:assessment/withheld entry:assessment/withheld multi:assessment/withheld choice:assessment/withheld entry:assessment/withheld"
+        },
+        {
+          "name": "course exam: no hint is offered",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "course exam: choosing a single-choice option marks nothing; Check is still needed",
+          "ok": true,
+          "detail": "learn-assessment-question-0"
+        },
+        {
+          "name": "course exam: the answered card says only that the answer is recorded",
+          "ok": true,
+          "detail": "learn-assessment-question-0: recorded"
+        },
+        {
+          "name": "course exam: with one question left, every answer is only recorded and nothing is marked",
+          "ok": true,
+          "detail": "recorded,recorded,recorded,recorded,recorded,recorded,recorded; feedback 0, key marks 0"
+        },
+        {
+          "name": "course exam: the last answer completes the sitting with a result",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "course exam: once complete, every card shows what it withheld",
+          "ok": true,
+          "detail": "8/8"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "A13-formal-shipping-01-checkpoint-withheld.png",
+        "A13-formal-shipping-02-checkpoint-revealed.png",
+        "A13-formal-shipping-03-exam-withheld.png",
+        "A13-formal-shipping-04-exam-revealed.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "A13-formal",
+      "title": "A chapter checkpoint and a course exam withhold the key and correctness until the sitting completes",
+      "preview": "qa",
+      "criteria": [
+        "A13.2"
+      ],
+      "context": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browserLocale": "en-GB",
+        "appLanguage": "en",
+        "timezoneId": "Asia/Beirut",
+        "clock": null
+      },
+      "steps": [
+        "a chapter checkpoint",
+        "a course exam"
+      ],
+      "checks": [
+        {
+          "name": "the checkpoint opens",
+          "ok": true,
+          "detail": "whole-picture"
+        },
+        {
+          "name": "checkpoint: the sitting is formal and says feedback waits for the end",
+          "ok": true,
+          "detail": "match:assessment/withheld choice:assessment/withheld match:assessment/withheld choice:assessment/withheld choice:assessment/withheld choice:assessment/withheld choice:assessment/withheld multi:assessment/withheld"
+        },
+        {
+          "name": "checkpoint: no hint is offered",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "checkpoint: choosing a single-choice option marks nothing; Check is still needed",
+          "ok": true,
+          "detail": "learn-assessment-question-1"
+        },
+        {
+          "name": "checkpoint: the answered card says only that the answer is recorded",
+          "ok": true,
+          "detail": "learn-assessment-question-1: recorded"
+        },
+        {
+          "name": "checkpoint: with one question left, every answer is only recorded and nothing is marked",
+          "ok": true,
+          "detail": "recorded,recorded,recorded,recorded,recorded,recorded,recorded; feedback 0, key marks 0"
+        },
+        {
+          "name": "checkpoint: the last answer completes the sitting with a result",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "checkpoint: once complete, every card shows what it withheld",
+          "ok": true,
+          "detail": "8/8"
+        },
+        {
+          "name": "the course exam opens",
+          "ok": true,
+          "detail": "fx-starter"
+        },
+        {
+          "name": "course exam: the sitting is formal and says feedback waits for the end",
+          "ok": true,
+          "detail": "choice:assessment/withheld match:assessment/withheld boolean:assessment/withheld choice:assessment/withheld entry:assessment/withheld multi:assessment/withheld choice:assessment/withheld entry:assessment/withheld"
+        },
+        {
+          "name": "course exam: no hint is offered",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "course exam: choosing a single-choice option marks nothing; Check is still needed",
+          "ok": true,
+          "detail": "learn-assessment-question-0"
+        },
+        {
+          "name": "course exam: the answered card says only that the answer is recorded",
+          "ok": true,
+          "detail": "learn-assessment-question-0: recorded"
+        },
+        {
+          "name": "course exam: with one question left, every answer is only recorded and nothing is marked",
+          "ok": true,
+          "detail": "recorded,recorded,recorded,recorded,recorded,recorded,recorded; feedback 0, key marks 0"
+        },
+        {
+          "name": "course exam: the last answer completes the sitting with a result",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "course exam: once complete, every card shows what it withheld",
+          "ok": true,
+          "detail": "8/8"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "A13-formal-qa-01-checkpoint-withheld.png",
+        "A13-formal-qa-02-checkpoint-revealed.png",
+        "A13-formal-qa-03-exam-withheld.png",
+        "A13-formal-qa-04-exam-revealed.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "A14-sitting",
+      "title": "A checkpoint sitting resumes by identity after navigation, remount and reload, keys hidden; finish, retake, and no practice leak",
+      "preview": "shipping",
+      "criteria": [
+        "A14.1",
+        "A14.2",
+        "A13.2"
+      ],
+      "context": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browserLocale": "en-GB",
+        "appLanguage": "en",
+        "timezoneId": "Asia/Beirut",
+        "clock": null
+      },
+      "steps": [
+        "answer three questions, then leave",
+        "navigate away (Back, then the Hub tab) and come back to the checkpoint",
+        "the assessment screen survived the navigation (kept mounted by the navigator)",
+        "remount: another checkpoint in between, then this one again",
+        "reload the page on the sitting",
+        "practice for the sitting’s objectives while it is open",
+        "finish the sitting",
+        "positive control: a finished sitting releases its questions to practice",
+        "Retake: a new sitting",
+        "the new sitting re-asks 8 question(s) of the first"
+      ],
+      "checks": [
+        {
+          "name": "a checkpoint with at least four questions opens",
+          "ok": true,
+          "detail": "whole-picture,understand-market,analytical-tools,what-moves-markets,repeatable-approach"
+        },
+        {
+          "name": "opening the checkpoint records one open sitting on the device",
+          "ok": true,
+          "detail": "sit-chapter:whole-picture-1-1790315881633 (device record)"
+        },
+        {
+          "name": "three answers are recorded",
+          "ok": true,
+          "detail": "recorded,recorded,recorded"
+        },
+        {
+          "name": "the device holds the three answers under the sitting",
+          "ok": true,
+          "detail": "sit-chapter:whole-picture-1-1790315881633: 3 answers (device record)"
+        },
+        {
+          "name": "Back leaves the sitting",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "after navigating away and back: the same sitting, with the same three committed answers",
+          "ok": true,
+          "detail": "sit-chapter:whole-picture-1-1790315881633: 3 answers (device record)"
+        },
+        {
+          "name": "after navigating away and back: the same questions, in the same order",
+          "ok": true,
+          "detail": "fx-mastery-updated-lesson-10-portfolio-and-money-management--q01,fx-mastery-updated-lesson-10-portfolio-and-money-management--q02,fx-mastery-updated-lesson-10-portfolio-and-money-management--q03"
+        },
+        {
+          "name": "after navigating away and back: the three answers are shown as recorded",
+          "ok": true,
+          "detail": "3/3"
+        },
+        {
+          "name": "after navigating away and back: no key, no correctness and no result while it is unfinished",
+          "ok": true,
+          "detail": "feedback 0, key marks 0"
+        },
+        {
+          "name": "another checkpoint opens in between",
+          "ok": true,
+          "detail": "understand-market"
+        },
+        {
+          "name": "after a remount: the same sitting, with the same three committed answers",
+          "ok": true,
+          "detail": "sit-chapter:whole-picture-1-1790315881633: 3 answers (device record)"
+        },
+        {
+          "name": "after a remount: the same questions, in the same order",
+          "ok": true,
+          "detail": "fx-mastery-updated-lesson-10-portfolio-and-money-management--q01,fx-mastery-updated-lesson-10-portfolio-and-money-management--q02,fx-mastery-updated-lesson-10-portfolio-and-money-management--q03"
+        },
+        {
+          "name": "after a remount: the three answers are shown as recorded",
+          "ok": true,
+          "detail": "3/3"
+        },
+        {
+          "name": "after a remount: no key, no correctness and no result while it is unfinished",
+          "ok": true,
+          "detail": "feedback 0, key marks 0"
+        },
+        {
+          "name": "after a remount: the cards are rebuilt from the sitting record (the three answered ones, no other)",
+          "ok": true,
+          "detail": "3 restored (card props)"
+        },
+        {
+          "name": "after a remount: the screen says the sitting was resumed",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the reload returns to the sitting",
+          "ok": true,
+          "detail": "/learn/assessment/chapter/whole-picture (demo session restored)"
+        },
+        {
+          "name": "after a reload: the same sitting, with the same three committed answers",
+          "ok": true,
+          "detail": "sit-chapter:whole-picture-1-1790315881633: 3 answers (device record)"
+        },
+        {
+          "name": "after a reload: the same questions, in the same order",
+          "ok": true,
+          "detail": "fx-mastery-updated-lesson-10-portfolio-and-money-management--q01,fx-mastery-updated-lesson-10-portfolio-and-money-management--q02,fx-mastery-updated-lesson-10-portfolio-and-money-management--q03"
+        },
+        {
+          "name": "after a reload: the three answers are shown as recorded",
+          "ok": true,
+          "detail": "3/3"
+        },
+        {
+          "name": "after a reload: no key, no correctness and no result while it is unfinished",
+          "ok": true,
+          "detail": "feedback 0, key marks 0"
+        },
+        {
+          "name": "after a reload: the cards are rebuilt from the sitting record (the three answered ones, no other)",
+          "ok": true,
+          "detail": "3 restored (card props)"
+        },
+        {
+          "name": "after a reload: the screen says the sitting was resumed",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "first sitting open: no practice surface shows a question of the open sitting",
+          "ok": true,
+          "detail": "3 objectives, 8 practice cards, leaked: none"
+        },
+        {
+          "name": "the remaining answers finish the sitting with a result",
+          "ok": true,
+          "detail": "recorded,recorded,recorded,recorded,feedback"
+        },
+        {
+          "name": "the device marks the same sitting complete with every answer once",
+          "ok": true,
+          "detail": "sit-chapter:whole-picture-1-1790315881633: 8/8, completedAt 1790315962556"
+        },
+        {
+          "name": "after the sitting is finished, practice shows at least one of its questions (the leak check can see them)",
+          "ok": true,
+          "detail": "6 of its questions in practice"
+        },
+        {
+          "name": "coming back after the finish opens a new sitting, not the finished one",
+          "ok": true,
+          "detail": "sit-chapter:whole-picture-2-1790315991945 (device record)"
+        },
+        {
+          "name": "its cards are unanswered",
+          "ok": true,
+          "detail": "8/8"
+        },
+        {
+          "name": "second sitting open: no practice surface shows a question of the open sitting",
+          "ok": true,
+          "detail": "3 objectives, 8 practice cards, leaked: none"
+        },
+        {
+          "name": "the new sitting finishes with a result",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "pressing Retake on the result opens another new sitting",
+          "ok": true,
+          "detail": "sit-chapter:whole-picture-3-1790316044687 (device record)"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "A14-sitting-shipping-01-three-answered.png",
+        "A14-sitting-shipping-02-resumed-after-reload.png",
+        "A14-sitting-shipping-03-first-sitting-result.png",
+        "A14-sitting-shipping-04-retake.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "A14-sitting",
+      "title": "A checkpoint sitting resumes by identity after navigation, remount and reload, keys hidden; finish, retake, and no practice leak",
+      "preview": "qa",
+      "criteria": [
+        "A14.1",
+        "A14.2",
+        "A13.2"
+      ],
+      "context": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browserLocale": "en-GB",
+        "appLanguage": "en",
+        "timezoneId": "Asia/Beirut",
+        "clock": null
+      },
+      "steps": [
+        "answer three questions, then leave",
+        "navigate away (Back, then the Hub tab) and come back to the checkpoint",
+        "the assessment screen survived the navigation (kept mounted by the navigator)",
+        "remount: another checkpoint in between, then this one again",
+        "reload the page on the sitting",
+        "practice for the sitting’s objectives while it is open",
+        "finish the sitting",
+        "positive control: a finished sitting releases its questions to practice",
+        "Retake: a new sitting",
+        "the new sitting re-asks 8 question(s) of the first"
+      ],
+      "checks": [
+        {
+          "name": "a checkpoint with at least four questions opens",
+          "ok": true,
+          "detail": "whole-picture,understand-market,analytical-tools,what-moves-markets,repeatable-approach"
+        },
+        {
+          "name": "opening the checkpoint records one open sitting on the device",
+          "ok": true,
+          "detail": "sit-chapter:whole-picture-1-1790316057657 (device record)"
+        },
+        {
+          "name": "three answers are recorded",
+          "ok": true,
+          "detail": "recorded,recorded,recorded"
+        },
+        {
+          "name": "the device holds the three answers under the sitting",
+          "ok": true,
+          "detail": "sit-chapter:whole-picture-1-1790316057657: 3 answers (device record)"
+        },
+        {
+          "name": "Back leaves the sitting",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "after navigating away and back: the same sitting, with the same three committed answers",
+          "ok": true,
+          "detail": "sit-chapter:whole-picture-1-1790316057657: 3 answers (device record)"
+        },
+        {
+          "name": "after navigating away and back: the same questions, in the same order",
+          "ok": true,
+          "detail": "fx-mastery-updated-lesson-10-portfolio-and-money-management--q01,fx-mastery-updated-lesson-10-portfolio-and-money-management--q02,fx-mastery-updated-lesson-10-portfolio-and-money-management--q03"
+        },
+        {
+          "name": "after navigating away and back: the three answers are shown as recorded",
+          "ok": true,
+          "detail": "3/3"
+        },
+        {
+          "name": "after navigating away and back: no key, no correctness and no result while it is unfinished",
+          "ok": true,
+          "detail": "feedback 0, key marks 0"
+        },
+        {
+          "name": "another checkpoint opens in between",
+          "ok": true,
+          "detail": "understand-market"
+        },
+        {
+          "name": "after a remount: the same sitting, with the same three committed answers",
+          "ok": true,
+          "detail": "sit-chapter:whole-picture-1-1790316057657: 3 answers (device record)"
+        },
+        {
+          "name": "after a remount: the same questions, in the same order",
+          "ok": true,
+          "detail": "fx-mastery-updated-lesson-10-portfolio-and-money-management--q01,fx-mastery-updated-lesson-10-portfolio-and-money-management--q02,fx-mastery-updated-lesson-10-portfolio-and-money-management--q03"
+        },
+        {
+          "name": "after a remount: the three answers are shown as recorded",
+          "ok": true,
+          "detail": "3/3"
+        },
+        {
+          "name": "after a remount: no key, no correctness and no result while it is unfinished",
+          "ok": true,
+          "detail": "feedback 0, key marks 0"
+        },
+        {
+          "name": "after a remount: the cards are rebuilt from the sitting record (the three answered ones, no other)",
+          "ok": true,
+          "detail": "3 restored (card props)"
+        },
+        {
+          "name": "after a remount: the screen says the sitting was resumed",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the reload returns to the sitting",
+          "ok": true,
+          "detail": "/learn/assessment/chapter/whole-picture (demo session restored)"
+        },
+        {
+          "name": "after a reload: the same sitting, with the same three committed answers",
+          "ok": true,
+          "detail": "sit-chapter:whole-picture-1-1790316057657: 3 answers (device record)"
+        },
+        {
+          "name": "after a reload: the same questions, in the same order",
+          "ok": true,
+          "detail": "fx-mastery-updated-lesson-10-portfolio-and-money-management--q01,fx-mastery-updated-lesson-10-portfolio-and-money-management--q02,fx-mastery-updated-lesson-10-portfolio-and-money-management--q03"
+        },
+        {
+          "name": "after a reload: the three answers are shown as recorded",
+          "ok": true,
+          "detail": "3/3"
+        },
+        {
+          "name": "after a reload: no key, no correctness and no result while it is unfinished",
+          "ok": true,
+          "detail": "feedback 0, key marks 0"
+        },
+        {
+          "name": "after a reload: the cards are rebuilt from the sitting record (the three answered ones, no other)",
+          "ok": true,
+          "detail": "3 restored (card props)"
+        },
+        {
+          "name": "after a reload: the screen says the sitting was resumed",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "first sitting open: no practice surface shows a question of the open sitting",
+          "ok": true,
+          "detail": "3 objectives, 8 practice cards, leaked: none"
+        },
+        {
+          "name": "the remaining answers finish the sitting with a result",
+          "ok": true,
+          "detail": "recorded,recorded,recorded,recorded,feedback"
+        },
+        {
+          "name": "the device marks the same sitting complete with every answer once",
+          "ok": true,
+          "detail": "sit-chapter:whole-picture-1-1790316057657: 8/8, completedAt 1790316138966"
+        },
+        {
+          "name": "after the sitting is finished, practice shows at least one of its questions (the leak check can see them)",
+          "ok": true,
+          "detail": "6 of its questions in practice"
+        },
+        {
+          "name": "coming back after the finish opens a new sitting, not the finished one",
+          "ok": true,
+          "detail": "sit-chapter:whole-picture-2-1790316168396 (device record)"
+        },
+        {
+          "name": "its cards are unanswered",
+          "ok": true,
+          "detail": "8/8"
+        },
+        {
+          "name": "second sitting open: no practice surface shows a question of the open sitting",
+          "ok": true,
+          "detail": "3 objectives, 8 practice cards, leaked: none"
+        },
+        {
+          "name": "the new sitting finishes with a result",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "pressing Retake on the result opens another new sitting",
+          "ok": true,
+          "detail": "sit-chapter:whole-picture-3-1790316221188 (device record)"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "A14-sitting-qa-01-three-answered.png",
+        "A14-sitting-qa-02-resumed-after-reload.png",
+        "A14-sitting-qa-03-first-sitting-result.png",
+        "A14-sitting-qa-04-retake.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "A12-failed-write",
+      "title": "A refused durable answer write shows Retry, leaves no result, attempt or completed sitting, and Retry commits once",
+      "preview": "shipping",
+      "criteria": [
+        "A12.1",
+        "A12.2"
+      ],
+      "context": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browserLocale": "en-GB",
+        "appLanguage": "en",
+        "timezoneId": "Asia/Beirut",
+        "clock": null
+      },
+      "steps": [
+        "answer 7 of 8",
+        "the device store refuses writes; answer the last question",
+        "Retry while the store still refuses",
+        "the store takes writes again; Retry",
+        "after a reload the device still holds it once",
+        "lesson practice: a refused answer write, then Retry"
+      ],
+      "checks": [
+        {
+          "name": "the checkpoint opens",
+          "ok": true,
+          "detail": "understand-market"
+        },
+        {
+          "name": "every answer but the last is recorded",
+          "ok": true,
+          "detail": "recorded,recorded,recorded,recorded,recorded,recorded,recorded"
+        },
+        {
+          "name": "the last answer says it was not saved",
+          "ok": true,
+          "detail": "learn-assessment-question-7: not-saved"
+        },
+        {
+          "name": "the card offers Retry",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the screen offers Retry for the unsaved answer",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "no result is shown",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "no key is revealed on any card",
+          "ok": true,
+          "detail": "0 revealed"
+        },
+        {
+          "name": "the unsaved card is not locked: its options can still be changed",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the device holds no completed sitting and no answer for the last question",
+          "ok": true,
+          "detail": "7/8 answers, completedAt null (device record)"
+        },
+        {
+          "name": "no ghost attempt and no mastery change on the device",
+          "ok": true,
+          "detail": "attempts 7 → 7"
+        },
+        {
+          "name": "a retry that fails again still shows Retry and no result",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the retry completes the sitting with a result",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the Retry banner is gone",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the last answer is committed exactly once and the sitting is complete",
+          "ok": true,
+          "detail": "8/8, completedAt 1790316246762 (device record)"
+        },
+        {
+          "name": "one attempt is recorded for the last question",
+          "ok": true,
+          "detail": "1 (device record)"
+        },
+        {
+          "name": "after a reload: one answer for the last question, the sitting complete",
+          "ok": true,
+          "detail": "8 answers (device record)"
+        },
+        {
+          "name": "lesson practice: a refused write shows Retry",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "lesson practice: nothing was recorded",
+          "ok": true,
+          "detail": "0 attempts (device record)"
+        },
+        {
+          "name": "lesson practice: Retry saves the answer",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "lesson practice: the answer is recorded exactly once",
+          "ok": true,
+          "detail": "1 attempts (device record)"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "A12-failed-write-shipping-01-last-answer-not-saved.png",
+        "A12-failed-write-shipping-02-retried-result.png",
+        "A12-failed-write-shipping-03-lesson-not-saved.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "A12-failed-write",
+      "title": "A refused durable answer write shows Retry, leaves no result, attempt or completed sitting, and Retry commits once",
+      "preview": "qa",
+      "criteria": [
+        "A12.1",
+        "A12.2"
+      ],
+      "context": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browserLocale": "en-GB",
+        "appLanguage": "en",
+        "timezoneId": "Asia/Beirut",
+        "clock": null
+      },
+      "steps": [
+        "answer 7 of 8",
+        "the device store refuses writes; answer the last question",
+        "Retry while the store still refuses",
+        "the store takes writes again; Retry",
+        "after a reload the device still holds it once",
+        "lesson practice: a refused answer write, then Retry"
+      ],
+      "checks": [
+        {
+          "name": "the checkpoint opens",
+          "ok": true,
+          "detail": "understand-market"
+        },
+        {
+          "name": "every answer but the last is recorded",
+          "ok": true,
+          "detail": "recorded,recorded,recorded,recorded,recorded,recorded,recorded"
+        },
+        {
+          "name": "the last answer says it was not saved",
+          "ok": true,
+          "detail": "learn-assessment-question-7: not-saved"
+        },
+        {
+          "name": "the card offers Retry",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the screen offers Retry for the unsaved answer",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "no result is shown",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "no key is revealed on any card",
+          "ok": true,
+          "detail": "0 revealed"
+        },
+        {
+          "name": "the unsaved card is not locked: its options can still be changed",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the device holds no completed sitting and no answer for the last question",
+          "ok": true,
+          "detail": "7/8 answers, completedAt null (device record)"
+        },
+        {
+          "name": "no ghost attempt and no mastery change on the device",
+          "ok": true,
+          "detail": "attempts 7 → 7"
+        },
+        {
+          "name": "a retry that fails again still shows Retry and no result",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the retry completes the sitting with a result",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the Retry banner is gone",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the last answer is committed exactly once and the sitting is complete",
+          "ok": true,
+          "detail": "8/8, completedAt 1790316289194 (device record)"
+        },
+        {
+          "name": "one attempt is recorded for the last question",
+          "ok": true,
+          "detail": "1 (device record)"
+        },
+        {
+          "name": "after a reload: one answer for the last question, the sitting complete",
+          "ok": true,
+          "detail": "8 answers (device record)"
+        },
+        {
+          "name": "lesson practice: a refused write shows Retry",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "lesson practice: nothing was recorded",
+          "ok": true,
+          "detail": "0 attempts (device record)"
+        },
+        {
+          "name": "lesson practice: Retry saves the answer",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "lesson practice: the answer is recorded exactly once",
+          "ok": true,
+          "detail": "1 attempts (device record)"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "A12-failed-write-qa-01-last-answer-not-saved.png",
+        "A12-failed-write-qa-02-retried-result.png",
+        "A12-failed-write-qa-03-lesson-not-saved.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "A15.3-provisional",
+      "title": "The \"Awaiting editorial approval\" notice on the exam result, progress, learn home and certificates",
+      "preview": "shipping",
+      "criteria": [
+        "A15.3"
+      ],
+      "context": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browserLocale": "en-GB",
+        "appLanguage": "en",
+        "timezoneId": "Asia/Beirut",
+        "clock": null
+      },
+      "steps": [
+        "control: nothing is marked yet",
+        "sit a checkpoint to its result",
+        "certificates: read every lesson of adv-crypto and answer one of its questions"
+      ],
+      "checks": [
+        {
+          "name": "learn home: no notice before any marked answer",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the checkpoint opens",
+          "ok": true,
+          "detail": "analytical-tools"
+        },
+        {
+          "name": "the checkpoint reaches its result",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "exam result: the notice is shown",
+          "ok": true,
+          "detail": "Awaiting editorial approval These results are marked against course questions and answer keys that are still awaiting OneRoyal editorial review, so treat them a"
+        },
+        {
+          "name": "learn home: the notice is shown",
+          "ok": true,
+          "detail": "Awaiting editorial approval These results are marked against course questions and answer keys that are still awaiting OneRoyal editorial review, so treat them a"
+        },
+        {
+          "name": "every lesson of adv-crypto is marked read",
+          "ok": true,
+          "detail": "11/11"
+        },
+        {
+          "name": "one of its questions is answered and marked",
+          "ok": true,
+          "detail": "adv-crypto-adv-crypto-lesson-1-from-trader-to-operator-q05"
+        },
+        {
+          "name": "progress: the notice is shown",
+          "ok": true,
+          "detail": "Awaiting editorial approval These results are marked against course questions and answer keys that are still awaiting OneRoyal editorial review, so treat them a"
+        },
+        {
+          "name": "a certificate is listed",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "certificate: the notice is shown",
+          "ok": true,
+          "detail": "Awaiting editorial approval These results are marked against course questions and answer keys that are still awaiting OneRoyal editorial review, so treat them a"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "A15.3-provisional-shipping-01-result-notice.png",
+        "A15.3-provisional-shipping-02-progress-notice.png",
+        "A15.3-provisional-shipping-03-certificate-notice.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "A15.3-provisional",
+      "title": "The \"Awaiting editorial approval\" notice on the exam result, progress, learn home and certificates",
+      "preview": "qa",
+      "criteria": [
+        "A15.3"
+      ],
+      "context": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browserLocale": "en-GB",
+        "appLanguage": "en",
+        "timezoneId": "Asia/Beirut",
+        "clock": null
+      },
+      "steps": [
+        "control: nothing is marked yet",
+        "sit a checkpoint to its result",
+        "certificates: read every lesson of adv-crypto and answer one of its questions"
+      ],
+      "checks": [
+        {
+          "name": "learn home: no notice before any marked answer",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "the checkpoint opens",
+          "ok": true,
+          "detail": "analytical-tools"
+        },
+        {
+          "name": "the checkpoint reaches its result",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "exam result: the notice is shown",
+          "ok": true,
+          "detail": "Awaiting editorial approval These results are marked against course questions and answer keys that are still awaiting OneRoyal editorial review, so treat them a"
+        },
+        {
+          "name": "learn home: the notice is shown",
+          "ok": true,
+          "detail": "Awaiting editorial approval These results are marked against course questions and answer keys that are still awaiting OneRoyal editorial review, so treat them a"
+        },
+        {
+          "name": "every lesson of adv-crypto is marked read",
+          "ok": true,
+          "detail": "11/11"
+        },
+        {
+          "name": "one of its questions is answered and marked",
+          "ok": true,
+          "detail": "adv-crypto-adv-crypto-lesson-1-from-trader-to-operator-q05"
+        },
+        {
+          "name": "progress: the notice is shown",
+          "ok": true,
+          "detail": "Awaiting editorial approval These results are marked against course questions and answer keys that are still awaiting OneRoyal editorial review, so treat them a"
+        },
+        {
+          "name": "a certificate is listed",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "certificate: the notice is shown",
+          "ok": true,
+          "detail": "Awaiting editorial approval These results are marked against course questions and answer keys that are still awaiting OneRoyal editorial review, so treat them a"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "A15.3-provisional-qa-01-result-notice.png",
+        "A15.3-provisional-qa-02-progress-notice.png",
+        "A15.3-provisional-qa-03-certificate-notice.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "A13-desktop",
+      "title": "Practice on selection and a withheld checkpoint at a desktop width",
+      "preview": "shipping",
+      "criteria": [
+        "A13.1",
+        "A13.2"
+      ],
+      "context": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "browserLocale": "en-GB",
+        "appLanguage": "en",
+        "timezoneId": "Asia/Beirut",
+        "clock": null
+      },
+      "steps": [],
+      "checks": [
+        {
+          "name": "desktop 1280×800: lesson practice: the single-choice card runs in practice mode",
+          "ok": true,
+          "detail": "learn-lesson-question-0 fx-starter-updated-lesson-1-introduction-to-forex-q01 mode=practice feedback=immediate"
+        },
+        {
+          "name": "desktop 1280×800: lesson practice: the single-choice card offers no Check button",
+          "ok": true,
+          "detail": "learn-lesson-question-0"
+        },
+        {
+          "name": "desktop 1280×800: lesson practice: nothing is marked before an option is chosen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "desktop 1280×800: lesson practice: choosing an option marks it at once, with its explanation",
+          "ok": true,
+          "detail": "Not quite The Forex market is generally considered more liquid than the stock market because its daily trading volume, measured in trillions of US dollars, is f"
+        },
+        {
+          "name": "desktop 1280×800: lesson practice: the key is shown on the options",
+          "ok": true,
+          "detail": "2 option(s) labelled"
+        },
+        {
+          "name": "desktop 1280×800: lesson practice: the multi card offers Check",
+          "ok": true,
+          "detail": "learn-lesson-question-1 fx-starter-updated-lesson-1-introduction-to-forex-q02"
+        },
+        {
+          "name": "desktop 1280×800: lesson practice: filling the multi answer marks nothing until Check",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "desktop 1280×800: lesson practice: Check marks the multi answer",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "desktop 1280×800: the checkpoint opens",
+          "ok": true,
+          "detail": "whole-picture"
+        },
+        {
+          "name": "desktop 1280×800: checkpoint: the sitting is formal and says feedback waits for the end",
+          "ok": true,
+          "detail": "match:assessment/withheld choice:assessment/withheld match:assessment/withheld choice:assessment/withheld choice:assessment/withheld choice:assessment/withheld choice:assessment/withheld multi:assessment/withheld"
+        },
+        {
+          "name": "desktop 1280×800: checkpoint: no hint is offered",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "desktop 1280×800: checkpoint: choosing a single-choice option marks nothing; Check is still needed",
+          "ok": true,
+          "detail": "learn-assessment-question-1"
+        },
+        {
+          "name": "desktop 1280×800: checkpoint: the answered card says only that the answer is recorded",
+          "ok": true,
+          "detail": "learn-assessment-question-1: recorded"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "A13-desktop-shipping-01-lesson-practice.png",
+        "A13-desktop-shipping-02-checkpoint-withheld.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "A13-desktop",
+      "title": "Practice on selection and a withheld checkpoint at a desktop width",
+      "preview": "qa",
+      "criteria": [
+        "A13.1",
+        "A13.2"
+      ],
+      "context": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "browserLocale": "en-GB",
+        "appLanguage": "en",
+        "timezoneId": "Asia/Beirut",
+        "clock": null
+      },
+      "steps": [],
+      "checks": [
+        {
+          "name": "desktop 1280×800: lesson practice: the single-choice card runs in practice mode",
+          "ok": true,
+          "detail": "learn-lesson-question-0 fx-starter-updated-lesson-1-introduction-to-forex-q01 mode=practice feedback=immediate"
+        },
+        {
+          "name": "desktop 1280×800: lesson practice: the single-choice card offers no Check button",
+          "ok": true,
+          "detail": "learn-lesson-question-0"
+        },
+        {
+          "name": "desktop 1280×800: lesson practice: nothing is marked before an option is chosen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "desktop 1280×800: lesson practice: choosing an option marks it at once, with its explanation",
+          "ok": true,
+          "detail": "Not quite The Forex market is generally considered more liquid than the stock market because its daily trading volume, measured in trillions of US dollars, is f"
+        },
+        {
+          "name": "desktop 1280×800: lesson practice: the key is shown on the options",
+          "ok": true,
+          "detail": "2 option(s) labelled"
+        },
+        {
+          "name": "desktop 1280×800: lesson practice: the multi card offers Check",
+          "ok": true,
+          "detail": "learn-lesson-question-1 fx-starter-updated-lesson-1-introduction-to-forex-q02"
+        },
+        {
+          "name": "desktop 1280×800: lesson practice: filling the multi answer marks nothing until Check",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "desktop 1280×800: lesson practice: Check marks the multi answer",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "desktop 1280×800: the checkpoint opens",
+          "ok": true,
+          "detail": "whole-picture"
+        },
+        {
+          "name": "desktop 1280×800: checkpoint: the sitting is formal and says feedback waits for the end",
+          "ok": true,
+          "detail": "match:assessment/withheld choice:assessment/withheld match:assessment/withheld choice:assessment/withheld choice:assessment/withheld choice:assessment/withheld choice:assessment/withheld multi:assessment/withheld"
+        },
+        {
+          "name": "desktop 1280×800: checkpoint: no hint is offered",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "desktop 1280×800: checkpoint: choosing a single-choice option marks nothing; Check is still needed",
+          "ok": true,
+          "detail": "learn-assessment-question-1"
+        },
+        {
+          "name": "desktop 1280×800: checkpoint: the answered card says only that the answer is recorded",
+          "ok": true,
+          "detail": "learn-assessment-question-1: recorded"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "A13-desktop-qa-01-lesson-practice.png",
+        "A13-desktop-qa-02-checkpoint-withheld.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "A13-rtl",
+      "title": "Practice on selection and a withheld checkpoint in Arabic (right to left)",
+      "preview": "shipping",
+      "criteria": [
+        "A13.1",
+        "A13.2"
+      ],
+      "context": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browserLocale": "ar",
+        "appLanguage": "ar",
+        "timezoneId": "Asia/Beirut",
+        "clock": null
+      },
+      "steps": [],
+      "checks": [
+        {
+          "name": "Arabic is applied to the document",
+          "ok": true,
+          "detail": "ar-AE"
+        },
+        {
+          "name": "the layout is mirrored: Home is now on the right of the Hub",
+          "ok": true,
+          "detail": "{\"lang\":\"ar-AE\",\"homeX\":309.59375,\"hubX\":4}"
+        },
+        {
+          "name": "Arabic: lesson practice: the single-choice card runs in practice mode",
+          "ok": true,
+          "detail": "learn-lesson-question-0 fx-starter-updated-lesson-1-introduction-to-forex-q01 mode=practice feedback=immediate"
+        },
+        {
+          "name": "Arabic: lesson practice: the single-choice card offers no Check button",
+          "ok": true,
+          "detail": "learn-lesson-question-0"
+        },
+        {
+          "name": "Arabic: lesson practice: nothing is marked before an option is chosen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Arabic: lesson practice: choosing an option marks it at once, with its explanation",
+          "ok": true,
+          "detail": "ليس تمامًا The Forex market is generally considered more liquid than the stock market because its daily trading volume, measured in trillions of US dollars, is "
+        },
+        {
+          "name": "Arabic: lesson practice: the key is shown on the options",
+          "ok": true,
+          "detail": "2 option(s) labelled"
+        },
+        {
+          "name": "Arabic: lesson practice: the multi card offers Check",
+          "ok": true,
+          "detail": "learn-lesson-question-1 fx-starter-updated-lesson-1-introduction-to-forex-q02"
+        },
+        {
+          "name": "Arabic: lesson practice: filling the multi answer marks nothing until Check",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Arabic: lesson practice: Check marks the multi answer",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Arabic: the checkpoint opens",
+          "ok": true,
+          "detail": "whole-picture"
+        },
+        {
+          "name": "Arabic: checkpoint: the sitting is formal and says feedback waits for the end",
+          "ok": true,
+          "detail": "match:assessment/withheld choice:assessment/withheld match:assessment/withheld choice:assessment/withheld choice:assessment/withheld choice:assessment/withheld choice:assessment/withheld multi:assessment/withheld"
+        },
+        {
+          "name": "Arabic: checkpoint: no hint is offered",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Arabic: checkpoint: choosing a single-choice option marks nothing; Check is still needed",
+          "ok": true,
+          "detail": "learn-assessment-question-1"
+        },
+        {
+          "name": "Arabic: checkpoint: the answered card says only that the answer is recorded",
+          "ok": true,
+          "detail": "learn-assessment-question-1: recorded"
+        },
+        {
+          "name": "Arabic: the result shows the notice in Arabic",
+          "ok": true,
+          "detail": "بانتظار الاعتماد التحريري تستند هذه النتائج إلى أسئلة الدورة ومفاتيح إجاباتها التي لا تزال بانتظار المراجعة التحريرية من OneRoyal، لذا تعامل معها على أنها مؤقتة"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "A13-rtl-shipping-01-lesson-practice.png",
+        "A13-rtl-shipping-02-checkpoint-withheld.png"
+      ],
+      "ok": true
+    },
+    {
+      "id": "A13-rtl",
+      "title": "Practice on selection and a withheld checkpoint in Arabic (right to left)",
+      "preview": "qa",
+      "criteria": [
+        "A13.1",
+        "A13.2"
+      ],
+      "context": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browserLocale": "ar",
+        "appLanguage": "ar",
+        "timezoneId": "Asia/Beirut",
+        "clock": null
+      },
+      "steps": [],
+      "checks": [
+        {
+          "name": "Arabic is applied to the document",
+          "ok": true,
+          "detail": "ar-AE"
+        },
+        {
+          "name": "the layout is mirrored: Home is now on the right of the Hub",
+          "ok": true,
+          "detail": "{\"lang\":\"ar-AE\",\"homeX\":309.59375,\"hubX\":4}"
+        },
+        {
+          "name": "Arabic: lesson practice: the single-choice card runs in practice mode",
+          "ok": true,
+          "detail": "learn-lesson-question-0 fx-starter-updated-lesson-1-introduction-to-forex-q01 mode=practice feedback=immediate"
+        },
+        {
+          "name": "Arabic: lesson practice: the single-choice card offers no Check button",
+          "ok": true,
+          "detail": "learn-lesson-question-0"
+        },
+        {
+          "name": "Arabic: lesson practice: nothing is marked before an option is chosen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Arabic: lesson practice: choosing an option marks it at once, with its explanation",
+          "ok": true,
+          "detail": "ليس تمامًا The Forex market is generally considered more liquid than the stock market because its daily trading volume, measured in trillions of US dollars, is "
+        },
+        {
+          "name": "Arabic: lesson practice: the key is shown on the options",
+          "ok": true,
+          "detail": "2 option(s) labelled"
+        },
+        {
+          "name": "Arabic: lesson practice: the multi card offers Check",
+          "ok": true,
+          "detail": "learn-lesson-question-1 fx-starter-updated-lesson-1-introduction-to-forex-q02"
+        },
+        {
+          "name": "Arabic: lesson practice: filling the multi answer marks nothing until Check",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Arabic: lesson practice: Check marks the multi answer",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Arabic: the checkpoint opens",
+          "ok": true,
+          "detail": "whole-picture"
+        },
+        {
+          "name": "Arabic: checkpoint: the sitting is formal and says feedback waits for the end",
+          "ok": true,
+          "detail": "match:assessment/withheld choice:assessment/withheld match:assessment/withheld choice:assessment/withheld choice:assessment/withheld choice:assessment/withheld choice:assessment/withheld multi:assessment/withheld"
+        },
+        {
+          "name": "Arabic: checkpoint: no hint is offered",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Arabic: checkpoint: choosing a single-choice option marks nothing; Check is still needed",
+          "ok": true,
+          "detail": "learn-assessment-question-1"
+        },
+        {
+          "name": "Arabic: checkpoint: the answered card says only that the answer is recorded",
+          "ok": true,
+          "detail": "learn-assessment-question-1: recorded"
+        },
+        {
+          "name": "Arabic: the result shows the notice in Arabic",
+          "ok": true,
+          "detail": "بانتظار الاعتماد التحريري تستند هذه النتائج إلى أسئلة الدورة ومفاتيح إجاباتها التي لا تزال بانتظار المراجعة التحريرية من OneRoyal، لذا تعامل معها على أنها مؤقتة"
+        },
+        {
+          "name": "no uncaught page error during the journey",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "screenshots": [
+        "A13-rtl-qa-01-lesson-practice.png",
+        "A13-rtl-qa-02-checkpoint-withheld.png"
+      ],
+      "ok": true
+    }
+  ],
+  "totals": {
+    "findings": 7,
+    "runs": 14,
+    "checks": 314,
+    "failed": 0,
+    "blocked": 0
+  }
+}
