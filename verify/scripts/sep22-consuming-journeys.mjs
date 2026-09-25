@@ -344,6 +344,19 @@ const TAB_ROOT = {
 };
 /** Presses a primary tab; a second press pops the tab to its root. */
 const toTab = async (page, base, id, wait = 1400) => {
+  /*
+   * A ticket, a review or a receipt is shown above the tab bar (Sep22 B1),
+   * so there is no tab to tap from it: step back out, as a client does,
+   * until the tab bar is there.
+   */
+  for (
+    let i = 0;
+    i < 4 && (await page.locator(`[data-testid="${id}"]:visible`).count()) === 0;
+    i += 1
+  ) {
+    if ((await page.locator('[data-testid="header-back"]:visible').count()) === 0) break;
+    await back(page, 900);
+  }
   await page.locator(`[data-testid="${id}"]:visible`).last().click({ timeout: 15_000 });
   await page.waitForTimeout(wait);
   if (routeOf(page, base).split('?')[0] !== TAB_ROOT[id]) {
