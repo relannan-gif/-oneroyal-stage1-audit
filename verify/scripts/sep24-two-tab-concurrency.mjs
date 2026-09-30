@@ -229,7 +229,12 @@ const storedPreferences = (page) =>
   page.evaluate(() => {
     for (let i = 0; i < localStorage.length; i += 1) {
       const key = localStorage.key(i);
-      if (key !== null && key.endsWith('oneroyal.preferences')) {
+      // Not the stamp the storage layer keeps beside a copy (`oneroyal.device-stamp:<key>`).
+      if (
+        key !== null &&
+        key.endsWith('oneroyal.preferences') &&
+        !key.startsWith('oneroyal.device-stamp:')
+      ) {
         try {
           return JSON.parse(localStorage.getItem(key) ?? 'null')?.state ?? null;
         } catch {

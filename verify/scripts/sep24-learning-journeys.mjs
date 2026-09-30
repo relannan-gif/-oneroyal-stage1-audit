@@ -580,7 +580,9 @@ class Journey {
     return this.page.evaluate(() => {
       for (let i = 0; i < localStorage.length; i += 1) {
         const key = localStorage.key(i);
-        if (key && /oneroyal\.learning\.v1\./.test(key)) {
+        // Anchored: the storage layer keeps a stamp beside each copy
+        // (`oneroyal.device-stamp:<key>`), which must not be read as the record.
+        if (key && /^oneroyal\.learning\.v1\./.test(key)) {
           try {
             return { key, data: JSON.parse(localStorage.getItem(key)).data };
           } catch {
