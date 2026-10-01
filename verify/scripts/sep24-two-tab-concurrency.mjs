@@ -126,15 +126,27 @@ const naming = async (id, action) => {
 const front = async (page) => {
   await page.bringToFront();
   await page.waitForTimeout(400);
-  // Entering the demo in the OTHER tab re-arms the synthetic-data
-  // explanation, and the storage event brings it up here too.
+  /*
+   * ONE INTRODUCTION, ONE PRESS (Oct01 A5). This used to press up to three
+   * times: entering the demo in the OTHER tab wrote a re-armed explanation
+   * that this tab re-hydrated, and every screen it had mounted put up its own
+   * copy, each closed only by its own "Got it". The explanation now has one
+   * presenter app-wide, its acknowledgement is shared, and entering the demo
+   * no longer writes the re-arm. More than one copy on screen, or one that
+   * survives its acknowledgement, is the defect — so it fails the run.
+   */
   const intro = page.locator('[data-testid="demo-intro-dismiss"]:visible');
-  for (let round = 0; round < 3 && (await intro.count()) > 0; round += 1) {
-    await intro
-      .last()
-      .click({ timeout: 3500 })
-      .catch(() => undefined);
+  const presented = await intro.count();
+  if (presented > 1) {
+    throw new Error(`demo introduction stacked: ${presented} copies presented at once`);
+  }
+  if (presented === 1) {
+    await intro.click({ timeout: 3500 }).catch(() => undefined);
     await page.waitForTimeout(600);
+    const left = await intro.count();
+    if (left > 0) {
+      throw new Error(`demo introduction still presented after one acknowledgement (${left})`);
+    }
   }
 };
 const pressNow = (page, id) =>
@@ -196,13 +208,10 @@ const isOn = async (page, id) => {
   });
 };
 
+// One press, through the same single-presenter check as every step (Oct01 A5).
 const dismissIntro = async (page) => {
-  await page
-    .getByTestId('demo-intro-dismiss')
-    .last()
-    .click({ timeout: 3500 })
-    .catch(() => undefined);
   await page.waitForTimeout(500);
+  await front(page);
 };
 /** Welcome → demonstration session, as a client enters it. */
 const enterDemo = async (page, base) => {
