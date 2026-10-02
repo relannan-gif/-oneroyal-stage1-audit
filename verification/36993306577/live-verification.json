@@ -1,0 +1,218 @@
+{
+  "kind": "oneroyal.deployed-previews-verification",
+  "status": "passed",
+  "missingComparisons": [],
+  "blocked": [],
+  "expectRevision": "0d94cf6beafd7d4955c1ac741168a06451034f63",
+  "localBuild": {
+    "shipping": "shipping",
+    "qa": "qa"
+  },
+  "verifiedAt": "2026-10-02T10:05:14.903Z",
+  "target": "https://relannan-gif.github.io/-oneroyal-stage1-audit",
+  "live": true,
+  "checks": 30,
+  "failed": 0,
+  "results": [
+    {
+      "preview": "shipping",
+      "check": "index answers 200",
+      "ok": true,
+      "detail": "status 200"
+    },
+    {
+      "preview": "shipping",
+      "check": "build manifest served",
+      "ok": true,
+      "detail": "status 200"
+    },
+    {
+      "preview": "shipping",
+      "check": "manifest base path is the published path",
+      "ok": true,
+      "detail": "manifest /-oneroyal-stage1-audit/shipping, published /-oneroyal-stage1-audit/shipping"
+    },
+    {
+      "preview": "shipping",
+      "check": "manifest names the declared final revision",
+      "ok": true,
+      "detail": "manifest 0d94cf6beafd7d4955c1ac741168a06451034f63, declared 0d94cf6beafd7d4955c1ac741168a06451034f63"
+    },
+    {
+      "preview": "shipping",
+      "check": "every local reference is under the preview path",
+      "ok": true,
+      "detail": "1 references"
+    },
+    {
+      "preview": "shipping",
+      "check": "every referenced resource answers 200",
+      "ok": true,
+      "detail": "200 /-oneroyal-stage1-audit/shipping/_expo/static/js/web/entry-17e4deb6d57c22e6803fb9149b9ef441.js"
+    },
+    {
+      "preview": "shipping",
+      "check": "served bytes equal the local build (size and sha256 of every referenced file)",
+      "ok": true,
+      "detail": "/-oneroyal-stage1-audit/shipping/_expo/static/js/web/entry-17e4deb6d57c22e6803fb9149b9ef441.js 12940560 B 9fb7595ac02740b34656bf09c93dc846a2f6fd73e06b6d8b01c6078235202a9e",
+      "files": [
+        {
+          "path": "/-oneroyal-stage1-audit/shipping/_expo/static/js/web/entry-17e4deb6d57c22e6803fb9149b9ef441.js",
+          "status": 200,
+          "bytes": 12940560,
+          "sha256": "9fb7595ac02740b34656bf09c93dc846a2f6fd73e06b6d8b01c6078235202a9e",
+          "localBytes": 12940560,
+          "localSha256": "9fb7595ac02740b34656bf09c93dc846a2f6fd73e06b6d8b01c6078235202a9e"
+        }
+      ]
+    },
+    {
+      "preview": "shipping",
+      "check": "served entry bundle hashes as the manifest says",
+      "ok": true,
+      "detail": "served 9fb7595ac02740b3, manifest 9fb7595ac02740b3"
+    },
+    {
+      "preview": "shipping",
+      "check": "app renders its build identity at the root",
+      "ok": true,
+      "detail": "Build identity · 0d94cf6beafd · Awaiting approved legal content"
+    },
+    {
+      "preview": "shipping",
+      "check": "the displayed identity is the declared final revision",
+      "ok": true,
+      "detail": "displayed \"Build identity · 0d94cf6beafd · Awaiting approved legal content\", declared 0d94cf6"
+    },
+    {
+      "preview": "shipping",
+      "check": "root URL stays under the preview path",
+      "ok": true,
+      "detail": "/-oneroyal-stage1-audit/shipping/welcome"
+    },
+    {
+      "preview": "shipping",
+      "check": "deep link restores to its route",
+      "ok": true,
+      "detail": "/-oneroyal-stage1-audit/shipping/login"
+    },
+    {
+      "preview": "shipping",
+      "check": "reload of a deep link comes back to the same route",
+      "ok": true,
+      "detail": "/-oneroyal-stage1-audit/shipping/login"
+    },
+    {
+      "preview": "shipping",
+      "check": "Back stays inside the preview",
+      "ok": true,
+      "detail": "/-oneroyal-stage1-audit/shipping/welcome"
+    },
+    {
+      "preview": "shipping",
+      "check": "no failed resource requests during the journey",
+      "ok": true,
+      "detail": "none; 3 route reload(s) restored through 404.html"
+    },
+    {
+      "preview": "qa",
+      "check": "index answers 200",
+      "ok": true,
+      "detail": "status 200"
+    },
+    {
+      "preview": "qa",
+      "check": "build manifest served",
+      "ok": true,
+      "detail": "status 200"
+    },
+    {
+      "preview": "qa",
+      "check": "manifest base path is the published path",
+      "ok": true,
+      "detail": "manifest /-oneroyal-stage1-audit/qa, published /-oneroyal-stage1-audit/qa"
+    },
+    {
+      "preview": "qa",
+      "check": "manifest names the declared final revision",
+      "ok": true,
+      "detail": "manifest 0d94cf6beafd7d4955c1ac741168a06451034f63, declared 0d94cf6beafd7d4955c1ac741168a06451034f63"
+    },
+    {
+      "preview": "qa",
+      "check": "every local reference is under the preview path",
+      "ok": true,
+      "detail": "1 references"
+    },
+    {
+      "preview": "qa",
+      "check": "every referenced resource answers 200",
+      "ok": true,
+      "detail": "200 /-oneroyal-stage1-audit/qa/_expo/static/js/web/entry-bc7eb00be2538f69c3ffe8c3d9e9c76f.js"
+    },
+    {
+      "preview": "qa",
+      "check": "served bytes equal the local build (size and sha256 of every referenced file)",
+      "ok": true,
+      "detail": "/-oneroyal-stage1-audit/qa/_expo/static/js/web/entry-bc7eb00be2538f69c3ffe8c3d9e9c76f.js 12940298 B 7bcf1357056b9376090a98a846013ac58eb7ca18f6ace0f249e8e18ebfff9434",
+      "files": [
+        {
+          "path": "/-oneroyal-stage1-audit/qa/_expo/static/js/web/entry-bc7eb00be2538f69c3ffe8c3d9e9c76f.js",
+          "status": 200,
+          "bytes": 12940298,
+          "sha256": "7bcf1357056b9376090a98a846013ac58eb7ca18f6ace0f249e8e18ebfff9434",
+          "localBytes": 12940298,
+          "localSha256": "7bcf1357056b9376090a98a846013ac58eb7ca18f6ace0f249e8e18ebfff9434"
+        }
+      ]
+    },
+    {
+      "preview": "qa",
+      "check": "served entry bundle hashes as the manifest says",
+      "ok": true,
+      "detail": "served 7bcf1357056b9376, manifest 7bcf1357056b9376"
+    },
+    {
+      "preview": "qa",
+      "check": "app renders its build identity at the root",
+      "ok": true,
+      "detail": "Build identity · 0d94cf6beafd · Non-production legal fixtures"
+    },
+    {
+      "preview": "qa",
+      "check": "the displayed identity is the declared final revision",
+      "ok": true,
+      "detail": "displayed \"Build identity · 0d94cf6beafd · Non-production legal fixtures\", declared 0d94cf6"
+    },
+    {
+      "preview": "qa",
+      "check": "root URL stays under the preview path",
+      "ok": true,
+      "detail": "/-oneroyal-stage1-audit/qa/welcome"
+    },
+    {
+      "preview": "qa",
+      "check": "deep link restores to its route",
+      "ok": true,
+      "detail": "/-oneroyal-stage1-audit/qa/login"
+    },
+    {
+      "preview": "qa",
+      "check": "reload of a deep link comes back to the same route",
+      "ok": true,
+      "detail": "/-oneroyal-stage1-audit/qa/login"
+    },
+    {
+      "preview": "qa",
+      "check": "Back stays inside the preview",
+      "ok": true,
+      "detail": "/-oneroyal-stage1-audit/qa/welcome"
+    },
+    {
+      "preview": "qa",
+      "check": "no failed resource requests during the journey",
+      "ok": true,
+      "detail": "none; 3 route reload(s) restored through 404.html"
+    }
+  ]
+}
