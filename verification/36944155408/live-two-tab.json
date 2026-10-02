@@ -1,0 +1,523 @@
+{
+  "runner": "sep24-two-tab-concurrency",
+  "startedAt": "2026-10-02T00:51:09.107Z",
+  "commit": null,
+  "sourceRevision": "f87f2b08f784b66738a649a9d7c47256278114f8",
+  "revisionDeclaration": {
+    "where": "https://github.com/relannan-gif/-oneroyal-stage1-audit/actions/runs/36944155408",
+    "files": [
+      {
+        "path": "scripts/sep24-two-tab-concurrency.mjs",
+        "sha256": "b45e1385902ae03468787ec4e2bdb9f28e2e7a7c0875fb8d54daf1e4635e6bd8"
+      },
+      {
+        "path": "scripts/lib/runner-revision.mjs",
+        "sha256": "b5a6bb81a61af8fb0fe52873bd43d8dc17b171f9e48ee3fea5fedb1624ce90e3"
+      }
+    ]
+  },
+  "bases": [
+    {
+      "base": "https://relannan-gif.github.io/-oneroyal-stage1-audit/shipping",
+      "preview": "shipping",
+      "build": {
+        "sourceRevision": "f87f2b08f784b66738a649a9d7c47256278114f8",
+        "treeRevision": "a592a6eebee47eba81a5eeff5b24fd7045106638",
+        "configuration": "awaiting-approved-content",
+        "scopeClean": true
+      },
+      "checks": [
+        {
+          "name": "both tabs reach Settings",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "name": "before any reload: tab A shows Dark, tab B shows its privacy and reduce-motion choices",
+          "ok": true,
+          "detail": {
+            "aDark": true,
+            "bPrivacy": true,
+            "bReduceMotion": true
+          }
+        },
+        {
+          "name": "stored: Dark (A), privacy on (B), reduce motion on (B)",
+          "ok": true,
+          "detail": {
+            "theme": "dark",
+            "locale": "en",
+            "privacyMode": true,
+            "reduceMotion": true,
+            "activeAccountId": "acc-classic-usd",
+            "hasSeenWelcome": false,
+            "hasSeenDemoIntro": true
+          }
+        },
+        {
+          "name": "after reload tab A shows Dark, privacy on and reduce motion on",
+          "ok": true,
+          "detail": {
+            "dark": true,
+            "privacy": true,
+            "reduceMotion": true,
+            "stored": {
+              "theme": "dark",
+              "locale": "en",
+              "privacyMode": true,
+              "reduceMotion": true,
+              "activeAccountId": "acc-classic-usd",
+              "hasSeenWelcome": false,
+              "hasSeenDemoIntro": true
+            }
+          }
+        },
+        {
+          "name": "after reload tab B shows Dark, privacy on and reduce motion on",
+          "ok": true,
+          "detail": {
+            "dark": true,
+            "privacy": true,
+            "reduceMotion": true,
+            "stored": {
+              "theme": "dark",
+              "locale": "en",
+              "privacyMode": true,
+              "reduceMotion": true,
+              "activeAccountId": "acc-classic-usd",
+              "hasSeenWelcome": false,
+              "hasSeenDemoIntro": true
+            }
+          }
+        },
+        {
+          "name": "both requests were sent and opened their threads",
+          "ok": true,
+          "detail": {
+            "idA": "tkt-502",
+            "idB": "tkt-501",
+            "failureA": null,
+            "failureB": null
+          }
+        },
+        {
+          "name": "the two requests have different ids",
+          "ok": true,
+          "detail": {
+            "idA": "tkt-502",
+            "idB": "tkt-501"
+          }
+        },
+        {
+          "name": "after reload tab A lists both requests",
+          "ok": true,
+          "detail": {
+            "A": true,
+            "B": true
+          }
+        },
+        {
+          "name": "after reload tab A: A's ticket keeps its subject, first message and reply, and nothing of B's",
+          "ok": true,
+          "detail": {
+            "row": "Two-tab A muq8zzyt Open · SUP-48502 · Today, 03:52 Typical first response: 8h",
+            "thread": "Two-tab A muq8zzyt SUP-48502 You Opening from tab A muq8zzyt — please check. 2 Oct 2026, 03:52 You Reply from tab A muq8zzyt 2 Oct 2026, 03:52 OneRoyal Assistant Automated Thanks — I have added this to the thread. I can look up the status of your account, your transactions and your orders, and explain how a process works. I cannot approve, release or change anything myself. A member of the team wi"
+          }
+        },
+        {
+          "name": "after reload tab A: B's ticket keeps its subject, first message and reply, and nothing of A's",
+          "ok": true,
+          "detail": {
+            "row": "Two-tab B muq8zzyt Open · SUP-48501 · Today, 03:52 Typical first response: 8h",
+            "thread": "Two-tab B muq8zzyt SUP-48501 You Opening from tab B muq8zzyt — please check. 2 Oct 2026, 03:52 You Reply from tab B muq8zzyt 2 Oct 2026, 03:52 OneRoyal Assistant Automated Thanks — I have added this to the thread. I can look up the status of your account, your transactions and your orders, and explain how a process works. I cannot approve, release or change anything myself. A member of the team wi"
+          }
+        },
+        {
+          "name": "after reload tab B lists both requests",
+          "ok": true,
+          "detail": {
+            "A": true,
+            "B": true
+          }
+        },
+        {
+          "name": "after reload tab B: A's ticket keeps its subject, first message and reply, and nothing of B's",
+          "ok": true,
+          "detail": {
+            "row": "Two-tab A muq8zzyt Open · SUP-48502 · Today, 03:52 Typical first response: 8h",
+            "thread": "Two-tab A muq8zzyt SUP-48502 You Opening from tab A muq8zzyt — please check. 2 Oct 2026, 03:52 You Reply from tab A muq8zzyt 2 Oct 2026, 03:52 OneRoyal Assistant Automated Thanks — I have added this to the thread. I can look up the status of your account, your transactions and your orders, and explain how a process works. I cannot approve, release or change anything myself. A member of the team wi"
+          }
+        },
+        {
+          "name": "after reload tab B: B's ticket keeps its subject, first message and reply, and nothing of A's",
+          "ok": true,
+          "detail": {
+            "row": "Two-tab B muq8zzyt Open · SUP-48501 · Today, 03:52 Typical first response: 8h",
+            "thread": "Two-tab B muq8zzyt SUP-48501 You Opening from tab B muq8zzyt — please check. 2 Oct 2026, 03:52 You Reply from tab B muq8zzyt 2 Oct 2026, 03:52 OneRoyal Assistant Automated Thanks — I have added this to the thread. I can look up the status of your account, your transactions and your orders, and explain how a process works. I cannot approve, release or change anything myself. A member of the team wi"
+          }
+        },
+        {
+          "name": "no uncaught page errors",
+          "ok": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "environment": {
+        "secureContext": true,
+        "webLocks": true
+      },
+      "beforeReload": {
+        "aDark": true,
+        "bPrivacy": true,
+        "bReduceMotion": true
+      }
+    },
+    {
+      "base": "https://relannan-gif.github.io/-oneroyal-stage1-audit/qa",
+      "preview": "qa",
+      "build": {
+        "sourceRevision": "f87f2b08f784b66738a649a9d7c47256278114f8",
+        "treeRevision": "a592a6eebee47eba81a5eeff5b24fd7045106638",
+        "configuration": "non-production",
+        "scopeClean": true
+      },
+      "checks": [
+        {
+          "name": "both tabs reach Settings",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "name": "before any reload: tab A shows Dark, tab B shows its privacy and reduce-motion choices",
+          "ok": true,
+          "detail": {
+            "aDark": true,
+            "bPrivacy": true,
+            "bReduceMotion": true
+          }
+        },
+        {
+          "name": "stored: Dark (A), privacy on (B), reduce motion on (B)",
+          "ok": true,
+          "detail": {
+            "theme": "dark",
+            "locale": "en",
+            "privacyMode": true,
+            "reduceMotion": true,
+            "activeAccountId": "acc-classic-usd",
+            "hasSeenWelcome": false,
+            "hasSeenDemoIntro": true
+          }
+        },
+        {
+          "name": "after reload tab A shows Dark, privacy on and reduce motion on",
+          "ok": true,
+          "detail": {
+            "dark": true,
+            "privacy": true,
+            "reduceMotion": true,
+            "stored": {
+              "theme": "dark",
+              "locale": "en",
+              "privacyMode": true,
+              "reduceMotion": true,
+              "activeAccountId": "acc-classic-usd",
+              "hasSeenWelcome": false,
+              "hasSeenDemoIntro": true
+            }
+          }
+        },
+        {
+          "name": "after reload tab B shows Dark, privacy on and reduce motion on",
+          "ok": true,
+          "detail": {
+            "dark": true,
+            "privacy": true,
+            "reduceMotion": true,
+            "stored": {
+              "theme": "dark",
+              "locale": "en",
+              "privacyMode": true,
+              "reduceMotion": true,
+              "activeAccountId": "acc-classic-usd",
+              "hasSeenWelcome": false,
+              "hasSeenDemoIntro": true
+            }
+          }
+        },
+        {
+          "name": "both requests were sent and opened their threads",
+          "ok": true,
+          "detail": {
+            "idA": "tkt-501",
+            "idB": "tkt-502",
+            "failureA": null,
+            "failureB": null
+          }
+        },
+        {
+          "name": "the two requests have different ids",
+          "ok": true,
+          "detail": {
+            "idA": "tkt-501",
+            "idB": "tkt-502"
+          }
+        },
+        {
+          "name": "after reload tab A lists both requests",
+          "ok": true,
+          "detail": {
+            "A": true,
+            "B": true
+          }
+        },
+        {
+          "name": "after reload tab A: A's ticket keeps its subject, first message and reply, and nothing of B's",
+          "ok": true,
+          "detail": {
+            "row": "Two-tab A muq92f0q Open · SUP-48501 · Today, 03:54 Typical first response: 8h",
+            "thread": "QA Preview build with sample legal documents. Not OneRoyal approved content. Two-tab A muq92f0q SUP-48501 You Opening from tab A muq92f0q — please check. 2 Oct 2026, 03:54 You Reply from tab A muq92f0q 2 Oct 2026, 03:54 OneRoyal Assistant Automated Thanks — I have added this to the thread. I can look up the status of your account, your transactions and your orders, and explain how a process works."
+          }
+        },
+        {
+          "name": "after reload tab A: B's ticket keeps its subject, first message and reply, and nothing of A's",
+          "ok": true,
+          "detail": {
+            "row": "Two-tab B muq92f0q Open · SUP-48502 · Today, 03:54 Typical first response: 8h",
+            "thread": "QA Preview build with sample legal documents. Not OneRoyal approved content. Two-tab B muq92f0q SUP-48502 You Opening from tab B muq92f0q — please check. 2 Oct 2026, 03:54 You Reply from tab B muq92f0q 2 Oct 2026, 03:54 OneRoyal Assistant Automated Thanks — I have added this to the thread. I can look up the status of your account, your transactions and your orders, and explain how a process works."
+          }
+        },
+        {
+          "name": "after reload tab B lists both requests",
+          "ok": true,
+          "detail": {
+            "A": true,
+            "B": true
+          }
+        },
+        {
+          "name": "after reload tab B: A's ticket keeps its subject, first message and reply, and nothing of B's",
+          "ok": true,
+          "detail": {
+            "row": "Two-tab A muq92f0q Open · SUP-48501 · Today, 03:54 Typical first response: 8h",
+            "thread": "QA Preview build with sample legal documents. Not OneRoyal approved content. Two-tab A muq92f0q SUP-48501 You Opening from tab A muq92f0q — please check. 2 Oct 2026, 03:54 You Reply from tab A muq92f0q 2 Oct 2026, 03:54 OneRoyal Assistant Automated Thanks — I have added this to the thread. I can look up the status of your account, your transactions and your orders, and explain how a process works."
+          }
+        },
+        {
+          "name": "after reload tab B: B's ticket keeps its subject, first message and reply, and nothing of A's",
+          "ok": true,
+          "detail": {
+            "row": "Two-tab B muq92f0q Open · SUP-48502 · Today, 03:54 Typical first response: 8h",
+            "thread": "QA Preview build with sample legal documents. Not OneRoyal approved content. Two-tab B muq92f0q SUP-48502 You Opening from tab B muq92f0q — please check. 2 Oct 2026, 03:54 You Reply from tab B muq92f0q 2 Oct 2026, 03:54 OneRoyal Assistant Automated Thanks — I have added this to the thread. I can look up the status of your account, your transactions and your orders, and explain how a process works."
+          }
+        },
+        {
+          "name": "no uncaught page errors",
+          "ok": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "environment": {
+        "secureContext": true,
+        "webLocks": true
+      },
+      "beforeReload": {
+        "aDark": true,
+        "bPrivacy": true,
+        "bReduceMotion": true
+      }
+    }
+  ],
+  "finishedAt": "2026-10-02T00:54:54.545Z",
+  "failed": 0,
+  "filtered": null,
+  "builds": {
+    "shipping": {
+      "sourceRevision": "f87f2b08f784b66738a649a9d7c47256278114f8",
+      "treeRevision": "a592a6eebee47eba81a5eeff5b24fd7045106638",
+      "configuration": "awaiting-approved-content",
+      "scopeClean": true
+    },
+    "qa": {
+      "sourceRevision": "f87f2b08f784b66738a649a9d7c47256278114f8",
+      "treeRevision": "a592a6eebee47eba81a5eeff5b24fd7045106638",
+      "configuration": "non-production",
+      "scopeClean": true
+    }
+  },
+  "specs": [
+    {
+      "id": "two-tab",
+      "previews": [
+        "shipping",
+        "qa"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "two-tab",
+      "title": "Two tabs over one localStorage: preferences and support references",
+      "preview": "shipping",
+      "checks": [
+        {
+          "name": "both tabs reach Settings",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "before any reload: tab A shows Dark, tab B shows its privacy and reduce-motion choices",
+          "ok": true,
+          "detail": "{\"aDark\":true,\"bPrivacy\":true,\"bReduceMotion\":true}"
+        },
+        {
+          "name": "stored: Dark (A), privacy on (B), reduce motion on (B)",
+          "ok": true,
+          "detail": "{\"theme\":\"dark\",\"locale\":\"en\",\"privacyMode\":true,\"reduceMotion\":true,\"activeAccountId\":\"acc-classic-usd\",\"hasSeenWelcome\":false,\"hasSeenDemoIntro\":true}"
+        },
+        {
+          "name": "after reload tab A shows Dark, privacy on and reduce motion on",
+          "ok": true,
+          "detail": "{\"dark\":true,\"privacy\":true,\"reduceMotion\":true,\"stored\":{\"theme\":\"dark\",\"locale\":\"en\",\"privacyMode\":true,\"reduceMotion\":true,\"activeAccountId\":\"acc-classic-usd\",\"hasSeenWelcome\":false,\"hasSeenDemoIntro\":true}}"
+        },
+        {
+          "name": "after reload tab B shows Dark, privacy on and reduce motion on",
+          "ok": true,
+          "detail": "{\"dark\":true,\"privacy\":true,\"reduceMotion\":true,\"stored\":{\"theme\":\"dark\",\"locale\":\"en\",\"privacyMode\":true,\"reduceMotion\":true,\"activeAccountId\":\"acc-classic-usd\",\"hasSeenWelcome\":false,\"hasSeenDemoIntro\":true}}"
+        },
+        {
+          "name": "both requests were sent and opened their threads",
+          "ok": true,
+          "detail": "{\"idA\":\"tkt-502\",\"idB\":\"tkt-501\",\"failureA\":null,\"failureB\":null}"
+        },
+        {
+          "name": "the two requests have different ids",
+          "ok": true,
+          "detail": "{\"idA\":\"tkt-502\",\"idB\":\"tkt-501\"}"
+        },
+        {
+          "name": "after reload tab A lists both requests",
+          "ok": true,
+          "detail": "{\"A\":true,\"B\":true}"
+        },
+        {
+          "name": "after reload tab A: A's ticket keeps its subject, first message and reply, and nothing of B's",
+          "ok": true,
+          "detail": "{\"row\":\"Two-tab A muq8zzyt Open · SUP-48502 · Today, 03:52 Typical first response: 8h\",\"thread\":\"Two-tab A muq8zzyt SUP-48502 You Opening from tab A muq8zzyt — please check. 2 Oct 2026, 03:52 You Reply from tab A muq8zzyt 2 Oct 2026, 03:52 OneRoyal Assistant Automated Thanks — I have added this to t"
+        },
+        {
+          "name": "after reload tab A: B's ticket keeps its subject, first message and reply, and nothing of A's",
+          "ok": true,
+          "detail": "{\"row\":\"Two-tab B muq8zzyt Open · SUP-48501 · Today, 03:52 Typical first response: 8h\",\"thread\":\"Two-tab B muq8zzyt SUP-48501 You Opening from tab B muq8zzyt — please check. 2 Oct 2026, 03:52 You Reply from tab B muq8zzyt 2 Oct 2026, 03:52 OneRoyal Assistant Automated Thanks — I have added this to t"
+        },
+        {
+          "name": "after reload tab B lists both requests",
+          "ok": true,
+          "detail": "{\"A\":true,\"B\":true}"
+        },
+        {
+          "name": "after reload tab B: A's ticket keeps its subject, first message and reply, and nothing of B's",
+          "ok": true,
+          "detail": "{\"row\":\"Two-tab A muq8zzyt Open · SUP-48502 · Today, 03:52 Typical first response: 8h\",\"thread\":\"Two-tab A muq8zzyt SUP-48502 You Opening from tab A muq8zzyt — please check. 2 Oct 2026, 03:52 You Reply from tab A muq8zzyt 2 Oct 2026, 03:52 OneRoyal Assistant Automated Thanks — I have added this to t"
+        },
+        {
+          "name": "after reload tab B: B's ticket keeps its subject, first message and reply, and nothing of A's",
+          "ok": true,
+          "detail": "{\"row\":\"Two-tab B muq8zzyt Open · SUP-48501 · Today, 03:52 Typical first response: 8h\",\"thread\":\"Two-tab B muq8zzyt SUP-48501 You Opening from tab B muq8zzyt — please check. 2 Oct 2026, 03:52 You Reply from tab B muq8zzyt 2 Oct 2026, 03:52 OneRoyal Assistant Automated Thanks — I have added this to t"
+        },
+        {
+          "name": "no uncaught page errors",
+          "ok": true,
+          "detail": "[]"
+        }
+      ],
+      "ok": true
+    },
+    {
+      "id": "two-tab",
+      "title": "Two tabs over one localStorage: preferences and support references",
+      "preview": "qa",
+      "checks": [
+        {
+          "name": "both tabs reach Settings",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "before any reload: tab A shows Dark, tab B shows its privacy and reduce-motion choices",
+          "ok": true,
+          "detail": "{\"aDark\":true,\"bPrivacy\":true,\"bReduceMotion\":true}"
+        },
+        {
+          "name": "stored: Dark (A), privacy on (B), reduce motion on (B)",
+          "ok": true,
+          "detail": "{\"theme\":\"dark\",\"locale\":\"en\",\"privacyMode\":true,\"reduceMotion\":true,\"activeAccountId\":\"acc-classic-usd\",\"hasSeenWelcome\":false,\"hasSeenDemoIntro\":true}"
+        },
+        {
+          "name": "after reload tab A shows Dark, privacy on and reduce motion on",
+          "ok": true,
+          "detail": "{\"dark\":true,\"privacy\":true,\"reduceMotion\":true,\"stored\":{\"theme\":\"dark\",\"locale\":\"en\",\"privacyMode\":true,\"reduceMotion\":true,\"activeAccountId\":\"acc-classic-usd\",\"hasSeenWelcome\":false,\"hasSeenDemoIntro\":true}}"
+        },
+        {
+          "name": "after reload tab B shows Dark, privacy on and reduce motion on",
+          "ok": true,
+          "detail": "{\"dark\":true,\"privacy\":true,\"reduceMotion\":true,\"stored\":{\"theme\":\"dark\",\"locale\":\"en\",\"privacyMode\":true,\"reduceMotion\":true,\"activeAccountId\":\"acc-classic-usd\",\"hasSeenWelcome\":false,\"hasSeenDemoIntro\":true}}"
+        },
+        {
+          "name": "both requests were sent and opened their threads",
+          "ok": true,
+          "detail": "{\"idA\":\"tkt-501\",\"idB\":\"tkt-502\",\"failureA\":null,\"failureB\":null}"
+        },
+        {
+          "name": "the two requests have different ids",
+          "ok": true,
+          "detail": "{\"idA\":\"tkt-501\",\"idB\":\"tkt-502\"}"
+        },
+        {
+          "name": "after reload tab A lists both requests",
+          "ok": true,
+          "detail": "{\"A\":true,\"B\":true}"
+        },
+        {
+          "name": "after reload tab A: A's ticket keeps its subject, first message and reply, and nothing of B's",
+          "ok": true,
+          "detail": "{\"row\":\"Two-tab A muq92f0q Open · SUP-48501 · Today, 03:54 Typical first response: 8h\",\"thread\":\"QA Preview build with sample legal documents. Not OneRoyal approved content. Two-tab A muq92f0q SUP-48501 You Opening from tab A muq92f0q — please check. 2 Oct 2026, 03:54 You Reply from tab A muq92f0q 2"
+        },
+        {
+          "name": "after reload tab A: B's ticket keeps its subject, first message and reply, and nothing of A's",
+          "ok": true,
+          "detail": "{\"row\":\"Two-tab B muq92f0q Open · SUP-48502 · Today, 03:54 Typical first response: 8h\",\"thread\":\"QA Preview build with sample legal documents. Not OneRoyal approved content. Two-tab B muq92f0q SUP-48502 You Opening from tab B muq92f0q — please check. 2 Oct 2026, 03:54 You Reply from tab B muq92f0q 2"
+        },
+        {
+          "name": "after reload tab B lists both requests",
+          "ok": true,
+          "detail": "{\"A\":true,\"B\":true}"
+        },
+        {
+          "name": "after reload tab B: A's ticket keeps its subject, first message and reply, and nothing of B's",
+          "ok": true,
+          "detail": "{\"row\":\"Two-tab A muq92f0q Open · SUP-48501 · Today, 03:54 Typical first response: 8h\",\"thread\":\"QA Preview build with sample legal documents. Not OneRoyal approved content. Two-tab A muq92f0q SUP-48501 You Opening from tab A muq92f0q — please check. 2 Oct 2026, 03:54 You Reply from tab A muq92f0q 2"
+        },
+        {
+          "name": "after reload tab B: B's ticket keeps its subject, first message and reply, and nothing of A's",
+          "ok": true,
+          "detail": "{\"row\":\"Two-tab B muq92f0q Open · SUP-48502 · Today, 03:54 Typical first response: 8h\",\"thread\":\"QA Preview build with sample legal documents. Not OneRoyal approved content. Two-tab B muq92f0q SUP-48502 You Opening from tab B muq92f0q — please check. 2 Oct 2026, 03:54 You Reply from tab B muq92f0q 2"
+        },
+        {
+          "name": "no uncaught page errors",
+          "ok": true,
+          "detail": "[]"
+        }
+      ],
+      "ok": true
+    }
+  ],
+  "viewport": {
+    "width": 393,
+    "height": 852
+  },
+  "timezone": "Asia/Beirut",
+  "locale": "en-GB"
+}
