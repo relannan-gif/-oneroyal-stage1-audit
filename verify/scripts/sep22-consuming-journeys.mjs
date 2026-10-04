@@ -2859,6 +2859,10 @@ finding({
 finding({
   id: 'F147',
   title: 'Closed position lookup loses continuity with its resulting trade',
+  // Oct03 TRD-06: a close executes only on a trading market, so on the wall
+  // clock this journey was refused every weekend. It runs on a Wednesday
+  // morning, every demo market open; what it checks is unchanged.
+  context: { clock: '2026-09-23T10:00:00Z' },
   async run({ page, base, j, newPage }) {
     await enterDemo(page, base);
     await toTrade(page, base);
