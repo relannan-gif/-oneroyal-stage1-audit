@@ -1,27 +1,27 @@
 {
   "kind": "oneroyal.build-manifest",
   "version": 1,
-  "sourceRevision": "4af103535fcba7074d835473eb44e2ffee9be8b1",
-  "treeRevision": "4af103535fcba7074d835473eb44e2ffee9be8b1",
+  "sourceRevision": "7ea8410d1cd9294d8c5d83cf1a20d63fa8479302",
+  "treeRevision": "7ea8410d1cd9294d8c5d83cf1a20d63fa8479302",
   "lockfileHash": "bb7cadb56c130acea0327a1a1dadbf727ca9e59f08c9e522a1cf7438e04b3a40",
   "configuration": "awaiting-approved-content",
   "basePath": "/-oneroyal-stage1-audit/shipping",
-  "builtAt": "2026-10-04T07:52:18.651Z",
+  "builtAt": "2026-10-04T12:26:39.492Z",
   "scopeClean": true,
   "evidenceScope": "apps, packages, scripts, package.json, pnpm-workspace.yaml, pnpm-lock.yaml, turbo.json, tsconfig.base.json",
   "bundle": {
-    "path": "_expo/static/js/web/entry-9e50a759215942394c657ea060eea3d7.js",
+    "path": "_expo/static/js/web/entry-bb6cb20a7af9378ca4e84a5bedc0b27b.js",
     "bytes": 12998154,
-    "sha256": "ca850a36494ae66c3ebfd058ea376332570f8be07555187917bb21da22f4af32"
+    "sha256": "83e25d81ad188b84930c770acb53eac04d103b3a84b8e7f8e3725abd55d79f4a"
   },
   "export": {
     "fileCount": 41,
     "bytes": 15399303,
     "files": [
       {
-        "path": "_expo/static/js/web/entry-9e50a759215942394c657ea060eea3d7.js",
+        "path": "_expo/static/js/web/entry-bb6cb20a7af9378ca4e84a5bedc0b27b.js",
         "bytes": 12998154,
-        "sha256": "ca850a36494ae66c3ebfd058ea376332570f8be07555187917bb21da22f4af32"
+        "sha256": "83e25d81ad188b84930c770acb53eac04d103b3a84b8e7f8e3725abd55d79f4a"
       },
       {
         "path": "assets/__node_modules/@expo-google-fonts/almarai/Almarai_300Light.5b0dec05feae02fef51afd517af94d4c.ttf",
@@ -216,7 +216,7 @@
       {
         "path": "index.html",
         "bytes": 1207,
-        "sha256": "85f0d7d8c86481f0dabd54faa0f67ba4c54c7775a6196502115c826ad8bdd7ec"
+        "sha256": "2946ec48c60c58a9223449be44683f40692c3790a31a5f06701beb2d0f99a3e4"
       },
       {
         "path": "metadata.json",
